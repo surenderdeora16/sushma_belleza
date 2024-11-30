@@ -36,13 +36,13 @@ const Brochure = () => {
             <div className='w-full h-[80%] bg-[linear-gradient(0deg,#000000_12.53%,#0000_100%)] sm:bg-[linear-gradient(100deg,#00000_1.53%,rgba(0,0,0,0)_100%)] absolute z-20 left-0 bottom-0'></div>
             <div className=' 2xl:container h-full mx-auto flex flex-col cmd:justify-end items-start px-5 xs:px-7 sm:px-10 lg:px-16 cmd:pb-[45px] relative z-30'>
                 <div className='pb-[50px] xs:pb-[70px] sm:pb-5 w-full h-full cmd:h-auto flex flex-col cmd:flex-row gap-y-[60px] sm:gap-y-0 justify-end sm:justify-around cmd:justify-between items-start sm:items-center cmd:items-end'>
-                    <div className='w-full cmd:max-w-[360px] lg:max-w-[350px] xl:max-w-[440px] flex flex-col items-start sm:items-center cmd:items-start'>
-                        <h3 className='text-left sm:text-center cmd:text-left font-supera500 text-[27px] cxs:text-[32px] sm:text-[30px] lg:text-[35px] leading-[0.9]  text-[#FFFFFF] uppercase flex flex-col items-start gap-x-2 sm:block'>
+                    <div className='w-full cmd:max-w-[400px] lg:max-w-[400px] xl:max-w-[440px] flex flex-col items-start sm:items-center cmd:items-start'>
+                        <h3 className='text-left sm:text-center cmd:text-left font-supera500 text-[27px] cxs:text-[32px] sm:text-[30px] lg:text-[35px] leading-[0.92]  text-[#FFFFFF] uppercase flex flex-col items-start gap-x-2 sm:block'>
                             The pride of
                             <span className={`tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-no-repeat bg-center`}> zirakpur </span>
                         </h3>
-                        <p className='mt-2 pb-4 border-b font-supera500 text-[15px] bxxs:text-[16px] xs:text-xl tracking-wider text-[#fff] capitalize text-center cmd:text-left'>live amidst nature and openness.</p>
-                        <div className='text-left sm:text-left cmd:text-left tracking-wide font-supera500 text-[19px] xs:text-[20px] text-[#FFFFFF] capitalize mt-8 sm:mt-2.5'>Sushma belleza PR-7 airport road, zirakpur</div>
+                        <p className='mt-1.5 pb-6 cmd:border-b font-supera500 text-[15px] bxxs:text-[16px] xs:text-xl tracking-wider text-[#fff] capitalize text-center cmd:text-left'>live amidst nature and openness.</p>
+                        <div className='text-left sm:text-left cmd:text-left tracking-wide font-supera500 text-[19px] xs:text-[20px] text-[#FFFFFF] capitalize mt-8 sm:mt-3'>Sushma belleza PR-7 airport road, zirakpur</div>
                     </div>
                     <div>
                         <div className='flex flex-col sm:flex-row'>

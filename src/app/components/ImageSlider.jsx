@@ -73,7 +73,7 @@ export function ImageSlider({ slidesData }) {
                                 alt={slide.title}
                                 className="object-cover"
                             />
-                            <div className="absolute inset-0 bg-black/50" />
+                            <div className="absolute inset-0 bg-black/40" />
                             <div className="absolute inset-0 text-white">
                                 <div className={`w-full h-full relative duration-500 ${index === activeIndex
                                     ? 'flex flex-col justify-between pt-8 pb-11 px-4 duration-500'

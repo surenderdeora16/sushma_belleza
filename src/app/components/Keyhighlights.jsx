@@ -8,41 +8,35 @@ import KeyHeighlightImg2 from "@/app/images/keyheighlights-img2.webp"
 import KeyHeighlightImg3 from "@/app/images/keyheighlights-img3.webp"
 import KeyHeighlightImg4 from "@/app/images/keyheighlights-img4.webp"
 import KeyHeighlightImg5 from "@/app/images/keyheighlights-img5.webp"
-import KeyHeighlightImg6 from "@/app/images/keyheighlights-img6.webp"
 import { useState } from "react"
 
 const slidesData = [
     {
-        title: "Prime Location",
+        title: "Part of a Larger Township",
         image: KeyHeighlightImg1?.src,
-        description: "Situated on the sector-dividing road of Sector 67, Medallion Aurum provides easy access to Chandigarh International Airport, IT City, and prominent educational institutions.",
+        description: "Belleza is nestled within Sushma Downtown, a sprawling 60-acre integrated township. This means residents have access to a wider range of amenities and a well-planned community living experience.",
     },
     {
-        title: "Spacious Residences",
+        title: "Strategic Location",
         image: KeyHeighlightImg2?.src,
-        description: "The project features meticulously designed 3+1 and 4+1 BHK apartments, ranging from 2,950 to 3,900 sq. ft., ensuring ample living space.",
+        description: "Situated on the Airport Road, Belleza offers excellent connectivity to Chandigarh, the airport, and other key destinations in the region. This makes it convenient for residents to commute and access various facilities.",
 
     },
     {
-        title: "Extensive Amenities",
+        title: "Focus on Green Living",
         image: KeyHeighlightImg3?.src,
-        description: "Residents can enjoy a clubhouse, gymnasium, swimming pool, spa, indoor games, and dedicated areas for tennis, basketball, and volleyball.",
+        description: "The project boasts extensive green spaces, landscaped parks, and a dedicated kids' plantation area. This promotes a healthy and eco-friendly lifestyle for residents.",
     },
     {
-        title: "Advanced Mivan Construction",
+        title: "Thoughtful Design",
         image: KeyHeighlightImg4?.src,
-        description: "Utilizing Mivan technology, the project ensures robust construction quality and timely delivery.",
+        description: "Belleza features spacious apartments with dedicated family lounges and balconies, catering to the needs of modern families. The emphasis on natural light and ventilation enhances the living experience.",
 
     },
     {
-        title: "Ample Open Space",
+        title: "Lifestyle Amenities",
         image: KeyHeighlightImg5?.src,
-        description: "Spanning over 12.6 acres with 82% open area, Medallion Aurum offers a serene environment with landscaped gardens and green spaces.",
-    },
-    {
-        title: "Enhanced Security",
-        image: KeyHeighlightImg6?.src,
-        description: "A 5-tier security system, including 24x7 CCTV surveillance, ensures a safe living environment.",
+        description: "Residents can enjoy a range of amenities including a clubhouse, swimming pool, gym, indoor games, and a musical walkway. These facilities promote recreation, fitness, and community interaction.",
     },
 ]
 
@@ -93,15 +87,15 @@ export default function Home() {
                 <div className="hidden md:block">
                     <Heading
                         heading={'key Highlights'}
-                        subHeading={'Your Dream Home Awaits you to Own Exquisite Site in The Medallion Aurum'}
-                        headingColor={'#0A1325'}
-                        subHeadingColor={'#5A5454'}
+                        subHeading={'Your Dream Home Awaits you to Own Exquisite Site in Sushma Belleza'}
+                        headingColor={'#474536'}
+                        subHeadingColor={'#5D615B'}
                         subHeadingClass={'font-supera600'}
                     />
                 </div>
                 <div className='block md:hidden px-5 sm:px-5 mb-[22px] xl:container mx-auto'>
                     <h2 className={`uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom`}>key Highlights</h2>
-                    <p className={`font-supera600 capitalize cmd:mt-1.5  max-w-full tracking-wider sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#fff]`}>Your Dream Home Awaits you to Own Exquisite Site in The Medallion Aurum</p>
+                    <p className={`font-supera600 capitalize cmd:mt-1.5  max-w-full tracking-wider sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#fff]`}>Your Dream Home Awaits you to Own Exquisite Site in Sushma Belleza</p>
                 </div>
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
                     <motion.div
@@ -139,8 +133,8 @@ export default function Home() {
                 </div>
                 <div className="hidden md:flex gap-x-10">
                     <div className="flex flex-col boder-2 border-black whitespace-nowrap">
-                        <span className="font-supera600 text-[20px] lg:text-[22px] text-[#595959] capitalize">A Few Words About</span>
-                        <strong className={`font-supera700 text-[26px] cmd:text-[30px] xl:text-[34px] 2xl:text-[38px] text-[#000] capitalize text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-right-bottom bg-no-repeat bg-cover`}>The Medallion Aurum</strong>
+                        <span className="font-supera600 text-[20px] lg:text-[22px] text-[#595959] capitalize">sushma Belleza</span>
+                        <strong className={`font-supera700 text-[26px] cmd:text-[30px] xl:text-[34px] 2xl:text-[38px] text-[#000] capitalize text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-right-bottom bg-no-repeat bg-cover`}>Lifestyle Amenities</strong>
                     </div>
                     <p className="font-supera600 text-sm lg:text-[15px] xl:text-base 2xl:text-lg text-[#000] capitalize">
                         Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
