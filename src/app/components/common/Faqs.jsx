@@ -6,95 +6,28 @@ function Faqs() {
 
     const [isActiveFaq, setIsActiveFaq] = useState(-1)
 
-    // let faqData = [
-    //     {
-    //         faqQues: "What is The Medallion Mohali?",
-    //         faqAns: "The Medallion Mohali is a premium residential project located in Sector 82, Mohali. It offers luxurious 3 and 4 BHK flats with modern amenities and facilities, making it one of the most sought-after residential developments in the region. The project is known for its strategic location near Chandigarh, excellent connectivity, and high-end features."
-    //     },
-    //     {
-    //         faqQues: "What types of flats are available at The Medallion Mohali?",
-    //         faqAns: "Medallion flats in Mohali offer spacious 3 BHK and 4 BHK configurations with various floor plans and layouts to suit different family sizes. The flats are designed with modern interiors, high ceilings, and large balconies that provide stunning views of the surroundings."
-    //     },
-    //     {
-    //         faqQues: "What amenities are available at The Medallion Mohali?",
-    //         faqAns: "The Medallion Mohali provides a wide range of luxury amenities including a clubhouse, swimming pool, gym, sports facilities, landscaped gardens, jogging tracks, kids' play area, and 24/7 security. These amenities are designed to offer a high standard of living for residents."
-    //     },
-    //     {
-    //         faqQues: "Where is The Medallion located in Mohali?",
-    //         faqAns: "The Medallion Mohali is located in Sector 82, Airport Road, Mohali, which is well-connected to Chandigarh and other nearby areas. Its strategic location makes it convenient for both working professionals and families, with easy access to schools, hospitals, shopping centers, and transportation hubs."
-    //     },
-    //     {
-    //         faqQues: "What is the price range of flats at The Medallion Mohali?",
-    //         faqAns: "The price of Medallion flats in Mohali varies depending on the size, configuration, and floor plan. Typically, the starting price for a 3 BHK flat is in the range of ₹1 crore and above, while the price for 4 BHK flats may be higher. For the latest pricing, it is recommended to contact the sales office or visit the official website."
-    //     },
-    //     {
-    //         faqQues: "Are there any special offers or payment plans for buying a flat at The Medallion Mohali?",
-    //         faqAns: "Yes, buyers can often take advantage of flexible payment plans and exclusive offers when purchasing flats at The Medallion Mohali. It is advised to check with the sales team for ongoing promotions or discount offers."
-    //     },
-    //     {
-    //         faqQues: "Is The Medallion Mohali a good investment opportunity?",
-    //         faqAns: "The Medallion Mohali is considered a strong investment opportunity due to its prime location on Airport Road, world-class amenities, and rising demand for high-end residential properties in Mohali. The project offers strong appreciation potential, making it attractive for both homebuyers and investors."
-    //     },
-    //     {
-    //         faqQues: "What is the possession timeline for The Medallion Mohali?",
-    //         faqAns: "The possession date for Medallion flats in Mohali varies by phase. It is recommended to check with the developer for the exact timeline and updates on the construction progress to ensure you are informed about possession schedules."
-    //     },
-    //     {
-    //         faqQues: "Who is the developer behind The Medallion Mohali?",
-    //         faqAns: "The Medallion Mohali is developed by a reputed builder with a strong portfolio in the real estate sector. The project is known for its high-quality construction, attention to detail, and timely delivery."
-    //     }
-    // ]
-
     let faqData = [
         {
-            faqQues: "What types of apartments are available at Medallion Aurum?",
-            faqAns: "Medallion Aurum offers luxurious 3+1 BHK and 4+1 BHK apartments designed for spacious living, featuring modern amenities and high-end finishes."
+            faqQues: "What is Sushma Belleza?",
+            faqAns: "Sushma Belleza is a premium residential project located in Sushma Downtown, a 60-acre integrated township in Zirakpur, Punjab. It offers spacious apartments with modern amenities and a focus on green living."
         },
         {
-            faqQues: "Where is Medallion Aurum located?",
-            faqAns: "Medallion Aurum is located in Sector 67, Mohali, with convenient access to Chandigarh International Airport, IT City Mohali, educational institutions, hospitals, and major business hubs."
+            faqQues: "Where is Sushma Belleza located?",
+            faqAns: "Sushma Belleza is strategically located on Airport Road, Zirakpur, Punjab. This provides excellent connectivity to Chandigarh, the airport, and other key destinations in the region."
         },
         {
-            faqQues: "What are the key amenities provided at Medallion Aurum?",
-            faqAns: "Residents enjoy a range of amenities, including a clubhouse, gymnasium, swimming pool, spa, indoor games, landscaped green spaces, sports facilities like tennis and basketball courts, and 24x7 security with a 5-tier system."
+            faqQues: "What types of apartments are available in Sushma Belleza?",
+            faqAns: "Sushma Belleza offers a variety of spacious apartments, including 2 BHK and 3 BHK configurations, designed to meet the needs of different families."
         },
         {
-            faqQues: "Is Medallion Aurum a gated community?",
-            faqAns: "Yes, Medallion Aurum is a gated community with a secure environment, offering 24x7 CCTV surveillance, security guards, and access control systems for the safety of all residents."
+            faqQues: "What are the key amenities offered at Sushma Belleza?",
+            faqAns: "Residents of Sushma Belleza enjoy a wide range of amenities, including a clubhouse, swimming pool, gym, landscaped parks, kids' play areas, and more."
         },
         {
-            faqQues: "What is the size range of apartments at Medallion Aurum?",
-            faqAns: "The apartments range from approximately 2,950 sq. ft. to 3,900 sq. ft., offering ample living space, thoughtful design, and modern interiors."
+            faqQues: "What is the price range of apartments in Sushma Belleza?",
+            faqAns: ""
         },
-        {
-            faqQues: "What is Mivan technology, and how is it used in the construction of Medallion Aurum?",
-            faqAns: "Mivan technology is an advanced construction technique used for formwork, ensuring high-quality, durable, and earthquake-resistant buildings. It enhances the overall structural integrity and timely project completion."
-        },
-        {
-            faqQues: "Are there recreational facilities for children and families?",
-            faqAns: "Yes, Medallion Aurum offers a dedicated children's play area, green spaces for family outings, sports courts, indoor game zones, and more to cater to the recreational needs of residents."
-        },
-        {
-            faqQues: "Is Medallion Aurum suitable for investment purposes?",
-            faqAns: "Absolutely! The strategic location, high-end amenities, robust construction quality, and promising growth in Mohali’s real estate market make Medallion Aurum an excellent investment option."
-        },
-        {
-            faqQues: "What is the proximity of Medallion Aurum to key landmarks?",
-            faqAns: "Medallion Aurum enjoys close proximity to Chandigarh International Airport, IT City Mohali, reputed schools, hospitals, shopping centers, and various commercial hubs."
-        },
-
-        {
-            faqQues: "Is there adequate parking available?",
-            faqAns: "Yes, Medallion Aurum provides ample covered parking spaces for residents and visitors, ensuring a hassle-free experience."
-        },
-        {
-            faqQues: "Can I book a site visit for Medallion Aurum?",
-            faqAns:"Yes, site visits can be arranged. Please contact our sales team or visit our website to schedule an appointment for a guided tour of the property."
-        },
-        {
-            faqQues: "What is the open space ratio at Medallion Aurum?",
-            faqAns: "Medallion Aurum boasts 82% open space, ensuring a serene living environment with lush green landscapes and natural surroundings."
-        },
+        
     ]
 
     const handleFaqToggle = (index) => {
@@ -106,7 +39,7 @@ function Faqs() {
             <div>
                 <Heading heading={'Frequently asked questions'}
                     subHeading={''}
-                    headingColor={'#171717'}
+                    headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
                     subHeadingClass={'font-supera600'}
                 />

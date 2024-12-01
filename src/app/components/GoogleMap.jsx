@@ -63,11 +63,8 @@ const DynamicTabs = ({ className = '', contentHeight = '', tabs, imageClass='' }
                             aria-label={`Tab ${tab.name}`}
                             onClick={() => setActiveTab(index)}
                             className={`outline-none py-2 px-5 lg:px-10 font-supera600 border ${activeTab === index
-                                    ? `text-white ${process.env.basePath === ''
-                                        ? 'bg-backgroud-theme-local'
-                                        : 'bg-backgroud-theme-production'
-                                    } bg-right-bottom border-transparent`
-                                    : 'border-gray-300 bg-white text-black'
+                                    ? `text-white bg-[#4E4E4E] border-transparent`
+                                    : 'border-gray-300 bg-white text-[#4E4E4E]'
                                 } ${index === 0 ? 'rounded-bl-2xl sm:rounded-bl-3xl' : ''} ${index === tabs.length - 1 ? 'rounded-br-2xl sm:rounded-br-3xl' : ''
                                 } text-sm lg:text-lg tracking-wide`}
                         >

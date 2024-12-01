@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
             <GoogleMap
                 className={'section-gap-inner w-full h-[60vh]'}
                 tabs={tabsConfig}
-            />
+            />   
             <ContactInfo />
             <Downloads />
             <AvatarModel />

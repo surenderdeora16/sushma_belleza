@@ -64,7 +64,7 @@ const data = {
 
 const OurProducts = () => {
     const { activeSectionTab } = useActivetab()
-    const [selectedOption, setSelectedOption] = useState('3+1 BHK');
+    const [selectedOption, setSelectedOption] = useState('3BHK');
     const [visible, setVisible] = useState(true);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [event, setEvent] = useState('Our Products')

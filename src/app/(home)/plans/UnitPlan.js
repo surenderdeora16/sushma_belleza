@@ -1,41 +1,62 @@
 const unitPlan = [
     {
-        tab: '3+1 BHK',
+        tab: 'Low rise - 3BHK',
         tab_id: '1',
         sizes: [
             {
-                size: '2950 Sq.Ft',
+                size: '2300 sq.ft.',
                 type: {
                     type1: {
                         images: "/images/unit-plan-map1.webp",
                         Image3D: "",
-                        title: "EXCLUSIVE 3+1 Apartment",
-                        size: '2950 Sq.Ft',
+                        title: "EXCLUSIVE 3BHK",
+                        size: '2300 sq.ft.',
                         type: 'Type-1',
                         desc: "Where comfort meets happiness, everyday!",
-                        reraCarpetArea: '1823.61 Sq.Ft',
-                        balconyArea: '383.61 Sq.Ft',
+                        reraCarpetArea: '1317.45 sq.ft.',
+                        SuperArea: '2300 sq.ft.',
                     },
                 },
             },
         ],
     },
     {
-        tab: '4+1 BHK',
+        tab: 'High rise - 3BHK+s',
         tab_id: '2',
         sizes: [
             {
-                size: '3900 Sq.Ft',
+                size: '2800 sq.ft.',
                 type: {
                     type1: {
                         images: "/images/unit-plan-map2.webp",
                         Image3D: "",
-                        title: "EXCLUSIVE 4+ 1 Apartment",
-                        size: '3900 Sq.Ft',
+                        title: "EXCLUSIVE 3BHK",
+                        size: '2800 sq.ft.',
                         type: 'Type-1',
                         desc: "Where comfort meets happiness, everyday!",
-                        reraCarpetArea: '2349.69 Sq.Ft',
-                        balconyArea: '556 Sq.Ft',
+                        reraCarpetArea: '1689.38 Sq.Ft',
+                        SuperArea: '2800 sq.ft.',
+                    },
+                },
+            },
+        ],
+    },
+    {
+        tab: 'High rise - 4BHK+s',
+        tab_id: '3',
+        sizes: [
+            {
+                size: '3400 sq.ft.',
+                type: {
+                    type1: {
+                        images: "/images/unit-plan-map2.webp",
+                        Image3D: "",
+                        title: "EXCLUSIVE 4BHK +s",
+                        size: '3400 sq.ft.',
+                        type: 'Type-1',
+                        desc: "Where comfort meets happiness, everyday!",
+                        reraCarpetArea: '2076.29 Sq.Ft',
+                        SuperArea: '3400 sq.ft.',
                     },
                 },
             },

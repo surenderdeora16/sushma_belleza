@@ -115,8 +115,8 @@ const Plans = () => {
                             <path fillRule="evenodd" clipRule="evenodd" d="M20.4309 20.5811L4.27019 36.7418L0.230713 32.7024L14.3717 18.5613L0.230713 4.42033L4.27019 0.380859L20.4309 16.5416C20.9665 17.0773 21.2674 17.8038 21.2674 18.5613C21.2674 19.3189 20.9665 20.0454 20.4309 20.5811Z" />
                         </svg>
                     </button>
-                    <div className=' w-full flex-col sm:flex-row flex justify-between items-start bxxs:items-center lg:px-5'>
-                        <div className='pt-2 bxxs:pt-0  w-full sm:w-auto'>
+                    <div className=' w-full flex-col cmd:flex-row flex justify-between items-start cmd:items-center lg:px-5'>
+                        <div className='pt-2 bxxs:pt-0 sm:pr-1 cmd:pr-0 w-full cmd:w-auto overflow-x-auto overflow-y-clip'>
                             <div className={`${activeViewBtn === '2Dview' ? 'w-full opacity-100 duration-500 relative z-20  flex self-start  justify-between sm:justify-center items-center gap-1.5 xs:gap-3 md:gap-5 border-b-[2px] sm:border-none border-[#D9D9D9]' : 'flex self-start justify-start xs:justify-center items-center gap-4 md:gap-[33.50px] opacity-0 duration-500 absolute z-0'}`}>
                                 {unitPlan.map((unit, index) => (
                                     <div
@@ -124,18 +124,18 @@ const Plans = () => {
                                         onClick={() => {
                                             handleTabChange(index)
                                         }}
-                                        className={`mb-1 cxs:mb-0 ${selectedUnitTab?.tab_id === unit?.tab_id ? ' text-[#000] sm:text-[#fff] bg-transparent sm:bg-[#000]' : 'text-[#868484] sm:text-[#000] bg-[#fff] sm:bg-[#efefef] '} w-full h-[32px] md:h-[36px] px-5 rounded-[9.42px] sm:hover:bg-[#000] sm:hover:text-white  cursor-pointer sm:border-[0.94px] border-[#202622]  leading-tight cxs:leading-normal whitespace-nowrap font-supera700 sm:font-supera500 text-lg xs:text-xl sm:text-[14px] cmd:text-[16px] tracking-[8%] text-center flex justify-center items-center uppercase`}>
+                                        className={`mb-1 cxs:mb-0 ${selectedUnitTab?.tab_id === unit?.tab_id ? ' text-[#000] sm:text-[#fff] bg-transparent sm:bg-[#474536]' : 'text-[#868484] sm:text-[#4B4B4B] bg-[#fff] sm:bg-[#EFEFEF] '} w-full h-[22px] cxs:h-[32px] md:h-[36px] px-4 xs:px-0 sm:px-5 rounded-[9.42px] sm:hover:bg-[#474536] sm:hover:text-white  cursor-pointer sm:border-0 border-[#202622]  leading-tight cxs:leading-normal whitespace-nowrap font-supera700 sm:font-supera500 text-[13px] cxs:text-sm cmd:text-[16px] tracking-[8%] text-center flex justify-center items-center uppercase`}>
                                         {unit?.tab}
                                     </div>
                                 ))}
-                                <div className={`block sm:hidden  w-1/2  rounded border-b-[4px] border-b-[#000] absolute z-30 top-[95%] ${selectedUnitTab?.tab_id == 1 ? 'left-[0%] duration-300' : 'left-[100%] translate-x-[-100%] duration-300'}`}></div>
+                                <div className={`block sm:hidden  w-1/3  rounded border-b-[4px] border-b-[#000] absolute z-30 top-[95%] ${selectedUnitTab?.tab_id == 1 ? 'left-[0%] duration-300' : selectedUnitTab?.tab_id == 2 ? 'left-[50%] translate-x-[-50%] duration-300' : 'left-[100%] translate-x-[-100%] duration-300'}`}></div>
 
                             </div>
                         </div>
-                        <div className='self-start bxxs:self-start mt-4 xs:mt-5 sm:mt-0 mb-0.5 sm:mb-0 w-[170px] h-[33px] md:h-[42px] border-[1.07px] rounded-[7px] sm:rounded-[10px]  border-[#000] overflow-hidden  relative  flex justify-center'>
-                            <div onClick={() => setActiveViewbtn('2Dview')} className={`w-1/2 h-full ${activeViewBtn === '2Dview' ? 'text-[#fff] ' : 'text-[#000]'} px-2 sm:px-0 cursor-pointer relative z-30 font-supera600 sm:font-supera500 text-[13px] sm:text-[14px] md:text-[15px] capitalize tracking-wide text-center flex items-center justify-center`}>2D View</div>
-                            <div onClick={() => setActiveViewbtn('3Dview')} className={`w-1/2 h-full ${activeViewBtn === '3Dview' ? 'text-[#fff] ' : 'text-[#000]'} px-2 sm:px-0 cursor-pointer relative z-30 font-supera600 sm:font-supera500 text-[13px] sm:text-[14px] md:text-[15px] capitalize tracking-wide text-center flex items-center justify-center`}>3D View</div>
-                            <div className={`w-[50%] h-full  sm:rounded-[7.47px] bg-[#000] absolute z-20 top-0 ${activeViewBtn === '2Dview' ? 'left-[0%] duration-300' : 'left-[50%] duration-300'}  `}></div>
+                        <div className='self-start bxxs:self-start mt-4 xs:mt-5 cmd:mt-0 mb-0.5 sm:mb-0 w-[170px] h-[33px] md:h-[42px] border-[1.07px] rounded-[7px] sm:rounded-[10px]  border-[#474536] overflow-hidden  relative  flex justify-center'>
+                            <div onClick={() => setActiveViewbtn('2Dview')} className={`w-1/2 h-full ${activeViewBtn === '2Dview' ? 'text-[#fff] ' : 'text-[#474536]'} px-2 sm:px-0 cursor-pointer relative z-30 font-supera600 sm:font-supera500 text-[13px] sm:text-[14px] md:text-[15px] capitalize tracking-wide text-center flex items-center justify-center`}>2D View</div>
+                            <div onClick={() => setActiveViewbtn('3Dview')} className={`w-1/2 h-full ${activeViewBtn === '3Dview' ? 'text-[#fff] ' : 'text-[#474536]'} px-2 sm:px-0 cursor-pointer relative z-30 font-supera600 sm:font-supera500 text-[13px] sm:text-[14px] md:text-[15px] capitalize tracking-wide text-center flex items-center justify-center`}>3D View</div>
+                            <div className={`w-[50%] h-full  sm:rounded-[7.47px] bg-[#474536] absolute z-20 top-0 ${activeViewBtn === '2Dview' ? 'left-[0%] duration-300' : 'left-[50%] duration-300'}  `}></div>
                         </div>
                     </div>
                     <div className={` ${activeViewBtn === '2Dview' ? 'h-full opacity-100 duration-500 w-full relative z-20 flex items-start' : 'opacity-0 duration-0 absolute z-0'}`}>
@@ -202,7 +202,7 @@ const Plans = () => {
                                     </div>
                                     <div className='w-full  lg:w-[195px] sm:pl-8 '>
                                         <p className='font-supera600 text-[13px] sm:text-[12px] lg:text-[14px] 2xl:text-[15.48px] text-[#737373] relative after:absolute after:top-[103%] after:left-0 after:w-[60%] after:h-[1.05px] after:bg-[#000]'>Balcony Area</p>
-                                        <h5 className='mt-2 font-supera700 text-[15px] xs:text-[19px] sm:text-[15px] lg:text-[16px] 2xl:text-[19px] text-[#000]'>{selectedTypeData?.balconyArea}</h5>
+                                        <h5 className='mt-2 font-supera700 text-[15px] xs:text-[19px] sm:text-[15px] lg:text-[16px] 2xl:text-[19px] text-[#000]'>{selectedTypeData?.SuperArea}</h5>
                                     </div>
                                     {/* <div className='w-full sm:pr-8 lg:w-[195px] sm:border-r-[1.5px] border-r-[#000]'>
                                                 <p className='font-supera600 text-[11px] xs:text-[13px] sm:text-[12px] lg:text-[14px] 2xl:text-[15.48px] text-[#737373] relative after:absolute after:top-[103%] after:left-0 after:w-[60%] after:h-[1.05px] after:bg-[#000]'>External Wall Area</p>

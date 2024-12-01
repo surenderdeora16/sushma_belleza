@@ -77,6 +77,10 @@ module.exports = {
         'GIT-production': `url('/medallionaurum/images/getintouchbg.png')`,
         'GIT-local': `url('/images/getintouchbg.png')`,
 
+        //Contact Info BG IMG 
+        'ContactInfoBG-production': `url('/sushmabelleza/images/contactinfobg-img.webp')`,
+        'ContactInfoBG-local': `url('/images/contactinfobg-img.webp')`,
+
       },
       screens: {
         'xxs': '340px',

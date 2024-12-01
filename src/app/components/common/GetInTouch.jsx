@@ -30,8 +30,8 @@ const GetInTouch = () => {
 
     return (
         <section id='contact-us' className='get-in-touch section-gap scroll-mt-24'>
-            <div className={`w-full h-full relative ${process.env.basePath == '' ? 'bg-GIT-local md:bg-transparent-local' : 'bg-GIT-production md:bg-transparent-production'} bg-fill bg-center-top bg-no-repeat sm:bg-[#000] flex`}>
-                <div className='h-full w-full absolute top-0 left-0 bg-[#000000bf] z-20'></div>
+            <div className={`w-full h-full relative ${process.env.basePath == '' ? 'bg-GIT-local md:bg-transparent-local' : 'bg-GIT-production md:bg-transparent-production'} bg-cover bg-center-top bg-no-repeat sm:bg-[#000] flex`}>
+                <div className='h-full w-full absolute top-0 left-0 bg-[#2B2B2B] z-20'></div>
                 <div className='z-30 relative hidden md:block w-[35%] h-full'>
                     <div className='w-full h-[750px] relative'>
                         <Image src={SideImg} fill className='object-cover object-top bg-center h-full'  alt="" />
