@@ -18,7 +18,7 @@ const HomeLoanFacility = () => {
             <div>
                 <Heading heading={'Approved Banks'}
                     subHeading={'Easy & Hassle-Free Bank Loan Options for Your Dream Home'}
-                    headingColor={'#0A1325'}
+                    headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
                     subHeadingClass={'font-supera600'}
                 />

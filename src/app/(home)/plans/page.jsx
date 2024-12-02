@@ -14,37 +14,40 @@ import BottomMobileBanner from '@/app/images/plans-bottombannersmallscreen.webp'
 import DynamicLightbox from '@/app/components/common/DynamicLightbox';
 
 const sitePlan = [
-    "Entrance Plaza",
-    "Exit Plaza",
-    "Water Plaza",
-    "Welcome Water Body",
-    "Clubhouse Drop-off Area",
-    "Club Pool Area",
-    "Experience Walk ",
-    "Driveway",
-    "Play Courts",
-    "Cricket Practice Pitch",
-    "Senior Citizen Court",
-    "Dense Planting",
-    "Butterfly Garden",
-    "Club Lawn With Cabana",
-    "Building Drop-Off Plaza",
-    "Internal Courtyard",
-    "Water Body with Signage",
-    "Open Air Amphitheatre",
-    "Outdoor Gym",
-    "Yoga Lawn With Wooden Decks",
-    "Central Lawn",
-    "Viewing Deck",
-    "Fragrance Garden",
-    "Kids Play Area",
-    "Commercial Plaza"
+    "ENTRANCE / EXIT",
+    "ROYAL AVENUE",
+    "WATER CASCADE",
+    "TOWER DROP OFFS",
+    "PRIVATE LAWN",
+    "JOGGING / WALKING TRACK",
+    "KID'S PLAY AREA ",
+    "SNAKE & LADDER PLAZA (COVERED)",
+    "PRAYER / MEDITATION LAWN",
+    "OPEN AIR GYM",
+    "YOGA LAWN",
+    "REFLEXOLOGY",
+    "CENTRAL LAWN",
+    "ACCENT MOUNDS",
+    "COLOUR GARDEN",
+    "ORGANIC / HERBAL GARDEN",
+    "SENIOR CITIZEN LAWN (ELDER'S COURT)",
+    "SHOPPING PLAZA",
+    "CRICKET PRACTICE PITCH",
+    "HALF BASKETBALL COURT",
+    "BADMINTON COURT",
+    "SEATING LAWN/ PLAZA",
+    "AMPHITHEATRE",
+    "PALM PLAZA / ORCHARD",
+    "SEATING PAVILION",
+    "TREE GROVES",
+    "KIDS PLANTATION AREA",
+    "CLUB ENTRANCE",
 ];
 
 const towerPlans = [
-    { label: 'Tower A-B-C-D-E', image: towerPlanImg2?.src },
-    { label: 'Tower F-G-H', image: towerPlanImg1?.src },
-    { label: 'Tower I-J', image: towerPlanImg2?.src },
+    { label: 'Low rise 2300 sqft', image: towerPlanImg2?.src },
+    { label: 'High rise 2800 sqft', image: towerPlanImg1?.src },
+    { label: 'high rise 3400 sqft', image: towerPlanImg2?.src },
 ];
 
 const page = () => {
@@ -61,8 +64,8 @@ const page = () => {
 
             <section id='plan' className='section-gap-inner scroll-mt-24 sm:scroll-mt-20'>
                 <Heading heading={'Unit plans'}
-                    subHeading={'Explore The medallion aurum floor plans, Site plan & Tower plans'}
-                    headingColor={'#0A1325'}
+                    subHeading={'Explore Sushma Belleza floor plans, Site plan & Tower plans'}
+                    headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
                     subHeadingClass={'font-supera600'}
                 />
@@ -71,7 +74,7 @@ const page = () => {
             </section>
 
             <section className='section-gap'>
-                <h5 style={{ lineHeight: 'normal' }} className={`mb-[22px] uppercase font-supera700 px-2  text-base xs:text-lg cxs:text-[22px] sm:text-[30px] cmd:text-[35px] text-center text-[#0A1325]`}>Experience outdoor living, Balconies as big as rooms!</h5>
+                <h5 style={{ lineHeight: 'normal' }} className={`mb-[22px] uppercase font-supera700 px-2  text-base xs:text-lg cxs:text-[22px] sm:text-[30px] cmd:text-[35px] text-center text-[#252525]`}>Experience outdoor living, Balconies as big as rooms!</h5>
 
                 <div className='w-full h-auto 2xl:h-[600px] 3xl:h-auto  relative'>
                     <Image
@@ -89,8 +92,8 @@ const page = () => {
                     <div className='xl:container mx-auto px-5 sm:pt-20'>
                         <Heading
                             heading={'Site plans'}
-                            subHeading={'Explore The medallion aurum floor plans, Site plan & Tower plans'}
-                            headingColor={'#0A1325'}
+                            subHeading={'Explore Sushma Belleza floor plans, Site plan & Tower plans'}
+                            headingColor={'#474536'}
                             subHeadingColor={'#5A5454'}
                             subHeadingClass={'font-supera600'}
                         />
@@ -102,15 +105,15 @@ const page = () => {
                                     title="Site plans"
                                     zoom={true}
                                     keyboardNavigation={true}
-                                    className={"cursor-pointer object-cover"}
+                                    className={"cursor-pointer object-contain"}
                                 />
                             </div>
                             <div className='border sm:border-none border-[#D9D9D9] rounded-xl'>
                                 {/* Changed to use CSS grid with auto-flow column for vertical indexing */}
-                                <ol className="grid grid-rows-13 sm:grid-rows-9 grid-flow-col auto-cols-fr gap-x-4 sm:gap-x-2 gap-y-6 sm:gap-y-4 2xl:gap-y-6 px-3 pb-5 sm:pb-24 pt-5 sm:pt-10 md:pt-14">
+                                <ol className="grid grid-rows-14 sm:grid-rows-10 grid-flow-col auto-cols-fr gap-x-4 sm:gap-x-2 gap-y-6 sm:gap-y-4 2xl:gap-y-6 px-3 pb-5 sm:pb-24 pt-5 sm:pt-10 md:pt-14">
                                     {sitePlan?.map((sitePlan, index) => (
                                         <li key={index} className="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex ">
-                                            <span className={`pr-1 font-supera600 text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-right-bottom`}>{index + 1}&nbsp;</span>{sitePlan}
+                                            <span className={`pr-1 font-supera600 text-transparent bg-clip-text bg-[#565555]`}>{index + 1}&nbsp;</span>{sitePlan}
                                         </li>
                                     ))}
                                 </ol>
@@ -126,7 +129,7 @@ const page = () => {
                         <div className='hidden lg:block'>
                             <Heading heading={'tower plans'}
                                 subHeading={'Click on the buttons below to view the tower plans in detail!'}
-                                headingColor={'#0A1325'}
+                                headingColor={'#474536'}
                                 subHeadingColor={'#5A5454'}
                                 subHeadingClass={'font-supera600'}
                                 textAlign={'left'}
@@ -135,7 +138,7 @@ const page = () => {
                         <div className='block lg:hidden'>
                             <Heading heading={'tower plans'}
                                 subHeading={'Click on the buttons below to view the tower plans in detail!'}
-                                headingColor={'#0A1325'}
+                                headingColor={'#4B4B4B'}
                                 subHeadingColor={'#5A5454'}
                                 subHeadingClass={'font-supera600'}
                             />
@@ -146,9 +149,9 @@ const page = () => {
                                     <li
                                         key={index}
                                         onClick={() => setSelectedPlan(index)}
-                                        className={`w-[90%] lg:w-[400px] h-[45px] cxs:h-[50px] lg:h-[54px] mx-auto lg:mx-0 font-supera600 tracking-wider text-sm xs:text-base cxs:text-[21px] flex justify-center items-center border-[1.34px] border-[#474536] rounded-full cursor-pointer transition-colors ${selectedPlan === index
-                                            ? 'bg-black text-white'
-                                            : ''
+                                        className={`w-[90%] lg:w-[400px] h-[45px] cxs:h-[50px] lg:h-[54px] mx-auto lg:mx-0 font-supera600 tracking-wider text-sm xs:text-base cxs:text-[21px] flex justify-center items-center border-[1.34px] rounded-full cursor-pointer transition-colors ${selectedPlan === index
+                                            ? 'bg-[#A27D27] text-white border-[#A27D27]'
+                                            : 'text-[#000000] border-[#474536]'
                                             }`}
                                     >
                                         {plan.label}

@@ -91,8 +91,8 @@ const Page = () => {
             <section className="section-gap">
                 <Heading
                     heading={'SPECIFICATIONS'}
-                    subHeading={'Explore The medallion Aurum mohali  Project gallery & Construction Updates.'}
-                    headingColor={'#0A1325'}
+                    subHeading={'Explore Sushma Belleza  Project gallery & Construction Updates.'}
+                    headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
                     subHeadingClass={'font-supera600'}
                 />

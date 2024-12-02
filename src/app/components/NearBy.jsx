@@ -8,33 +8,25 @@ import NearbyImg2 from '@/app/images/nearby-img2.webp'
 import NearbyImg3 from '@/app/images/nearby-img3.webp'
 import NearbyImg4 from '@/app/images/nearby-img4.webp'
 import NearbyImg5 from '@/app/images/nearby-img5.webp'
-import NearbyImg6 from '@/app/images/nearby-img6.webp'
 import NearbyImg7 from '@/app/images/nearby-img7.webp'
 import NearbyImg8 from '@/app/images/nearby-img8.webp'
 import NearbyImg9 from '@/app/images/nearby-img9.webp'
-import NearbyImg10 from '@/app/images/nearby-img10.webp'
-import NearbyImg11 from '@/app/images/nearby-img11.webp'
 import NearbyImg12 from '@/app/images/nearby-img12.webp'
 import NearbyImg13 from '@/app/images/nearby-img13.webp'
 
 
 
 const nearbyData = [
-    { image: NearbyImg1, distance: '01', unit: 'KM', place: 'Chandigarh' },
-    { image: NearbyImg2, distance: '1.2', unit: 'KM', place: 'Amity university' },
-    { image: NearbyImg3, distance: '1.5', unit: 'KM', place: 'Indian School of Business' },
-    { image: NearbyImg4, distance: '2.5', unit: 'KM', place: 'PCA Stadium Mohali' },
-    { image: NearbyImg5, distance: '2.5', unit: 'KM', place: 'Railway Station Mohali' },
-    { image: NearbyImg6, distance: '3.1', unit: 'KM', place: 'Mohali Golf Range' },
-    { image: NearbyImg7, distance: '3.3', unit: 'KM', place: 'Fortis Hospital' },
-    { image: NearbyImg8, distance: '4.3', unit: 'KM', place: 'Infosys' },
+    { image: NearbyImg13, distance: '01', unit: 'KM', place: 'manav mangal smart school zirakpur' },
+    { image: NearbyImg2, distance: '02', unit: 'KM', place: 'Starbucks' },
+    { image: NearbyImg3, distance: '02', unit: 'KM', place: 'Inox Cinema' },
+    { image: NearbyImg4, distance: '02', unit: 'KM', place: 'Dominos' },
+    { image: NearbyImg8, distance: '02', unit: 'KM', place: 'Big Bazaar' },
     { image: NearbyImg9, distance: '05', unit: 'KM', place: 'Airocity' },
-    { image: NearbyImg10, distance: '05', unit: 'KM', place: 'Manav Rachna International School' },
-    { image: NearbyImg11, distance: '06', unit: 'KM', place: 'Plaksha university' },
-    { image: NearbyImg12, distance: '8.6', unit: 'KM', place: 'Chandigarh International Airport' },
-    { image: NearbyImg13, distance: '09', unit: 'KM', place: 'Elante Mall' },
-
-
+    { image: NearbyImg12, distance: '07', unit: 'KM', place: 'Chandigarh International Airport' },
+    { image: NearbyImg1, distance: '11', unit: 'KM', place: 'Chandigarh' },
+    { image: NearbyImg7, distance: '15', unit: 'KM', place: 'fortis Hospital mohali' },
+    { image: NearbyImg5, distance: '15', unit: 'KM', place: 'Railway Station' },
 ]
 
 const NearBy = () => {
@@ -45,7 +37,7 @@ const NearBy = () => {
             <div className='2xl:container mx-auto'>
                 <div>
                     <h2 className='px-3 font-supera700 leading-tight text-[27px] sm:text-[30px] cmd:text-[32px] text-center text-[#0A1325] uppercase'>
-                        <span className='font-supera600'>Nearby,</span> <strong>The Medallion Aurum</strong>
+                        <span className='font-supera600'>Nearby,</span> <strong>Sushma Belleza</strong>
                     </h2>
                 </div>
                 <div className='my-[20px] 3xl:my-[25px] px-5 relative'>

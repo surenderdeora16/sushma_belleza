@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState, useCallback } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import SubHeader from '@/app/components/common/SubHeader'
 import Heading from '@/app/components/common/Heading'
@@ -36,7 +36,7 @@ const page = () => {
         {
             type: "video",
             src: "/videos/Location-video.mp4",
-            alt: "Medallion Aurum Location Video",
+            alt: "Sushma Belleza Location Video",
             class: "col-span-12",
         },
     ]
@@ -88,7 +88,7 @@ const page = () => {
                 <section className='xl:container mx-auto px-5'>
                     <div>
                         <h4 className='text-[#303030] font-supera700 text-center cmd:text-left  text-2xl  cxs:text-3xl cmd:text-4xl lg:text-4xl xl:text-[42px] leading-tight uppercase'>Why <br className="hidden cmd:block" />
-                            Mohali- <br className='block cmd:hidden' /> the medallion aurum?
+                            Mohali- <br className='block cmd:hidden' /> Sushma Belleza?
                         </h4>
 
                         <div className='grid grid-cols-2 gap-y-10 cmd:gap-y-0 cmd:flex mt-14'>
@@ -154,7 +154,7 @@ const page = () => {
                                     />
                                 </div>
                                 <h6 className='capitalize font-supera600 text-[#262623] leading-tight lg:leading-snug text-lg sm:text-xl 2xl:text-2xl'>Best Investment <br /> Opportunities.</h6>
-                                <p className='tracking-wider capitalize text-[#646363] font-supera600 text-[11px] bxxs:text-xs cxs:text-[13px] xl:text-sm 2xl:text-base'>Medallion Aurum presents the Best Investment Opportunity with its prime location, modern amenities, and strong growth potential, offering high returns and a lifestyle of luxury and convenience for both residents and investors.</p>
+                                <p className='tracking-wider capitalize text-[#646363] font-supera600 text-[11px] bxxs:text-xs cxs:text-[13px] xl:text-sm 2xl:text-base'>Sushma Belleza presents the Best Investment Opportunity with its prime location, modern amenities, and strong growth potential, offering high returns and a lifestyle of luxury and convenience for both residents and investors.</p>
                             </div>
                         </div>
                     </div>
@@ -165,15 +165,15 @@ const page = () => {
                 <section>
                     <Heading
                         heading={'Location map'}
-                        subHeading={'Strategically located in the heart of Mohali, Medallion Aurum offers seamless connectivity to Chandigarh, IT hubs, and key urban conveniences.'}
-                        headingColor={'#0A1325'}
+                        subHeading={'Sushma Belleza offers premium, modern living with spacious apartments designed for comfort and style. Located in a prime sector 67 of Mohali , these luxury residences provide world-class amenities and a sophisticated urban lifestyle.'}
+                        headingColor={'#474536'}
                         subHeadingColor={'#5A5454'}
                         headingClass={'font-supera600'}
                         subHeadingClass={'font-supera600'}
                     />
                     <div className='flex flex-col cmd:flex-row w-full h-[90vh]'>
                         <div className='w-full cmd:w-[65%] h-[80%] cmd:h-full  mx-auto'>
-                            <GoogleMap className={'w-full h-full'} imageClass={'object-[25%_50%] lg:object-center'} tabs={tabsConfig} />
+                            <GoogleMap className={'w-full h-full'} imageClass={'object-contain'} tabs={tabsConfig} />
                         </div>
                         <div className=" w-full cmd:w-[35%] h-1/2 cmd:h-full -mt-0.5 cmd:mt-0">
                             {/* <div className="w-full 2xl:container mx-auto h-[40vh] md:h-[60vh] lg:h-[80vh] relative">

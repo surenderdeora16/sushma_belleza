@@ -25,9 +25,20 @@ function Faqs() {
         },
         {
             faqQues: "What is the price range of apartments in Sushma Belleza?",
-            faqAns: ""
+            faqAns: "contact Reality Nivesh-sushma service partner  sales team for detailed pricing information & current offers."
         },
-        
+        {
+            faqQues: "Is Sushma Belleza RERA approved?",
+            faqAns: "Yes, Sushma Belleza is approved by RERA (Real Estate Regulatory Authority). [Provide the RERA registration number if available."
+        },
+        {
+            faqQues: "What are the payment plan options available for Sushma Belleza?",
+            faqAns: "Sushma belleza offers multiple payment plans such as down payment options, installment plans, and any special offers."
+        },
+        {
+            faqQues: "WWhat is the possession status of Sushma Belleza?",
+            faqAns: "Sushma belleza under construction project estimated completion December 2027."
+        },
     ]
 
     const handleFaqToggle = (index) => {

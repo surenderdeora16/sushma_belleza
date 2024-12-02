@@ -94,7 +94,7 @@ export default function Home() {
                     />
                 </div>
                 <div className='block md:hidden px-5 sm:px-5 mb-[22px] xl:container mx-auto'>
-                    <h2 className={`uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom`}>key Highlights</h2>
+                    <h2 className={`uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-cover bg-bottom`}>key Highlights</h2>
                     <p className={`font-supera600 capitalize cmd:mt-1.5  max-w-full tracking-wider sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#fff]`}>Your Dream Home Awaits you to Own Exquisite Site in Sushma Belleza</p>
                 </div>
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
@@ -134,7 +134,7 @@ export default function Home() {
                 <div className="hidden md:flex gap-x-10">
                     <div className="flex flex-col boder-2 border-black whitespace-nowrap">
                         <span className="font-supera600 text-[20px] lg:text-[22px] text-[#595959] capitalize">sushma Belleza</span>
-                        <strong className={`font-supera700 text-[26px] cmd:text-[30px] xl:text-[34px] 2xl:text-[38px] text-[#000] capitalize text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-right-bottom bg-no-repeat bg-cover`}>Lifestyle Amenities</strong>
+                        <strong className={`font-supera700 text-[26px] cmd:text-[30px] xl:text-[34px] 2xl:text-[38px] text-[#000] capitalize text-transparent bg-clip-text bg-[#8e6c1c]`}>Lifestyle Amenities</strong>
                     </div>
                     <p className="font-supera600 text-sm lg:text-[15px] xl:text-base 2xl:text-lg text-[#000] capitalize">
                         Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.

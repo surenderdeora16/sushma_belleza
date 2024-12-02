@@ -36,7 +36,7 @@ const DynamicLightbox = forwardRef(
       const imageSrc = images[currentIndex]?.src || images[currentIndex] || sliderimages[currentIndex]?.src || sliderimages[currentIndex]
       const link = document.createElement("a");
       link.href = imageSrc;
-      link.download = `the_medallion_${title}`;
+      link.download = `Sushma_Belleza${title}`;
       link.click();
     };
 

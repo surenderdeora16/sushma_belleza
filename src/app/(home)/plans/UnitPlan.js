@@ -49,7 +49,7 @@ const unitPlan = [
                 size: '3400 sq.ft.',
                 type: {
                     type1: {
-                        images: "/images/unit-plan-map2.webp",
+                        images: "/images/unit-plan-map3.webp",
                         Image3D: "",
                         title: "EXCLUSIVE 4BHK +s",
                         size: '3400 sq.ft.',

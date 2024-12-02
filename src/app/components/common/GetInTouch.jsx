@@ -61,7 +61,7 @@ const GetInTouch = () => {
                                 mobile: `${values.mobile}`,
                                 action: "getintouch",
                             };
-                            const data = await AxiosHelper.postData(`/medallion-aurum-enquiry/`, payload);
+                            const data = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
 
                             setLoaderShow(false);
                             if (data && data.status) {

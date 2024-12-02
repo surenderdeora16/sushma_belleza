@@ -59,21 +59,21 @@ const superaGothic = localFont({
 })
 
 const openGraphData = {
-  url: "https://medallionaurum.realtynivesh.com/",
+  url: "https://sushmagroup.realtynivesh.com/sushmabelleza/",
   type: "website",
-  title: "The Medallion Aurum",
-  description: "The Medallion Aurum",
+  title: "Sushma Belleza",
+  description: "Sushma Belleza",
   image: {
-    url: `https://medallionaurum.realtynivesh.com/${ogImage.src}`,
+    url: `https://sushmagroup.realtynivesh.com/sushmabelleza/${ogImage.src}`,
     width: 1200,
     height: 640,
-    alt: "Medallion Aurum Images",
+    alt: "Sushma Belleza Images",
   },
 };
 
 const twitterData = {
   card: "summary_large_image",
-  domain: "https://medallionaurum.realtynivesh.com/",
+  domain: "https://sushmagroup.realtynivesh.com/sushmabelleza/",
   title: openGraphData.title,
   description: openGraphData.description,
   image: openGraphData.image.url,
@@ -82,7 +82,7 @@ const twitterData = {
 export const metadata = {
   title: openGraphData.title,
   description: openGraphData.description,
-  keywords: "medallion aurum"
+  keywords: "Sushma Belleza"
 };
 
 const MetaTags = () => (

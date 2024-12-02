@@ -3,15 +3,33 @@
 @tailwind utilities;
 
 @layer utilities {
-  .font-supera100 { font-weight: 100; }
-  .font-supera200 { font-weight: 200; }
-  .font-supera300 { font-weight: 300; }
-  .font-supera400 { font-weight: 400; }
-  .font-supera500 { font-weight: 500; }
-  .font-supera600 { font-weight: 600; }
-  .font-supera700 { font-weight: 700; }
-  .font-supera800 { font-weight: 800; }
-  .font-supera900 { font-weight: 900; }
+  .font-supera100 {
+    font-weight: 100;
+  }
+  .font-supera200 {
+    font-weight: 200;
+  }
+  .font-supera300 {
+    font-weight: 300;
+  }
+  .font-supera400 {
+    font-weight: 400;
+  }
+  .font-supera500 {
+    font-weight: 500;
+  }
+  .font-supera600 {
+    font-weight: 600;
+  }
+  .font-supera700 {
+    font-weight: 700;
+  }
+  .font-supera800 {
+    font-weight: 800;
+  }
+  .font-supera900 {
+    font-weight: 900;
+  }
 }
 
 html {
@@ -46,16 +64,57 @@ html {
 }
 
 @keyframes rotate {
-  100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes prixClipFix {
-  0%   { clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0); }
-  25%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0); }
-  50%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%); }
-  75%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
-  100% { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0); }
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 }
+
+/* Our Product */
+.our-product::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  border-radius: 100% !important;
+  overflow: hidden !important;
+}
+
+.our-product::-webkit-scrollbar-track {
+  background: #9c9c9c00;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+}
+
+.our-product::-webkit-scrollbar-thumb {
+  background: #10101016;
+  border-radius: 20px;
+  overflow: hidden !important;
+  cursor: pointer;
+}
+
+.our-product::-webkit-scrollbar-thumb:hover {
+  background: #00000000;
+}
+/*  */
+
+
+
 
 ::-webkit-scrollbar {
   width: 3px;
@@ -65,20 +124,20 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #9c9c9c;
+  background: #474536;
   border-radius: 10px !important;
   overflow: hidden !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #101010;
+  background: #a27d27;
   border-radius: 20px;
   overflow: hidden !important;
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #000000;
+  background: #735a1e;
 }
 
 @media screen and (min-width: 640px) {
@@ -122,10 +181,19 @@ html {
   transition: 5s ease;
 }
 
-.wave-container .delay1 { animation: waves 2.5s linear; animation-delay: 0.1s; }
-.wave-container .delay2 { animation: waves 2.5s linear 0.7s infinite; }
-.wave-container .delay3 { animation: waves 2.5s linear 1.3s infinite; }
-.wave-container .delay4 { animation: waves 2.5s linear 1.9s infinite; }
+.wave-container .delay1 {
+  animation: waves 2.5s linear;
+  animation-delay: 0.1s;
+}
+.wave-container .delay2 {
+  animation: waves 2.5s linear 0.7s infinite;
+}
+.wave-container .delay3 {
+  animation: waves 2.5s linear 1.3s infinite;
+}
+.wave-container .delay4 {
+  animation: waves 2.5s linear 1.9s infinite;
+}
 
 .outlined-text {
   -webkit-text-stroke: 1px #ffffff;
@@ -157,7 +225,7 @@ html {
   padding-left: 8px;
   width: 100%;
   height: 100%;
-  font-family: var(--font-supera-gothic), sans-serif;;
+  font-family: var(--font-supera-gothic), sans-serif;
   font-weight: 500;
   color: white;
 }
@@ -174,7 +242,7 @@ html {
 
 /* Modal Enq Form  */
 .modal-enquiry-form .PhoneInputInput {
-   font-family: var(--font-supera-gothic), sans-serif;;
+  font-family: var(--font-supera-gothic), sans-serif;
   font-weight: 500;
   background-color: transparent;
   outline: none;
@@ -182,11 +250,10 @@ html {
   height: 100% !important;
 }
 .modal-enquiry-form .PhoneInputInput::placeholder {
-   font-family: var(--font-supera-gothic), sans-serif;;
+  font-family: var(--font-supera-gothic), sans-serif;
   font-weight: 500;
   color: #514e4e;
   text-transform: capitalize;
-
 }
 
 .modal-enquiry-form .PhoneInputCountryIcon {
@@ -246,16 +313,28 @@ html {
   animation: lds-ellipsis3 0.6s infinite;
 }
 @keyframes lds-ellipsis1 {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 @keyframes lds-ellipsis3 {
-  0% { transform: scale(1); }
-  100% { transform: scale(0); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 @keyframes lds-ellipsis2 {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(24px, 0); }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
 }
 
 .lb-canvas .lb-img {
@@ -291,4 +370,3 @@ html {
   object-fit: contain !important;
   margin: auto !important;
 }
-

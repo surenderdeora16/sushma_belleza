@@ -83,7 +83,7 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                 {/* <h4 className='mb-5 cmd:mb-0 font-supera500 text-[25px] cmd:text-[35px] xl:text-[43px] text-[#555555] max-w-[280px] cmd:max-w-[380px] leading-[1.3]'>We Are Excited To <span className='font-supera700 text-[#000]'>Meet You</span></h4> */}
                                 <h4 className='mb-5 cmd:mb-0 pr-5 xs:pr-10 sm:pr-7 lg:pr-5 font-supera600 text-[25px] cmd:text-[30px] xl:text-[35px] text-[#555555] w-full  leading-[1.3]'>{thankYou ? 'Thank You' : heading}</h4>
                                 <Link href={'#'} className='hidden cmd:block w-[200px] h-[50px] lg:w-[290px] lg:h-[72px] relative'>
-                                    <Image src={logo} fill className='object-contain' alt="medallion aurum logo" />
+                                    <Image src={logo} fill className='object-contain' alt="Sushma Belleza logo" />
                                 </Link>
                                 <div className='hidden cmd:block w-[200px] h-[75px] xl:w-[244px] xl:h-[86px] relative'>
                                     <Image src={realtyNiveshlogo} fill alt="realty nivesh logo" />
@@ -119,7 +119,7 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                                     ...values, mobile: `${values?.mobile}`, otp: `${values?.otp}`
                                                 },
                                         };
-                                        const data = await AxiosHelper.postData(`/medallion-aurum-enquiry/`, payload);
+                                        const data = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
 
                                         console.log('data', data)
 
@@ -220,9 +220,9 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                                     <div className='mt-3 cmd:mt-5 pl-2 flex'>
                                                         <Field type="checkbox" id="terms" checked={isChecked} onChange={() => setIsChecked(!isChecked)} className='w-[17px] h-[17px] relative top-0.5 border-[#E98F0A] outline-[#E98F0A]' />
                                                         <p className='ml-2.5 max-w-[350px] tracking-wide font-supera500 text-[11px] text-[#737474]'>I agree to receive newsletters, or relevant marketing content and
-                                                            Medallion Aurum Terms and Conditions</p>
+                                                            Sushma Belleza Terms and Conditions</p>
                                                     </div>
-                                                    <button aria-label="submit" type='submit' onClick={() => { setAction('submitForm') }} disabled={loaderShow} className='mt-5 cmd:mt-10 w-full h-[40px] bg-[#000] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
+                                                    <button aria-label="submit" type='submit' onClick={() => { setAction('submitForm') }} disabled={loaderShow} className='mt-5 cmd:mt-10 w-full h-[40px] bg-[#4b4b4b] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
                                                         {loaderShow ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> : `${action == 'submitForm' ? 'Get OTP' : 'Submit'}`}
                                                     </button>
                                                 </div>
@@ -295,7 +295,7 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                                                             action: 'resendOTP',
                                                                             data: { mobile: `${values?.mobile}` },
                                                                         };
-                                                                        const response = await AxiosHelper.postData(`/medallion-aurum-enquiry/`, payload);
+                                                                        const response = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
 
                                                                         if (response?.data?.status) {
                                                                             toast.success(response?.data?.message || 'New OTP sent to your mobile no.');
@@ -323,7 +323,7 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                                         aria-label="submit"
                                                         type='submit'
                                                         onClick={() => { setAction('verifyOTP'); }} disabled={loaderShow}
-                                                        className='mt-16 cmd:mt-16 w-full h-[40px] bg-[#000] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
+                                                        className='mt-16 cmd:mt-16 w-full h-[40px] bg-[#4b4b4b] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
                                                         {loaderShow ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> : `${action == 'verifyOTP' ? 'Submit' : 'Verify'}`}
                                                     </button>
                                                 </div>
@@ -333,7 +333,7 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                         {thankYou && (
                                             <div className='cxs:pt-5 lg:pt-0 lg:pl-8 xl:pl-16 w-full h-full flex flex-col justify-start'>
                                                 <div className='mt-5 flex flex-col gap-10 w-full h-full'>
-                                                    <h5 className='font-supera500 text-[15px] text-[#514E4E] tracking-wide pr-6 2xl:pr-0'>Meanwhile you can continue exploring more about Medallion Aurum</h5>
+                                                    <h5 className='font-supera500 text-[15px] text-[#514E4E] tracking-wide pr-6 2xl:pr-0'>Meanwhile you can continue exploring more about Sushma Belleza</h5>
 
                                                     <div>
                                                         <ul className='flex flex-wrap gap-x-8 xs:gap-x-16 gap-y-3'>

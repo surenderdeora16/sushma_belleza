@@ -18,7 +18,7 @@ const DefaultIcon = L.icon({
 const TARGET_LOCATION = {
   lat: 30.7065, // Latitude of Sushma Elements
   lng: 76.7499, // Longitude of Sushma Elements
-  name: "The Medallion Aurum",
+  name: "Sushma Belleza",
 };
 
 const Maps = () => {

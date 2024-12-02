@@ -27,7 +27,7 @@ module.exports = {
         moveUpDown: 'moveUpDown 4s ease-in-out infinite',
       },
       backgroundImage: {
-        'transparent-production': `url('/medallionaurum/images/transpbg.png')`,
+        'transparent-production': `url('/sushmabelleza/images/transpbg.png')`,
         'transparent-local': `url('/images/transpbg.png')`,
 
         // Theme Bg Image
@@ -35,14 +35,14 @@ module.exports = {
         'backgroud-theme-local': `url('/images/themebgimg.webp')`,
 
         // Top Main Banner 
-        'mobile-header-section-production': `url('/medallionaurum/images/topmainbannerbg-mobileimage.png')`,
+        'mobile-header-section-production': `url('/sushmabelleza/images/topmainbannerbg-mobileimage.png')`,
         'mobile-header-section-local': `url('/images/topmainbannerbg-mobileimage.png')`,
 
-        'header-section-production': `url('/medallionaurum/images/topmainbannerbg-image.png')`,
+        'header-section-production': `url('/sushmabelleza/images/topmainbannerbg-image.png')`,
         'header-section-local': `url('/images/topmainbannerbg-image.png')`,
 
         // Top Sub Banner 
-        'subHeader-production': `url('/medallionaurum/images/subHeaderBgimg.webp')`,
+        'subHeader-production': `url('/sushmabelleza/images/subHeaderBgimg.webp')`,
         'subHeader-local': `url('/images/subHeaderBgimg.webp')`,
 
         //About Us Section
@@ -55,26 +55,29 @@ module.exports = {
         // Brochure Section
         'brochure-section-Shadow': 'linear-gradient(88deg, #000000d4 12.53%, #00000014 99%)',
 
-        'mobile-brochure-section-production': `url('/medallionaurum/images/brochuresectionmobile.png')`,
+        'mobile-brochure-section-production': `url('/sushmabelleza/images/brochuresectionmobile.png')`,
         'mobile-brochure-section-local': `url('/images/brochuresectionmobile.png')`,
 
-        'brochure-section-production': `url('/medallionaurum/images/brochuresectionmobile.png')`,
+        'brochure-section-production': `url('/sushmabelleza/images/brochuresectionmobile.png')`,
         'brochure-section-local': `url('/images/brochuresectionmobile.png')`,
 
         // Download Section  
-        'download-section-production': `url('/medallionaurum/images/download-sectionimg.webp')`,
+        'download-sectionLeftImg-production': `url('/sushmabelleza/images/downloadsec-bgimg.webp')`,
+        'download-sectionLeftImg-local': `url('/images/downloadsec-bgimg.webp')`,
+
+        'download-section-production': `url('/sushmabelleza/images/download-sectionimg.webp')`,
         'download-section-local': `url('/images/download-sectionimg.webp')`,
 
         //Price List 
-        'paymentStructure-section-production': `url('/medallionaurum/images/payment-structurebg.webp')`,
+        'paymentStructure-section-production': `url('/sushmabelleza/images/payment-structurebg.webp')`,
         'paymentStructure-section-local': `url('/images/payment-structurebg.webp')`,
 
         //Plans 
-        'siteplan-production': `url('/medallionaurum/images/siteplanbg.svg')`,
+        'siteplan-production': `url('/sushmabelleza/images/siteplanbg.svg')`,
         'siteplan-local': `url('/images/siteplanbg.svg')`,
 
         //Get In Touch (Home Page) 
-        'GIT-production': `url('/medallionaurum/images/getintouchbg.png')`,
+        'GIT-production': `url('/sushmabelleza/images/getintouchbg.png')`,
         'GIT-local': `url('/images/getintouchbg.png')`,
 
         //Contact Info BG IMG 
@@ -123,7 +126,7 @@ module.exports = {
         // => @media (min-width: 1441px) { ... }
       },
       gridTemplateRows: {
-        '13': 'repeat(13, minmax(0, 1fr))',
+        '14': 'repeat(14, minmax(0, 1fr))',
       },
     },
   },

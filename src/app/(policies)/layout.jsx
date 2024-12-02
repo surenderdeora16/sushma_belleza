@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
 
             <footer className="bg-[#000] text-white py-4">
                 <p className="text-center font-lato text-[#c8c8c8] tracking-wide font-bold text-[10px] cxs:text-[13px] sm:text-[10px] cmd:text-[13px] lg:text-[15px] capitalize">
-                    © Copyright 2024 Medallion Aurum. Realty Nivesh. All Rights Reserved.
+                    © Copyright 2024 Sushma Belleza. Realty Nivesh. All Rights Reserved.
                 </p>
             </footer>
         </React.Fragment>

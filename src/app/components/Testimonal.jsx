@@ -10,31 +10,31 @@ import person from '@/app/images/user.png'
 const TestimonialData = [
     {
         image: person,
-        name: ' Mrs. Neha Arora',
-        designation: 'Business Owner',
-        messageHeading: 'Medallion Aurum’s strategic location in Sector 67, Mohali, is unbeatable',
-        message: ' It provides easy access to all major points, including Chandigarh International Airport and IT City Mohali. As an entrepreneur, I needed convenience and luxury combined, and Medallion Aurum delivers on both fronts. The quality of construction using Mivan technology further assures me of a safe and lasting investment.'
+        name: 'Ms. Sharma',
+        designation: 'Working Professional',
+        // messageHeading: 'Medallion Aurum’s strategic location in Sector 67, Mohali, is unbeatable',
+        message: "I love how Sushma Belleza is nestled within this huge township with so much greenery!  The landscaped parks are perfect for my morning walks, and it's so peaceful.Plus, being on Airport Road means easy access to Chandigarh and the airport.It's the best of both worlds!"
     },
     {
         image: person,
-        name: 'Mr. Siddharth Mehta',
-        designation: 'Software Engineer',
-        messageHeading: 'I chose Medallion Aurum for its incredible lifestyle offerings',
-        message: ' The premium amenities such as the swimming pool, gymnasium, and dedicated sports courts ensure that my entire family remains active and engaged. The thoughtful layout of the apartments and the extensive open spaces make it a perfect place to call home.'
-    },
-    {
-        image: person,
-        name: ' Ms. Kaur',
-        designation: 'IT Professional',
-        messageHeading: ' Highlighting Location and Connectivity',
-        message: 'The location of Medallion Aurum  couldn’t be better. It’s so close to Chandigarh, the airport, and my workplace in Mohali. The convenience is unbeatable, and it saves me so much time commuting'
+        name: 'Mr. & Mrs. Verma',
+        designation: 'Investors',
+        // messageHeading: 'I chose Medallion Aurum for its incredible lifestyle offerings',
+        message: "We invested in Sushma Belleza because we believe in the Sushma Group's reputation and the project's potential. The location on Airport Road is strategic, and the quality of construction is excellent. We're confident that our investment will appreciate in the future."
     },
     {
         image: person,
         name: 'The Gupta Family',
-        designation: '',
-        messageHeading: ' Appreciation for Design and Planning',
-        message: "We were impressed by the thoughtful design of the apartments at Medallion Aurum. The layout is perfect for our family, with plenty of natural light and ventilation. It truly feels like a home."
+        designation: 'First-Time Homebuyers',
+        // messageHeading: ' Highlighting Location and Connectivity',
+        message: "We were looking for a spacious apartment in a good location, but we didn't want to break the bank. Sushma Belleza offered the best value for money compared to other projects we considered. We're very happy with our purchase."
+    },
+    {
+        image: person,
+        name: 'Mr. Batra',
+        designation: 'Real Estate Investor',
+        // messageHeading: ' Appreciation for Design and Planning',
+        message: "Investing in Sushma Belleza was a smart choice. The property is located in a prime area with good connectivity, and the developer has a strong reputation for quality construction. I'm confident that my investment will yield good returns in the years to come."
     }
 ]
 

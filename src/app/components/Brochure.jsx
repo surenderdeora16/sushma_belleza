@@ -22,7 +22,7 @@ const Brochure = () => {
     const handleDownloadBrochure = () => {
         const link = document.createElement('a');
         link.href = `${process.env.basePath}/download/BROCHURE.pdf`; // Link to your PDF
-        link.download = 'themedallionaurum-Brochure.pdf';
+        link.download = 'thesushmabelleza-Brochure.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -39,7 +39,7 @@ const Brochure = () => {
                     <div className='w-full cmd:max-w-[400px] lg:max-w-[400px] xl:max-w-[440px] flex flex-col items-start sm:items-center cmd:items-start'>
                         <h3 className='text-left sm:text-center cmd:text-left font-supera500 text-[27px] cxs:text-[32px] sm:text-[30px] lg:text-[35px] leading-[0.92]  text-[#FFFFFF] uppercase flex flex-col items-start gap-x-2 sm:block'>
                             The pride of
-                            <span className={`tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-no-repeat bg-center`}> zirakpur </span>
+                            <span className={`tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px] text-transparent bg-clip-text bg-white ${process.env.basePath == '' ? 'sm:bg-backgroud-theme-local' : 'sm:bg-backgroud-theme-production '} bg-no-repeat bg-center`}> zirakpur </span>
                         </h3>
                         <p className='mt-1.5 pb-6 cmd:border-b font-supera500 text-[15px] bxxs:text-[16px] xs:text-xl tracking-wider text-[#fff] capitalize text-center cmd:text-left'>live amidst nature and openness.</p>
                         <div className='text-left sm:text-left cmd:text-left tracking-wide font-supera500 text-[19px] xs:text-[20px] text-[#FFFFFF] capitalize mt-8 sm:mt-3'>Sushma belleza PR-7 airport road, zirakpur</div>
@@ -66,14 +66,14 @@ const Brochure = () => {
                             </div>
                         </div>
                         <p className='text-center cmd:text-left mt-1 sm:mt-2 lg:mt-3 xl:mt-3 capitalize font-supera500 sm:font-supera600 text-[14.15px] sm:text-[18px] lg:text-[20px] xl:text-[24px] text-[#fff]'>Low rise G+4  | G+19  | 76% Open area</p>
-                        <div onClick={handleOpenModal} className={`${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-cover bg-left-top cursor-pointer sm:mx-auto cmd:mx-0 mt-[20px] xs:mt-[28px] sm:mt-[20px] w-[150px] h-[38px] xl:w-[176px] xl:h-[44px] bg-[#D1A963] rounded-full flex justify-center items-center`}>
+                        <div onClick={handleOpenModal} className={`bg-[#a27d27]  bg-cover bg-left-top cursor-pointer sm:mx-auto cmd:mx-0 mt-[20px] xs:mt-[28px] sm:mt-[20px] w-[150px] h-[38px] xl:w-[176px] xl:h-[44px] rounded-full flex justify-center items-center`}>
                             <button aria-label="Brochure" className='flex items-center gap-[8.98px]'>
                                 <div>
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M8.62945 13.4604L3.32249 8.15339L4.80844 6.61437L7.56806 9.37399V0.723633H9.69085V9.37399L12.4505 6.61437L13.9364 8.15339L8.62945 13.4604ZM2.26109 17.7059C1.67733 17.7059 1.17776 17.4982 0.762405 17.0829C0.347046 16.6675 0.139013 16.1676 0.138306 15.5831V12.399H2.26109V15.5831H14.9978V12.399H17.1206V15.5831C17.1206 16.1669 16.9129 16.6668 16.4976 17.0829C16.0822 17.499 15.5823 17.7066 14.9978 17.7059H2.26109Z" fill="#000" />
+                                        <path d="M8.62945 13.4604L3.32249 8.15339L4.80844 6.61437L7.56806 9.37399V0.723633H9.69085V9.37399L12.4505 6.61437L13.9364 8.15339L8.62945 13.4604ZM2.26109 17.7059C1.67733 17.7059 1.17776 17.4982 0.762405 17.0829C0.347046 16.6675 0.139013 16.1676 0.138306 15.5831V12.399H2.26109V15.5831H14.9978V12.399H17.1206V15.5831C17.1206 16.1669 16.9129 16.6668 16.4976 17.0829C16.0822 17.499 15.5823 17.7066 14.9978 17.7059H2.26109Z" fill="#fff" />
                                     </svg>
                                 </div>
-                                <span className='font-supera600 text-[15px] text-[#000] tracking-wider'>Brochure</span>
+                                <span className='font-supera600 text-[15px] text-[#fff] tracking-wider'>Brochure</span>
                             </button>
                         </div>
                     </div>

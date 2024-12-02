@@ -42,7 +42,7 @@ const DynamicTabs = ({ className = '', contentHeight = '', tabs, imageClass='' }
                         fill
                         quality={100}
                         alt="Tab content"
-                        className={`${imageClass} w-full h-full object-cover`}
+                        className={`${imageClass} w-full h-full`}
                     />
                 );
             default:
@@ -63,8 +63,8 @@ const DynamicTabs = ({ className = '', contentHeight = '', tabs, imageClass='' }
                             aria-label={`Tab ${tab.name}`}
                             onClick={() => setActiveTab(index)}
                             className={`outline-none py-2 px-5 lg:px-10 font-supera600 border ${activeTab === index
-                                    ? `text-white bg-[#4E4E4E] border-transparent`
-                                    : 'border-gray-300 bg-white text-[#4E4E4E]'
+                                ? `text-white bg-[#A27D27] border-transparent`
+                                : 'border-gray-300 bg-white text-[#A27D27]'
                                 } ${index === 0 ? 'rounded-bl-2xl sm:rounded-bl-3xl' : ''} ${index === tabs.length - 1 ? 'rounded-br-2xl sm:rounded-br-3xl' : ''
                                 } text-sm lg:text-lg tracking-wide`}
                         >

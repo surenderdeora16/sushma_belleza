@@ -22,7 +22,7 @@ import gymAmenitiesIcon from '@/app/images/gym-amenitiesicon.svg'
 import coWorkingSpaceIcon from '@/app/images/co-workingspacee-amenitiesicon.svg'
 import spaAmenitiesIcon from '@/app/images/spa-amenitiesicon.svg'
 import indoorGamesIcon from '@/app/images/indoorgames-amenitiesicon.svg'
-import cafeAndRestroIcon from '@/app/images/cafeandrestro-amenitiesicon.svg'
+import kidsplayIcon from '@/app/images/kidsplay-amenitiesicon.svg'
 import cctvIcon from '@/app/images/cctv-amenitiesicon.svg'
 import tennisCourtIcon from '@/app/images/tennis-amenitiesicon.svg'
 import cricketPichIcon from '@/app/images/cricket-amenitiesicon.svg'
@@ -30,11 +30,11 @@ import basketballIcon from '@/app/images/basketballcourt-amenitiesicon.svg'
 import valleyballIcon from '@/app/images/vollybollcourt-amenitiesicon.svg'
 import yogaIcon from '@/app/images/yoga-amenitiesicon.svg'
 import carParkingIcon from '@/app/images/carparking-amenitiesicon.svg'
-import sitOutAreaIcon from '@/app/images/sitoutarea-amenitiesicon.svg'
+import clubEntaranceIcon from '@/app/images/clubentarance-amenitiesicon.svg'
 
 const imageData = [
     {
-        title: 'Terrace Lounge',
+        title: 'legend',
         src: amenitiesImg1,
         icon: terraceLaungeIcon?.src,
         alt: "",
@@ -55,30 +55,30 @@ const imageData = [
         className: 'col-span-12 cxs:col-span-6 md:col-span-4'
     },
     {
-        title: 'co-working spaces',
+        title: 'private lawn',
         src: amenitiesImg4,
         icon: coWorkingSpaceIcon?.src,
         alt: "",
         className: 'col-span-12 cxs:col-span-6 md:col-span-4'
     },
     {
-        title: 'Spa & Sauna',
+        title: 'steam/ sauna',
         src: amenitiesImg5,
         icon: spaAmenitiesIcon?.src,
         alt: "",
         className: 'col-span-12 cxs:col-span-6 md:col-span-4'
     },
     {
-        title: 'Indoor Games Arcade',
+        title: 'club',
         src: amenitiesImg6,
         icon: indoorGamesIcon?.src,
         alt: "",
         className: 'col-span-12 cxs:col-span-6'
     },
     {
-        title: 'Restaurant & Coffee Shop',
+        title: 'kid’s play area',
         src: amenitiesImg7,
-        icon: cafeAndRestroIcon?.src,
+        icon: kidsplayIcon?.src,
         alt: "",
         className: 'col-span-12 cxs:col-span-6'
     },
@@ -111,7 +111,7 @@ const imageData = [
         className: 'col-span-12 cxs:col-span-6 md:col-span-4'
     },
     {
-        title: 'Volley Ball Court',
+        title: 'badminton court ',
         src: amenitiesImg12,
         icon: valleyballIcon?.src,
         alt: "",
@@ -132,9 +132,9 @@ const imageData = [
         className: 'col-span-12 cxs:col-span-6 md:col-span-6'
     },
     {
-        title: 'Sit Out Area ',
+        title: 'club entrance',
         src: amenitiesImg15,
-        icon: sitOutAreaIcon?.src,
+        icon: clubEntaranceIcon?.src,
         alt: "",
         className: 'col-span-12 cxs:col-span-12 md:col-span-6'
     },

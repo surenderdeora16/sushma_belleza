@@ -9,7 +9,7 @@ function Footer() {
     return (
         <footer className='section-gap'>
             <div style={{ backgroundImage: `url('${process.env.basePath}/images/footer-bg-image.webp')` }} className={`w-full`}>
-                <div className='w-full h-full bg-[#000000d7] '>
+                <div className='w-full h-full bg-[#2D2C2CE5] '>
                     <div className='lg:container mx-auto pt-[35px]'>
                         <Link href="/">
                             <div className='w-full max-w-[300px] sm:max-w-[350px] h-[100px] mx-auto relative'>
@@ -117,9 +117,9 @@ function Footer() {
                                 </span>
                                 &nbsp;
                                 &nbsp;
-                                <b className='inline cmd:hidden font-supera700 text-[14px] text-[#FC6602] uppercase'> Realty </b>&nbsp;<b className='inline cmd:hidden text-[#1EC8EC] uppercase'> Nivesh </b>
+                                <b className='inline cmd:hidden font-supera600 text-[14px] text-[#FC6602] uppercase'> Realty </b>&nbsp;<b className='inline cmd:hidden text-[#1EC8EC] uppercase'> Nivesh </b>
                             </div>
-                            <h6 className='font-supera700 text-[12px] cxs:text-[14px] lg:text-[16px] xl:text-[18px] flex'>
+                            <h6 className='font-supera600 text-[12px] cxs:text-[14px] lg:text-[16px] xl:text-[18px] flex'>
                                 <b className='hidden cmd:inline text-[#FC6602] uppercase'> Realty </b>&nbsp;<b className='hidden cmd:inline text-[#1EC8EC] uppercase'> Nivesh :&nbsp;</b>
                                 <p className='font-supera500 text-white text-center cmd:text-left'>Showroom No. 12 level 2, Uptown Insignia PR-7 Airport Road, Zirakpur, Punjab</p>
                             </h6>
@@ -133,7 +133,7 @@ function Footer() {
                         <Link href={`${process.env.basePath}/privacy-policy`} className='font-supera600 text-[10px] cxs:text-[13px] sm:text-[10px] cmd:text-[13px] lg:text-[15px]'>Privacy policy</Link>
                     </div>
                     <div>
-                        <p className='text-center sm:text-left font-lato text-[#081724] font-bold  text-[10px] cxs:text-[13px] sm:text-[10px] cmd:text-[13px] lg:text-[15px] capitalize'>© Copyright 2024 Medallion Aurum.  Realty nivesh All Rights Reserved</p>
+                        <p className='text-center sm:text-left font-lato text-[#081724] font-bold  text-[10px] cxs:text-[13px] sm:text-[10px] cmd:text-[13px] lg:text-[15px] capitalize'>© Copyright 2024 Sushma Belleza.  Realty nivesh All Rights Reserved</p>
                     </div>
                 </div>
             </div>

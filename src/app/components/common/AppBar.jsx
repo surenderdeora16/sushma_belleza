@@ -51,7 +51,7 @@ const AppBar = () => {
 
     const handleWhatsAppClick = () => {
         const phoneNumber = '9988010405';
-        const message = 'Hi I am interested in *The Medallion Aurum*. Please send more detail';
+        const message = 'Hi I am interested in *Sushma Belleza*. Please send more detail';
 
         const encodedMessage = encodeURIComponent(message);
 

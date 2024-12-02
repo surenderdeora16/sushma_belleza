@@ -1,10 +1,15 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
+    reactStrictMode: true,
     basePath: '',
-    assetPrefix: '',
+    trailingSlash: true,
+    assetPrefix: '/sushmabelleza',
     env: {
-        basePath: '',
+        basePath: '/sushmabelleza',
+    },
+    images: {
+        unoptimized: true
     },
 
     devIndicators: {

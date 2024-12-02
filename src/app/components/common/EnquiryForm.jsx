@@ -54,8 +54,8 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
 
     return (
         <div className='section-gap'>
-            <div className=' w-full h-full relative bg-[#000000] cmd:bg-[#f1f1f1] flex justify-center items-center py-8 sm:py-10 md:py-16 cmd:py-0'>
-                <div className={`block cmd:hidden w-full h-1/2 absolute top-0 left-0  ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-cover`}></div>
+            <div className=' w-full h-full relative bg-[#4b4b4b] cmd:bg-[#f1f1f1] flex justify-center items-center py-8 sm:py-10 md:py-16 cmd:py-0'>
+                <div className={`block cmd:hidden w-full h-1/2 absolute top-0 left-0  bg-[#a27d27]`}></div>
 
                 <div
                     style={{ background: 'transparent' }}
@@ -72,8 +72,8 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                         </>
                                     )}
                                 </h4>
-                                <div className='hidden cmd:block w-[300px] h-[70px] lg:w-[350px] lg:h-[80px] xl:w-[420px] xl:h-[100px] relative'>
-                                    <Image src={logo} fill alt="realty nivesh logo" className='object-cover' />
+                                <div className='hidden cmd:block w-[400px] h-[100px] lg:w-[450px] lg:h-[120px] xl:w-[520px] xl:h-[150px] relative'>
+                                    <Image src={logo} fill alt="realty nivesh logo" className='object-contain object-left' />
                                 </div>
                             </div>
                             <Formik
@@ -107,7 +107,7 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                                     ...values, mobile: `${values?.mobile}`, otp: `${values?.otp}`
                                                 },
                                         };
-                                        const data = await AxiosHelper.postData(`/medallion-aurum-enquiry/`, payload);
+                                        const data = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
                                         console.log("data,", data)
 
                                         if (data && data?.data?.status) {
@@ -199,9 +199,9 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                                     <div className='mt-3 cmd:mt-5 pl-2 flex'>
                                                         <Field type="checkbox" id="terms" checked={isChecked} onChange={() => setIsChecked(!isChecked)} className='w-[17px] h-[17px] relative top-0.5 border-[#e98f0a] outline-[#e98f0a]' />
                                                         <p className='ml-2.5 max-w-[350px] tracking-wide font-supera500 text-[11px] text-[#101010]'>I agree to receive newsletters, or relevant marketing content and
-                                                            The Medallion Terms and Conditions</p>
+                                                            Sushma Belleza Terms and Conditions</p>
                                                     </div>
-                                                    <button aria-label="submit" type='submit' onClick={() => { setAction('submitForm') }} disabled={loaderShow} className='mt-5 cmd:mt-10 w-full h-[45px] bg-[#101010] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
+                                                    <button aria-label="submit" type='submit' onClick={() => { setAction('submitForm') }} disabled={loaderShow} className='mt-5 cmd:mt-10 w-full h-[45px] bg-[#4B4B4B] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
                                                         {loaderShow ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> : `${action == 'submitForm' ? 'Get OTP' : 'Submit'}`}
                                                     </button>
                                                 </div>
@@ -274,7 +274,7 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                                                             action: 'resendOTP',
                                                                             data: { mobile: `${values?.mobile}` },
                                                                         };
-                                                                        const response = await AxiosHelper.postData(`/medallion-aurum-enquiry/`, payload);
+                                                                        const response = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
 
                                                                         if (response?.data?.status) {
                                                                             toast.success(response?.data?.message || 'New OTP sent to your mobile no.');
@@ -302,19 +302,19 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                                         aria-label="submit"
                                                         type='submit'
                                                         onClick={() => { setAction('verifyOTP'); }} disabled={loaderShow}
-                                                        className='mt-16 cmd:mt-16 w-full h-[45px] bg-[#101010] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
+                                                        className='mt-16 cmd:mt-16 w-full h-[45px] bg-[#4B4B4B] rounded-[20px] text-[#fff] font-supera500 tracking-wide text-[16px]'>
                                                         {loaderShow ? <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div> : `${action == 'verifyOTP' ? 'Submit' : 'Verify'}`}
                                                     </button>
                                                 </div>
                                             </div>
                                         )}
-                                        <div className='block cmd:hidden mx-auto my-10 w-full bxxs:w-[300px] h-[70px] sm:w-[350px] sm:h-[80px] md:w-[420px] md:h-[100px] relative'>
-                                            <Image src={logo} fill alt="realty nivesh logo" className='object-contain bxxs:object-cover' />
+                                        <div className='block cmd:hidden mx-auto my-10 w-full bxxs:w-[300px] h-[100px] sm:w-[350px] sm:h-[80px] md:w-[420px] md:h-[100px] relative'>
+                                            <Image src={logo} fill alt="realty nivesh logo" className='object-contain' />
                                         </div>
                                         {thankYou && (
                                             <div className='cxs:pt-5 lg:pt-0 lg:pl-8 xl:pl-16 w-full h-full flex flex-col justify-start'>
                                                 <div className='mt-5 flex flex-col gap-10 w-full h-full'>
-                                                    <h5 className='font-supera500 text-[15px] text-[#101010] tracking-wide pr-6 2xl:pr-0'>Meanwhile you can continue exploring more about Medallion</h5>
+                                                    <h5 className='font-supera500 text-[15px] text-[#101010] tracking-wide pr-6 2xl:pr-0'>Meanwhile you can continue exploring more about Sushma Belleza</h5>
 
                                                     <div>
                                                         <ul className='flex flex-wrap gap-x-8 xs:gap-x-16 gap-y-3'>

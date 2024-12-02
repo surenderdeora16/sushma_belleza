@@ -5,6 +5,7 @@ import Image from 'next/image'
 import React, { useEffect, useState } from 'react'
 import ApartmentImg1 from '@/app/images/price-section-apartmentImg1.webp'
 import ApartmentImg2 from '@/app/images/price-section-apartmentImg2.webp'
+import ApartmentImg3 from '@/app/images/price-section-apartmentImg3.webp'
 import EnquiryForm from '@/app/components/common/ModalEnquiryForm'
 import CurrentOfferImg from '@/app/images/current-offer-banner.webp'
 import CurrentOfferMobileBanner from '@/app/images/currentofferbanner-mobile.webp'
@@ -12,83 +13,94 @@ import CurrentOfferMobileBanner from '@/app/images/currentofferbanner-mobile.web
 const propertyData = [
     {
         image: ApartmentImg1,
-        title: '3+1 BHK',
-        size: '2950 SQFT.',
-        description: 'Introducing our 3+1 BHK Apartments @ tHE MEDALLION AURUM  mOHALI , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
+        title: '3 BHK',
+        size: '2300 SQFT.',
+        description: 'introducing our 3BHK Apartments @ Sushma Belleza , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
         // offer: 'Earn Monthly Rental Up to ₹ 15000*/- Per Month till Possession',
         offer: null,
         priceLabel: 'Company price',
-        companyPrice: '₹ 3,24,50,000/-',
+        companyPrice: '₹ 1.68cr',
         ourPriceLabel: 'Our Price',
-        ourPrice: '₹ 3.10cr*',
+        ourPrice: '₹ 1.48cr*',
     },
     {
         image: ApartmentImg2,
-        title: '4+1 BHK',
-        size: '3900 SQFT.',
-        description: 'Introducing our 4+1 BHK Apartments @ tHE MEDALLION AURUM  mOHALI , A magnificent testament to luxury and modern living. These stunning towers offer spacious living space.',
+        title: '3 BHK+S',
+        size: '2800 SQFT.',
+        description: 'introducing our3bhk+s  Apartments @Sushma Belleza  , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
         offer: null,
         priceLabel: 'Company price',
-        companyPrice: '₹ 4,29,00,000/-',
+        companyPrice: '₹ 2.06cr',
         ourPriceLabel: 'Our Price',
-        ourPrice: '₹ 4.10cr*',
+        ourPrice: '₹ 1.81cr*',
+    },
+    {
+        image: ApartmentImg3,
+        title: '4BHK+S',
+        size: '3400 SQFT.',
+        description: 'introducing our 4bhk+S  Apartments @ Sushma Belleza  , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
+        offer: null,
+        priceLabel: 'Company price',
+        companyPrice: '₹ 2.58cr',
+        ourPriceLabel: 'Our Price',
+        ourPrice: '₹ 2.27cr*',
     }
 ]
 
 const paymentPlanData = [
     {
-        name: 'Within 30 Days of Booking',
-        percentage: '25% of Sale Price'
+        name: 'Booking Amount',
+        percentage: '10% of BSP'
     },
     {
-        name: 'On Start of Raft',
-        percentage: '10% of Sale Price'
+        name: 'Within 45 days from date of Application',
+        percentage: '15% of BSP'
     },
     {
-        name: 'On Completion of Stilt',
-        percentage: '10% of Sale Price'
+        name: 'On Start Of Foundation',
+        percentage: '15% of BSP'
     },
     {
-        name: 'On Completion of 3rd Floor',
-        percentage: '5% of Sale Price'
+        name: 'On Start Of basement Roof Slab',
+        percentage: '10% of BSP + PLC'
     },
     {
-        name: 'On Completion of 6th Floor',
-        percentage: '5% of Sale Price'
+        name: 'On Start Of Ground Roof Slab',
+        percentage: '10% of BSP'
     },
     {
-        name: 'On Completion of 9th Floor',
-        percentage: '5% of Sale Price'
+        name: 'On Start Of First Roof Slab',
+        percentage: '10% of BSP'
+    },
+    {
+        name: 'On Start Of 2nd Roof Slab',
+        percentage: '5% of BSP + Corner Charges'
     },
     // 
     {
-        name: 'On Completion of 12th Floor',
-        percentage: '5% of Sale Price'
+        name: 'On Start Of 3nd Roof Slab',
+        percentage: '5% of BSP'
     },
     {
-        name: 'On Completion of 15th Floor',
-        percentage: '5% of Sale Price'
+        name: 'On Start Of 4nd Roof Slab',
+        percentage: '5% of BSP'
     },
     {
-        name: 'On Completion of 18th Floor',
-        percentage: '5% of Sale Price'
+        name: 'On Start of Internal Plaster Work',
+        percentage: '5% of BSP'
     },
     {
-        name: 'On Start of Plumbing Work',
-        percentage: '10% of Sale Price'
+        name: 'On Start of Finishing Work',
+        percentage: '5% of BSP'
     },
     {
-        name: 'On Start of PO Work',
-        percentage: '10% of Sale Price'
-    },
-    {
-        name: 'On Possession',
-        percentage: '5% of Sale Price'
+        name: 'On Offer of possession Of the Unit',
+        percentage: '5% of BSP + Stamp Duty + IFMS + Any Other Charges'
     },
 ]
 
 const page = () => {
-    const [isUnlocked, setIsUnlocked] = useState(true)
+    const [isUnlocked, setIsUnlocked] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [event, setEvent] = useState('Unlock Price')
 
@@ -119,8 +131,8 @@ const page = () => {
             <section id="price" className='section-gap-inner scroll-mt-24 sm:scroll-mt-20'>
                 <div>
                     <Heading heading={'Price List'}
-                        subHeading={'Explore The medallion aurum mohali Price list, Payment Plan and Latest offers'}
-                        headingColor={'#0A1325'}
+                        subHeading={'Explore Sushma Belleza Price list, Payment Plan and Latest offers'}
+                        headingColor={'#4E4E4E'}
                         subHeadingColor={'#5A5454'}
                         subHeadingClass={'font-supera600'}
                     />
@@ -142,14 +154,14 @@ const page = () => {
                                                 </p>
                                             )}
                                         </div>
-                                        <div className={`${isUnlocked ? 'bg-[#fff]' : 'bg-[#000]'} duration-1000  w-[38%] pl-[8px] md:pl-[12px] py-2 flex flex-col justify-center items-start h-full`}>
-                                            <h4 className={`${isUnlocked ? 'text-[#000]' : 'text-[#fff]'} duration-1000 font-supera700 text-[19px] uppercase mr-1 lg:pl-3`}>{property?.title}</h4>
-                                            <div className={`${isUnlocked ? 'text-[#000]' : 'text-[#fff]'} duration-1000 mt-1 font-supera700 text-[14px] uppercase lg:pl-3`}>{property?.size}</div>
-                                            <p className={`${isUnlocked ? 'text-[#151515]' : 'text-[#fff]'} duration-1000 mt-[9px] px-1 lg:px-3 font-supera500 text-[12px] 2xl:text-[13px] capitalize overflow-y-auto scroll-m-8`}>{property?.description}</p>
+                                        <div className={`${isUnlocked ? 'bg-[#FCF5E9]' : 'bg-[#FCF5E9]'} duration-1000  w-[38%] pl-[8px] md:pl-[12px] py-2 flex flex-col justify-center items-start h-full`}>
+                                            <h4 className={`${isUnlocked ? 'text-[#A27D27]' : 'text-[#A27D27]'} duration-1000 font-supera700 text-[19px] uppercase mr-1 lg:pl-3`}>{property?.title}</h4>
+                                            <div className={`${isUnlocked ? 'text-[#414141]' : 'text-[#414141]'} duration-1000 mt-1 font-supera700 text-[14px] uppercase lg:pl-3`}>{property?.size}</div>
+                                            <p className={`${isUnlocked ? 'text-[#414141]' : 'text-[#414141]'} duration-1000 mt-[9px] px-1 lg:px-3 font-supera500 text-[12px] 2xl:text-[13px] capitalize overflow-y-auto scroll-m-8`}>{property?.description}</p>
                                         </div>
                                         <div className='w-[27%] cursor-pointer rounded-r-[22px]  overflow-hidden'>
                                             <div className='relative w-full h-full'>
-                                                <div onClick={() => handleOpenModal(property?.title)} className={' w-full h-full flex flex-col gap-y-2 justify-center items-center bg-[#000]'}>
+                                                <div onClick={() => handleOpenModal(property?.title)} className={' w-full h-full flex flex-col gap-y-2 justify-center items-center bg-[#474536]'}>
                                                     <span>
                                                         <svg width="43" height="56" viewBox="0 0 43 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M36.9739 18.9836H34.3744V13.7846C34.3744 6.61 28.5515 0.787109 21.3769 0.787109C14.2022 0.787109 8.37933 6.61 8.37933 13.7846V18.9836H5.77982C2.92037 18.9836 0.580811 21.3232 0.580811 24.1827V50.1777C0.580811 53.0372 2.92037 55.3767 5.77982 55.3767H36.9739C39.8333 55.3767 42.1729 53.0372 42.1729 50.1777V24.1827C42.1729 21.3232 39.8333 18.9836 36.9739 18.9836ZM21.3769 42.3792C18.5174 42.3792 16.1778 40.0396 16.1778 37.1802C16.1778 34.3207 18.5174 31.9812 21.3769 31.9812C24.2363 31.9812 26.5759 34.3207 26.5759 37.1802C26.5759 40.0396 24.2363 42.3792 21.3769 42.3792ZM29.4353 18.9836H13.3184V13.7846C13.3184 9.33948 16.9317 5.72617 21.3769 5.72617C25.822 5.72617 29.4353 9.33948 29.4353 13.7846V18.9836Z" fill="#fff" />
@@ -189,7 +201,7 @@ const page = () => {
                                         </div>
 
                                         <div className='w-full mt-5 relative rounded-[10px]'>
-                                            <div onClick={() => handleOpenModal(property?.title)} className={`${isUnlocked ? 'scale-100 duration-300 group text-[#fff] lg:text-[31px] text-[18px] hover:text-white font-poppins font-semibold  ' : 'scale-0 duration-300 absolute'} overflow-hidden text-center capitalize flex justify-center items-center rounded-[5.19px] px-7 lg:px-16 py-4 gap-2 w-full bg-[#000]`}>
+                                            <div onClick={() => handleOpenModal(property?.title)} className={`${isUnlocked ? 'scale-100 duration-300 group text-[#fff] lg:text-[31px] text-[18px] hover:text-white font-poppins font-semibold  ' : 'scale-0 duration-300 absolute'} overflow-hidden text-center capitalize flex justify-center items-center rounded-[5.19px] px-7 lg:px-16 py-4 gap-2 w-full bg-[#474536]`}>
                                                 <span>
                                                     <svg width="18" height="23" className='group-hover:fill-[#fff] fill-[#fff] ' viewBox="0 0 43 56" xmlns="http://www.w3.org/2000/svg">
                                                         <path d="M36.9739 18.9836H34.3744V13.7846C34.3744 6.61 28.5515 0.787109 21.3769 0.787109C14.2022 0.787109 8.37933 6.61 8.37933 13.7846V18.9836H5.77982C2.92037 18.9836 0.580811 21.3232 0.580811 24.1827V50.1777C0.580811 53.0372 2.92037 55.3767 5.77982 55.3767H36.9739C39.8333 55.3767 42.1729 53.0372 42.1729 50.1777V24.1827C42.1729 21.3232 39.8333 18.9836 36.9739 18.9836ZM21.3769 42.3792C18.5174 42.3792 16.1778 40.0396 16.1778 37.1802C16.1778 34.3207 18.5174 31.9812 21.3769 31.9812C24.2363 31.9812 26.5759 34.3207 26.5759 37.1802C26.5759 40.0396 24.2363 42.3792 21.3769 42.3792ZM29.4353 18.9836H13.3184V13.7846C13.3184 9.33948 16.9317 5.72617 21.3769 5.72617C25.822 5.72617 29.4353 9.33948 29.4353 13.7846V18.9836Z" />
@@ -270,7 +282,7 @@ const page = () => {
             <section id="current-offer" className='section-gap-inner scroll-mt-24 sm:scroll-mt-20'>
                 <Heading heading={'current Offers'}
                     subHeading={''}
-                    headingColor={'#0A1325'}
+                    headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
                     subHeadingClass={'font-supera600'}
                 />

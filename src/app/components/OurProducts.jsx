@@ -48,7 +48,7 @@ const data = {
         offer: 'Ask us for the best offers ',
     },
     '4BHK+S': {
-        image: '/images/ourproducts-bgimg2.webp',
+        image: '/images/ourproducts-bgimg3.webp',
         type: 'SEMI FURNISHED',
         heading: <>High <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '3400',
@@ -84,7 +84,7 @@ const OurProducts = () => {
     const handleDownloadBrochure = () => {
         const link = document.createElement('a');
         link.href = `${process.env.basePath}/download/BROCHURE.pdf`; // Link to your PDF
-        link.download = 'themedallionaurum-Brochure.pdf';
+        link.download = 'thesushmabelleza-Brochure.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -133,7 +133,7 @@ const OurProducts = () => {
 
     const handleWhatsAppClick = () => {
         const phoneNumber = '9988010405';
-        const message = 'Hi I am interested in *The Medallion Aurum*. Please send more detail';
+        const message = 'Hi I am interested in *Sushma Belleza*. Please send more detail';
 
         const encodedMessage = encodeURIComponent(message);
 
@@ -147,10 +147,13 @@ const OurProducts = () => {
     useEffect(() => {
         console.log('activeSectionTab', activeSectionTab)
         if (activeSectionTab) {
-            if (activeSectionTab == '3+1 BHK') {
-                setSelectedOption('3+1 BHK');
-            } else if (activeSectionTab == '4+1 BHK') {
-                setSelectedOption('4+1 BHK');
+            if (activeSectionTab == '3BHK') {
+                setSelectedOption('3BHK');
+            } else if (activeSectionTab == '3BHK+S') {
+                setSelectedOption('3BHK+S');
+            }
+            else if (activeSectionTab == '4BHK+S') {
+                setSelectedOption('4BHK+S');
             }
         }
     }, [activeSectionTab]);
@@ -303,7 +306,7 @@ const OurProducts = () => {
                                     </div>
                                     <div className='flex flex-col justify-around  h-[40%]'>
                                         <div className='h-[39%] flex items-center'>
-                                            <div className={`w-full ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-no-repeat bg-cover  py-3 2xl:py-[15px]`}>
+                                            <div className={`w-full bg-[#9c7520] py-3 2xl:py-[15px]`}>
                                                 <div className='flex justify-around '>
                                                     <div className='flex flex-col justify-center items-center'>
                                                         <div className=' w-[21px] h-[22px] relative'>

@@ -19,8 +19,9 @@ const navigationItems = [
     href: '/#products',
     label: 'Products',
     submenu: [
-      { href: '/#products', tab: '3+1 BHK', label: '3+1 BHK' },
-      { href: '/#products', tab: '4+1 BHK', label: '4+1 BHK' }
+      { href: '/#products', tab: '3BHK', label: '3BHK' },
+      { href: '/#products', tab: '3BHK+S', label: '3BHK+S' },
+      { href: '/#products', tab: '4BHK+S', label: '4BHK+S' }
     ]
   },
   {
@@ -209,7 +210,7 @@ const Navbar = () => {
 
   const handleWhatsAppClick = useCallback(() => {
     const phoneNumber = '9988010405';
-    const message = 'Hi I am interested in *The Medallion Aurum*. Please send more detail';
+    const message = 'Hi I am interested in *Sushma Belleza*. Please send more detail';
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     if (typeof window !== 'undefined') {
@@ -222,9 +223,9 @@ const Navbar = () => {
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
       <div style={{ zIndex: '550' }} className={`w-full z-[50] ${isSticky ? 'fixed top-0' : 'absolute top-0 left-0'}`}>
 
-        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#000000ef] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `${process.env.basePath == '' ? 'bg-backgroud-theme-local sm:bg-transparent-local' : 'bg-backgroud-theme-production sm:bg-transparent-production '} sm:bg-[#000000ef] shadow-lg py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == '/' ? 'py-2 lg:py-1 xl:py-4 ' : `bg-black ${process.env.basePath == '' ? 'bg-backgroud-theme-local sm:bg-transparent-local' : 'bg-backgroud-theme-production sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
+        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == '/' ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${process.env.basePath == '' ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
           <div className={`duration-500  xl:py-1 lg:py-2.5 w-full 2xl:container flex justify-between lg:justify-around 3xl:justify-between ${megaMenu ? 'items-center sm:items-end xl:items-center duration-1000 px-0' : 'items-center duration-1000 px-1.5 cxs:px-5 xl:px-0'} duration-1000 mx-2`}>
-            <Link href="/" aria-label="Back to homepage" className={`${isSticky ? 'w-[100px] h-[40px] sm:w-[160px] sm:h-[50px]  duration-1000 my-0.5 sm:my-0' : `${pathName == '/' ? 'w-[130px] h-[60px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
+            <Link href="/" aria-label="Back to homepage" className={`${isSticky ? 'w-[100px] h-[40px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == '/' ? 'w-[130px] h-[60px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
               <Image
                 src={logo}
                 fill
@@ -327,7 +328,7 @@ const Navbar = () => {
                   <>
                     {content?.map((item, index) => (
                       <li key={index} onClick={() => { setTab(item?.href); setActiveSectionTab(item?.href.replace('#', '')) }}
-                        className={` min-w-[130px] py-1.5 inline-flex justify-center rounded-full font-supera700 text-[12px] md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${tab == item?.href ? `${process.env.basePath == '' ? 'bg-backgroud-theme-local  px-4 cmd:px-6' : 'bg-backgroud-theme-production px-4 cmd:px-6'} text-white` : 'text-[#fff] sm:text-[#474536] duration-1000'}  bg-no-repeat bg-center`}>
+                        className={` min-w-[130px] py-1.5 inline-flex justify-center rounded-full font-supera700 text-[12px] md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${tab == item?.href ? `bg-[#a27d27]  px-4 cmd:px-6 text-white` : 'text-[#fff] sm:text-[#474536] duration-1000'}  bg-no-repeat bg-center`}>
                         <Link href={item?.href}>
                           {item?.label}
                         </Link>
@@ -337,7 +338,7 @@ const Navbar = () => {
                   <>
                     {content?.map((item, index) => (
                       <li key={index} onClick={() => { setActiveSectionTab(item?.href.replace('#', '')) }}
-                        className={` sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg sm:rounded-full whitespace-nowrap font-supera700 text-sm md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${isActive(item?.href?.substring(1)) ? `${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production'} text-white` : `text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000`}  bg-no-repeat bg-center`}>
+                        className={` sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg sm:rounded-full whitespace-nowrap font-supera700 text-sm md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${isActive(item?.href?.substring(1)) ? `bg-[#986b10] text-white` : `text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000`}  bg-no-repeat bg-center`}>
                         <Link href={item?.href}>
                           {item?.label}
                         </Link>

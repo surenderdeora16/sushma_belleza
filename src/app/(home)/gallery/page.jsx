@@ -50,16 +50,16 @@ const galleryImages = {
     },
   ],
   "Project Gallery": [
-    { src: projectGalleryImg1, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: false },
-    { src: projectGalleryImg2, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
-    { src: projectGalleryImg3, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
-    { src: projectGalleryImg4, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6", status: true },
-    { src: projectGalleryImg5, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6", status: true },
-    { src: projectGalleryImg6, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
-    { src: projectGalleryImg7, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
-    { src: projectGalleryImg8, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
-    { src: projectGalleryImg9, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6", status: true },
-    { src: projectGalleryImg10, alt: "the medallion aurum", class: "col-span-12 cxs:col-span-6", status: true },
+    { src: projectGalleryImg1, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: false },
+    { src: projectGalleryImg2, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: projectGalleryImg3, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: projectGalleryImg4, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6", status: true },
+    { src: projectGalleryImg5, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6", status: true },
+    { src: projectGalleryImg6, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: projectGalleryImg7, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: projectGalleryImg8, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: projectGalleryImg9, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6", status: true },
+    { src: projectGalleryImg10, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6", status: true },
   ],
   "Sample Flat": [
     { src: SampleFlatBedroom, title: "Bedroom", alt: "Bedroom", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
@@ -71,7 +71,7 @@ const galleryImages = {
     { src: SampleFlatLoungeDinning, title: "LoungeDinning", alt: " LoungeDinning", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
     { src: SampleFlatMasterBedroom, title: "MasterBedroom", alt: " MasterBedroom", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
     { src: SampleFlatKidsRoom, title: "Kids Room", alt: "Kids Room", class: "col-span-12 sm:col-span-6", status: true },
-    { src: SampleFlatLiving, alt: "the medallion aurum Living", class: "col-span-12 cxs:col-span-6", status: true },
+    { src: SampleFlatLiving, alt: "Sushma Belleza Living", class: "col-span-12 cxs:col-span-6", status: true },
   ],
   "Construction Updates": [
     { src: projectGalleryImg1, alt: "Sample Flat Image 6", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: false },
@@ -223,7 +223,7 @@ export default function Page() {
         <Heading
           heading={typeof window !== 'undefined' && window.innerWidth >= 640 ? activeTab : 'Gallery'}
           subHeading={
-            "Explore The medallion Aurum mohali  Project gallery & Construction Updates."
+            "Explore Sushma Belleza mohali  Project gallery & Construction Updates."
           }
           headingColor={"#0A1325"}
           subHeadingColor={"#5A5454"}

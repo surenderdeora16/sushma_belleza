@@ -53,7 +53,7 @@ const AvatarModel = () => {
 
     const handleWhatsAppClick = () => {
         const phoneNumber = '9988010405';
-        const message = 'Hi I am interested in *The Medallion Aurum*. Please send more detail';
+        const message = 'Hi I am interested in *Sushma Belleza*. Please send more detail';
 
         const encodedMessage = encodeURIComponent(message);
 
@@ -146,7 +146,7 @@ const AvatarModel = () => {
                                         </div>
                                     </div>
                                     <div onClick={() => { handleOpenModal() }} className={` ${open ? 'cursor-pointer' : 'cursor-default'} w-full rounded-md overflow-hidden`}>
-                                        <button aria-label="contact now" className={`w-full py-[7px]  tracking-wider ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-cover bg-right-bottom text-[13px]  font-supera700 text-white uppercase`}> Contact Now </button>
+                                        <button aria-label="contact now" className={`w-full py-[7px]  tracking-wider bg-[#8e6c1c] text-[13px]  font-supera700 text-white uppercase`}> Contact Now </button>
                                     </div>
                                     <div className='w-full flex justify-between gap-x-[10px] pt-1 pb-3'>
                                         <button aria-label="call now" onClick={() => window.location.href = 'tel:918968066698'} className={` ${open ? 'cursor-pointer' : 'cursor-auto'} flex items-center pl-[10px] w-1/2 border-[1.5px] border-[#000] rounded-lg py-1.5`}>
