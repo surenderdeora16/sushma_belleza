@@ -119,7 +119,7 @@ function Footer() {
                                 &nbsp;
                                 <b className='inline cmd:hidden font-supera600 text-[14px] text-[#FC6602] uppercase'> Realty </b>&nbsp;<b className='inline cmd:hidden text-[#1EC8EC] uppercase'> Nivesh </b>
                             </div>
-                            <h6 className='font-supera600 text-[12px] cxs:text-[14px] lg:text-[16px] xl:text-[18px] flex'>
+                            <h6 className='font-supera500 text-[12px] cxs:text-[14px] lg:text-[16px] xl:text-[18px] flex'>
                                 <b className='hidden cmd:inline text-[#FC6602] uppercase'> Realty </b>&nbsp;<b className='hidden cmd:inline text-[#1EC8EC] uppercase'> Nivesh :&nbsp;</b>
                                 <p className='font-supera500 text-white text-center cmd:text-left'>Showroom No. 12 level 2, Uptown Insignia PR-7 Airport Road, Zirakpur, Punjab</p>
                             </h6>

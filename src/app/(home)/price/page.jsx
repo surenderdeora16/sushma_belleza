@@ -171,16 +171,18 @@ const Page = () => {
                                                 </div>
 
                                                 <div className={`w-full h-full absolute top-0 right-0 ${isUnlocked ? 'translate-x-[96%] duration-500' : 'translate-x-0 duration-500'} duration-500 z-20 ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production'} bg-cover`}>
-                                                    <div className={` w-full h-[40%] flex justify-center`}>
-                                                        <div className='flex flex-col lg:flex-col items-center justify-center gap-y-1 lg:gap-y-1 gap-x-3.5 capitalize font-supera600 text-[#000] text-[14px] 2xl:text-[16px] tracking-wide'>
-                                                            {property?.priceLabel}
-                                                            <p className='px-1 2xl:px-0 font-poppins font-medium text-[20px] lg:text-[22px] 2xl:text-[26px] tracking-[1%] text-[#000] relative after:absolute after:top-[50%] after:translate-y-[-50%] after:left-[50%] after:translate-x-[-50%] after:w-[110%] after:h-[1.1px] after:bg-[#EB4C4C]'>{property?.companyPrice}</p>
+                                                    <div className='w-full h-full py-2 bg-[#00000047]'>
+                                                        <div className={` w-full h-[40%] flex justify-center`}>
+                                                            <div className='flex flex-col lg:flex-col items-center justify-center gap-y-1 lg:gap-y-1 gap-x-3.5 capitalize font-supera600 text-[#fff] text-[14px] 2xl:text-[16px] tracking-wide'>
+                                                                {property?.priceLabel}
+                                                                <p className='px-1 2xl:px-0 font-poppins font-medium text-[20px] lg:text-[22px] 2xl:text-[26px] tracking-[1%] text-[#fff] relative after:absolute after:top-[50%] after:translate-y-[-50%] after:left-[50%] after:translate-x-[-50%] after:w-[110%] after:h-[1.1px] after:bg-[#EB4C4C]'>{property?.companyPrice}</p>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className='w-full h-[60%] relative flex flex-col justify-center items-center'>
-                                                        <h6 className='font-supera600 text-[14px] 2xl:text-[16px] text-center text-[#000]'>{property?.ourPriceLabel}</h6>
-                                                        <p className='font-poppins font-semibold text-[32px] lg:text-[35px] 2xl:text-[38px] tracking-[1%] text-center text-[#000]'>{property?.ourPrice}</p>
-                                                        <p className='rotate-0 tracking-wide  font-poppins font-medium text-[5px] text-[#000]'>T&C Apply </p>
+                                                        <div className='w-full h-[60%] relative flex flex-col justify-center items-center'>
+                                                            <h6 className='font-supera600 text-[14px] 2xl:text-[16px] text-center text-[#fff]'>{property?.ourPriceLabel}</h6>
+                                                            <p className='font-poppins font-semibold text-[32px] lg:text-[35px] 2xl:text-[38px] tracking-[1%] text-center text-[#fff]'>{property?.ourPrice}</p>
+                                                            <p className='rotate-0 tracking-wide  font-poppins font-medium text-[5px] text-[#fff]'>T&C Apply </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,7 +194,7 @@ const Page = () => {
                                         </div>
 
                                         <div>
-                                            <div className='relative max-w-[250px] bxxs:max-w-[280px] xs:max-w-[300px] cxs:max-w-[350px] sm:max-w-[400px] h-[40px] cxs:h-[50px] flex items-center mt-3.5 pl-3.5 bg-[#BE7530] tracking-wide font-supera600 sm:font-supera700 text-lg bxxs:text-xl cxs:text-[24px] sm:text-[26px] text-[#fff]'>
+                                            <div className='relative max-w-[250px] bxxs:max-w-[280px] xs:max-w-[300px] cxs:max-w-[350px] sm:max-w-[400px] h-[40px] cxs:h-[50px] flex items-center mt-3.5 pl-3.5 bg-[#AE7A11] tracking-wide font-supera600 sm:font-supera700 text-lg bxxs:text-xl cxs:text-[24px] sm:text-[26px] text-[#fff]'>
                                                 {property?.title} | {property?.size}
 
                                                 <div className="absolute top-0 right-0 w-0 h-0 border-t-[40px] cxs:border-t-[50px] border-t-transparent border-r-[40px] cxs:border-r-[50px] border-r-white"></div>
@@ -210,23 +212,23 @@ const Page = () => {
                                                 Unlock Price
                                             </div>
 
-                                            <div className={`${!isUnlocked ? 'duration-1000 h-[180px] z-20 bg-no-repeat bg-cover bg-center' : 'duration-1000  z-0 h-[0px] '} ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production'} bg-cover w-full flex-col rounded-[5.19px] overflow-hidden`}>
+                                            <div className={`${!isUnlocked ? 'duration-1000 h-[180px] z-20 bg-no-repeat bg-cover bg-center' : 'duration-1000  z-0 h-[0px] '} bg-[#4b4b4b] w-full flex-col rounded-[5.19px] overflow-hidden`}>
                                                 <div className={` w-full h-[40%] flex justify-center`}>
-                                                    <div className='flex flex-col lg:flex-col items-center justify-center gap-y-1 lg:gap-y-1 gap-x-3.5 capitalize font-supera600 text-[#000] text-[14px] 2xl:text-[16px] tracking-wide'>
+                                                    <div className='flex flex-col lg:flex-col items-center justify-center gap-y-1 lg:gap-y-1 gap-x-3.5 capitalize font-supera600 text-[#fff] tracking-wider text-[14px] 2xl:text-[16px] tracking-wide'>
                                                         {property?.priceLabel}
-                                                        <p className='px-1 2xl:px-0 font-poppins font-medium text-[20px] cxs:text-[22px] sm:text-[26px] tracking-[1%] text-[#000] relative after:absolute after:top-[50%] after:translate-y-[-50%] after:left-[50%] after:translate-x-[-50%] after:w-[110%] after:h-[1.1px] after:bg-[#EB4C4C]'>{property?.companyPrice}</p>
+                                                        <p className='px-1 2xl:px-0 font-poppins font-medium text-[20px] cxs:text-[22px] sm:text-[26px] tracking-[1%] text-[#fff] relative after:absolute after:top-[50%] after:translate-y-[-50%] after:left-[50%] after:translate-x-[-50%] after:w-[110%] after:h-[1.1px] after:bg-[#EB4C4C]'>{property?.companyPrice}</p>
                                                     </div>
                                                 </div>
                                                 <div className='flex justify-center'>
                                                     <svg width="117" height="3" viewBox="0 0 117 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M58.5002 2.7124V0.961426L0.338924 2.12365L58.5002 2.7124Z" fill="black" />
-                                                        <path d="M58.5001 2.7124V0.961426L116.661 2.12365L58.5001 2.7124Z" fill="black" />
+                                                        <path d="M58.5002 2.7124V0.961426L0.338924 2.12365L58.5002 2.7124Z" fill="#fff" />
+                                                        <path d="M58.5001 2.7124V0.961426L116.661 2.12365L58.5001 2.7124Z" fill="#fff" />
                                                     </svg>
                                                 </div>
                                                 <div className='w-full h-[60%] relative flex flex-col justify-center items-center'>
-                                                    <h6 className='font-supera600 text-[14px] 2xl:text-[16px] text-center text-[#000]'>{property?.ourPriceLabel}</h6>
-                                                    <p className='font-poppins font-semibold text-[32px] sm:text-[36px] tracking-[1%] text-center text-[#000]'>{property?.ourPrice}</p>
-                                                    <p className='rotate-0 tracking-wide  font-poppins font-medium text-[6px] text-[#000]'>T&C Apply </p>
+                                                    <h6 className='font-supera600 text-[14px] 2xl:text-[16px] tracking-wider text-center text-[#fff]'>{property?.ourPriceLabel}</h6>
+                                                    <p className='font-poppins font-semibold text-[32px] sm:text-[36px] tracking-[1%] text-center text-[#fff]'>{property?.ourPrice}</p>
+                                                    <p className='rotate-0 tracking-wide  font-poppins font-medium text-[6px] text-[#fff]'>T&C Apply </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,7 +242,7 @@ const Page = () => {
             </section>
 
             <section id="payment-structure" className='section-gap scroll-mt-24'>
-                <div className='bg-[#333333] relative'>
+                <div className='bg-[#4b4b4b] relative'>
                     <div className='w-full h-full absolute top-0 left-0 z-10 bg-[#0000009b]'></div>
                     <div className={` pt-6 sm:py-10 cmd:py-14 px-3 bxxs:px-5 ${process.env.basePath == '' ? 'bg-paymentStructure-section-local' : 'bg-paymentStructure-section-production'}`}>
                         <div className='relative z-20'>

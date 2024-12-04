@@ -64,7 +64,7 @@ const Testimonial = () => {
             <div className='testimonial-section w-full h-[710px] bg-no-repeat bg-cover relative'>
                 <div className='relative w-full h-full overflow-hidden bg-center'>
                     <video
-                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/videos/testimonalbg.mp4`}
+                        src={`${process.env.basePath}/videos/testimonalbg.mp4`}
                         autoPlay
                         muted
                         loop

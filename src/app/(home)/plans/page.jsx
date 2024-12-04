@@ -45,8 +45,8 @@ const sitePlan = [
 ];
 
 const towerPlans = [
-    { label: 'Low rise 2300 sqft', image: towerPlanImg2?.src },
-    { label: 'High rise 2800 sqft', image: towerPlanImg1?.src },
+    { label: 'Low rise 2300 sqft', image: towerPlanImg1?.src },
+    { label: 'High rise 2800 sqft', image: towerPlanImg2?.src },
     { label: 'high rise 3400 sqft', image: towerPlanImg2?.src },
 ];
 

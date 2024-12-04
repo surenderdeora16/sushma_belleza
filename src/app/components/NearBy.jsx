@@ -36,8 +36,8 @@ const NearBy = () => {
         <section id="nearby" className='mt-5 nearby-section section-gap-inner scroll-mt-20'>
             <div className='2xl:container mx-auto'>
                 <div>
-                    <h2 className='px-3 font-supera700 leading-tight text-[27px] sm:text-[30px] cmd:text-[32px] text-center text-[#0A1325] uppercase'>
-                        <span className='font-supera600'>Nearby,</span> <strong>Sushma Belleza</strong>
+                    <h2 className='px-3 font-supera700 leading-tight text-[27px] sm:text-[30px] cmd:text-[32px] text-center text-[#303030] uppercase'>
+                        <span className='font-supera600'>Nearby,</span> <strong className='font-supera700'>Sushma Belleza</strong>
                     </h2>
                 </div>
                 <div className='my-[20px] 3xl:my-[25px] px-5 relative'>
