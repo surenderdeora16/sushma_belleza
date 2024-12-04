@@ -28,7 +28,7 @@ const tabsConfig = [
     },
 ]
 
-const page = () => {
+const Page = () => {
     const videoRefs = useRef({});
     const [clickedVideos, setClickedVideos] = useState({});
 
@@ -122,7 +122,7 @@ const page = () => {
                                     />
                                 </div>
                                 <h6 className='capitalize font-supera600 text-[#262623] leading-tight lg:leading-snug text-lg sm:text-xl 2xl:text-2xl'>Stay <br /> Connected.</h6>
-                                <p className='tracking-wider capitalize text-[#646363] font-supera600 text-[11px] bxxs:text-xs cxs:text-[13px] xl:text-sm 2xl:text-base'>The Aurum's prime location ensures you "Stay Connected" effortlessly with excellent roadways, proximity to Chandigarh, and easy access to educational institutions, healthcare facilities, shopping centers, and business hubs. Enjoy seamless connectivity and a lifestyle of convenience.</p>
+                                <p className='tracking-wider capitalize text-[#646363] font-supera600 text-[11px] bxxs:text-xs cxs:text-[13px] xl:text-sm 2xl:text-base'>The Aurum&apos;s prime location ensures you &quot;Stay Connected&quot; effortlessly with excellent roadways, proximity to Chandigarh, and easy access to educational institutions, healthcare facilities, shopping centers, and business hubs. Enjoy seamless connectivity and a lifestyle of convenience.</p>
                             </div>
                             <div className='border-r border-[#BFBDAC] pr-5 cmd:px-5 xl:px-7 2xl:px-10 flex flex-col gap-y-2 xl:gap-y-3'>
                                 <div className='relative w-[50px] h-[50px] cxs:w-[55px] cxs:h-[55px] md:w-[63px] md:h-[63px]'>
@@ -208,4 +208,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

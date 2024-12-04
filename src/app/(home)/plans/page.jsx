@@ -50,7 +50,7 @@ const towerPlans = [
     { label: 'high rise 3400 sqft', image: towerPlanImg2?.src },
 ];
 
-const page = () => {
+const Page = () => {
     const [selectedPlan, setSelectedPlan] = useState(0);
      
     const variants = {
@@ -230,4 +230,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

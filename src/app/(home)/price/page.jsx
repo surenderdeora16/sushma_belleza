@@ -99,7 +99,7 @@ const paymentPlanData = [
     },
 ]
 
-const page = () => {
+const Page = () => {
     const [isUnlocked, setIsUnlocked] = useState(false)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [event, setEvent] = useState('Unlock Price')
@@ -297,4 +297,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

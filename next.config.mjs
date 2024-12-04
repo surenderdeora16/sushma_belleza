@@ -4,9 +4,9 @@ const nextConfig = {
     reactStrictMode: true,
     basePath: '',
     trailingSlash: true,
-    assetPrefix: '/sushmabelleza',
+    assetPrefix: '',
     env: {
-        basePath: '/sushmabelleza',
+        basePath: '',
     },
     images: {
         unoptimized: true

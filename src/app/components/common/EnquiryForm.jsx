@@ -68,7 +68,7 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                         'Thank You'
                                     ) : (
                                         <>
-                                            Can't wait to know more? <span className='text-[#464646] font-supera700'>Let's talk!</span>
+                                                Can&apos;t wait to know more? <span className='text-[#464646] font-supera700'>Let&apos;s talk!</span>
                                         </>
                                     )}
                                 </h4>
