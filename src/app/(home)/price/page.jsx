@@ -289,10 +289,17 @@ const Page = () => {
                     subHeadingClass={'font-supera600'}
                 />
                 <figure onClick={() => handleOpenModal("Current Offer")} className='cursor-pointer hidden sm:block w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] relative'>
-                    <Image src={CurrentOfferImg} fill alt="" className='object-cover object-left' />
+                    <Image src={CurrentOfferImg} fill alt="sushma belleza offers" quality={100} className='object-cover object-left' />
                 </figure>
-                <figure onClick={() => handleOpenModal("Current Offer (Mobile)")} className='block sm:hidden w-full h-[500px] bxxs:h-[545px] cxs:h-[550px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 3xl:h-[70vh] relative'>
-                    <Image src={CurrentOfferMobileBanner} fill alt="" className='object-cover sm:object-fill' />
+                <figure onClick={() => handleOpenModal("Current Offer (Mobile)")} className='block sm:hidden w-full mx-auto'>
+                    <Image
+                        src={CurrentOfferMobileBanner}
+                        width={100}
+                        height={75}
+                        layout="responsive"
+                        quality={100}
+                        alt="sushma belleza offers"
+                        className='object-cover cxs:object-cover' />
                 </figure>
             </section>
         </div>

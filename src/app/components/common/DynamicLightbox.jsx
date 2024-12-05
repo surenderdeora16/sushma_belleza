@@ -86,7 +86,7 @@ const DynamicLightbox = forwardRef(
               setIsOpen(true);
               setCurrentIndex(idx || 0);
             }}
-            quality={100}
+            loading="lazy"
             onContextMenu={onContextMenu}
             fill={fill}
             className={`${className} cursor-pointer object-contain`}

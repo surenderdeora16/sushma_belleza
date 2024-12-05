@@ -107,7 +107,7 @@ export default function Home() {
                         exit="exit"
                         onClick={() => handleNext()}
                         className="block md:hidden w-full h-[450px] xs:h-[500px] relative">
-                        <Image src={slidesData[currentIndex].image} alt={slidesData[currentIndex].title} fill className="object-cover" />
+                        <Image src={slidesData[currentIndex].image} alt={slidesData[currentIndex].title} fill className="object-cover object-right sm:object-center" />
                         <div className="absolute bottom-5 left-[50%] translate-x-[-50%] w-[95%] bg-white">
                             <div className={`relative w-full h-full pt-3 pb-5 pl-5 bxxs:pl-6 xs:pl-9 pr-4 after:absolute after:bottom-0 after:left-0 after:w-full after:h-[5px] ${process.env.basePath == '' ? 'after:bg-backgroud-theme-local' : 'after:bg-backgroud-theme-production'} after:bg-cover after:bg-no-repeat after:bg-right`}>
                                 <h3 className="font-supera600 text-xl text-[#303030] leading-tight">{slidesData[currentIndex].title}</h3>

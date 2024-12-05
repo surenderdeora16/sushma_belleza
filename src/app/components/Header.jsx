@@ -46,7 +46,7 @@ const Header = () => {
           className="flex justify-center items-center"
         >
           <div className="absolute w-full h-full">
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full h-full overflow-hidden ">
               {/* Background video */}
               <Image
                 src={HeaderImg}
@@ -56,9 +56,9 @@ const Header = () => {
                 aria-label="Sushma Belleza Header Image"
               />
               {/* Overlay content */}
-              <div className="w-full h-full absolute top-0 left-0">
-                <div className="relative w-full h-full bg-[#00000029]">
-                  <div className="px-5 xs:px-10 cmd:px-14 lg:px-6 xl:px-16 3xl:px-4 2xl:pt-12 w-full h-full flex flex-col justify-center sm:justify-center items-start">
+              <div className="w-full h-full flex items-end bg-[#00000029]">
+                <div className="relative w-full h-full sm:h-[calc(100%-75px)] lg:h-[calc(100%-80px)]">
+                  <div className="px-5 xs:px-10 cmd:px-14 lg:px-6 xl:px-16 3xl:px-4 -mt-10 sm:mt-0 w-full h-full flex flex-col justify-center sm:justify-center items-start">
                     <div></div>
                     <div className=" 2xl:container mx-auto sm:mx-0 2xl:mx-auto">
                       {/* Heading */}

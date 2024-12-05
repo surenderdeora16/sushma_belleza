@@ -107,7 +107,7 @@ const Downloads = () => {
         <section id="download" className='section-gap scroll-mt-24 h-[450px] xs:h-[500px] cxs:h-[550px] md:h-[610px] cmd:h-[680px] lg:h-auto'>
             {isModalOpen && <ModalEnquiryForm formType={'enquiry'} heading={FormHeading} isOpen={isModalOpen} onClose={handleCloseModal} onFormSubmit={!formUnlock ? downFunction == 'single' ? handleDownload : handleDownloadMultiple : ''} funcParameter={pdfdata} eventSource={event} />}
             <div className={` w-full relative h-[330px] xs:h-[350px] cxs:h-[380px] cmd:h-[450px] lg:h-[570px] ${process.env.basePath == '' ? 'lg:bg-download-sectionLeftImg-local' : 'lg:bg-download-sectionLeftImg-production'} bg-no-repeat bg-right-top bg-contain  bg-[#474536] lg:bg-[#090909]`}>
-                <div className={`w-full h-full ${process.env.basePath == '' ? 'lg:bg-download-section-local' : 'lg:bg-download-section-production'} bg-no-repeat bg-right bg-cover sm:bg-[length:80%_100%] md:bg-[length:70%_100%] lg:bg-[length:70%_100%] xl:bg-[length:70%_100%] 2xl:bg-[length:65%_100%] 3xl:bg-contain`}>
+                <div className={`w-full h-full ${process.env.basePath == '' ? 'lg:bg-download-section-local' : 'lg:bg-download-section-production'} bg-no-repeat bg-right bg-cover sm:bg-[length:80%_100%] md:bg-[length:70%_100%] lg:bg-[length:70%_100%] xl:bg-[length:70%_100%] 2xl:bg-[length:70%_100%] 3xl:bg-contain`}>
                     <div className='hidden lg:block w-full h-full bg-[#00000096] sm:bg-transparent absolute top-0 left-0 z-20 sm:z-0'></div>
                     <div className='2xl:container h-full pl-0 lg:pl-10 3xl:pl-0 mx-auto flex flex-col gap-y-10 lg:gap-y-0 justify-start lg:justify-evenly relative sm:z-10'>
                         <div className=' sm:px-0 relative z-30'>

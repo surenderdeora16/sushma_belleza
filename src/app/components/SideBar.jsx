@@ -191,7 +191,7 @@ const SideBar = ({ open, setOpen }) => {
                                     {menuData.map((menuItem, index) => (
                                         <li key={index} className="mb-3">
                                             <div className={`${activeMenu === menuItem.label ? 'pt-3 pb-3 mb-5 duration-500' : 'pb-1 duration-500'} duration-500 pl-3  flex items-center justify-between w-full border-b-[0.50px] border-b-gray-700`}>
-                                                <Link href={menuItem?.href ? menuItem?.href : ''}
+                                                <Link href={menuItem?.href ? `${process.env.basePath}${menuItem.href}` : ''}
                                                     onClick={() => { setOpen(false) }}
                                                     className="w-full text-left text-white hover:text-gray-300 text-lg font-supera500 tracking-wider py-2"
                                                 >
@@ -231,7 +231,7 @@ const SideBar = ({ open, setOpen }) => {
                                                                             delay: subIndex * 0.05,
                                                                         }}
                                                                     >
-                                                                        <Link href={subItem?.href ? subItem?.href : ''}
+                                                                        <Link href={subItem?.href ? `${process.env.basePath}${subItem?.href}` : ''}
                                                                             onClick={(e) => { handleTabChange(subItem.tab, subItem.href || menuItem.href, e); }}
                                                                             className="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left"
                                                                         >

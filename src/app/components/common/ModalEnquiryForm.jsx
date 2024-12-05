@@ -82,7 +82,7 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                             <div className='w-full cmd:w-1/2 flex flex-col  justify-around lg:justify-between'>
                                 {/* <h4 className='mb-5 cmd:mb-0 font-supera500 text-[25px] cmd:text-[35px] xl:text-[43px] text-[#555555] max-w-[280px] cmd:max-w-[380px] leading-[1.3]'>We Are Excited To <span className='font-supera700 text-[#000]'>Meet You</span></h4> */}
                                 <h4 className='mb-5 cmd:mb-0 pr-5 xs:pr-10 sm:pr-7 lg:pr-5 font-supera600 text-[25px] cmd:text-[30px] xl:text-[35px] text-[#555555] w-full  leading-[1.3]'>{thankYou ? 'Thank You' : heading}</h4>
-                                <Link href={'#'} className='hidden cmd:block w-[200px] h-[50px] lg:w-[290px] lg:h-[72px] relative'>
+                                <Link href={`${process.env.basePath}`} className='hidden cmd:block w-[200px] h-[50px] lg:w-[290px] lg:h-[72px] relative'>
                                     <Image src={logo} fill className='object-contain' alt="Sushma Belleza logo" />
                                 </Link>
                                 <div className='hidden cmd:block w-[200px] h-[75px] xl:w-[244px] xl:h-[86px] relative'>
@@ -120,8 +120,6 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
                                                 },
                                         };
                                         const data = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
-
-                                        console.log('data', data)
 
                                         if (data && data?.data?.status) {
                                             if (actionToSend == 'submitForm') {
@@ -337,12 +335,12 @@ const EnquiryForm = ({ formType, heading, isOpen, onClose = () => { }, eventSour
 
                                                     <div>
                                                         <ul className='flex flex-wrap gap-x-8 xs:gap-x-16 gap-y-3'>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href="/#products" onClick={() => handleClose()} className="w-full h-full">Products</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href="/plans" onClick={() => handleClose()} className="w-full h-full">Plans</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href="/amenities" onClick={() => handleClose()} className="w-full h-full">Amenities</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href="/price" onClick={() => handleClose()} className="w-full h-full">Price</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href="/location" onClick={() => handleClose()} className="w-full h-full">Location</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href="/gallery" onClick={() => handleClose()} className="w-full h-full">Gallery</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href={`${process.env.basePath}#products`} onClick={() => handleClose()} className="w-full h-full">Products</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href={`${process.env.basePath}/plans`} onClick={() => handleClose()} className="w-full h-full">Plans</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href={`${process.env.basePath}/amenities`} onClick={() => handleClose()} className="w-full h-full">Amenities</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href={`${process.env.basePath}/price`} onClick={() => handleClose()} className="w-full h-full">Price</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href={`${process.env.basePath}/location`} onClick={() => handleClose()} className="w-full h-full">Location</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production ' } bg-bottom `}><Link href={`${process.env.basePath}/gallery`} onClick={() => handleClose()} className="w-full h-full">Gallery</Link></li>
                                                         </ul>
                                                     </div>
 

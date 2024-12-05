@@ -220,7 +220,7 @@ const ProjectStatus = () => {
                                 <h5 className='uppercase font-supera700 tracking-wide text-[10px] text-center text-[#494E51]'>Pending </h5>
                             </div>
                         </div>
-                        <p className='font-supera600 uppercase mt-2.5 tracking-wide text-xs cxs:text-sm sm:text-base md:text-[18px] text-center text-[#5A5454]'>Note : SUSHMA BELLEZA  project progress recoded till September 2027*.</p>
+                        <p className='font-supera600 uppercase mt-2.5 tracking-wide text-xs cxs:text-sm sm:text-base md:text-[18px] text-center text-[#5A5454]'>Note : SUSHMA BELLEZA  project progress recoded till December 2024*.</p>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ function Footer() {
             <div style={{ backgroundImage: `url('${process.env.basePath}/images/footer-bg-image.webp')` }} className={`w-full`}>
                 <div className='w-full h-full bg-[#2D2C2CE5] '>
                     <div className='lg:container mx-auto pt-[35px]'>
-                        <Link href="/">
+                        <Link href={`${process.env.basePath}/`}>
                             <div className='w-full max-w-[300px] sm:max-w-[350px] h-[100px] mx-auto relative'>
                                 <Image
                                     src={logo}
@@ -24,34 +24,34 @@ function Footer() {
                         <hr className='max-w-[1257px] mx-5 lg:mx-auto border-[#787777] mt-[35px] mb-[25px]' />
                         <div className='flex flex-col gap-y-[38px]'>
                             <ul className='flex justify-center flex-wrap lg:flex-nowrap gap-3 md:gap-x-6 lg:gap-x-6 xl:gap-x-7 2xl:gap-x-9 px-2 sm:px-0'>
-                                <Link href={'/#about-us'}>
+                                <Link href={`${process.env.basePath}#about-us`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>About Us</li>
                                 </Link>
-                                <Link href="/#products">
+                                <Link href={`${process.env.basePath}#products`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>Products </li>
                                 </Link>
-                                <Link href="/location">
+                                <Link href={`${process.env.basePath}/location`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>LOCATION MAP</li>
                                 </Link>
-                                <Link href="/plans">
+                                <Link href={`${process.env.basePath}/plans`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>PLANS</li>
                                 </Link>
-                                <Link href="/price">
+                                <Link href={`${process.env.basePath}/price`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>Price</li>
                                 </Link>
-                                <Link href="/amenities">
+                                <Link href={`${process.env.basePath}/amenities`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>amenities</li>
                                 </Link>
-                                <Link href="/gallery">
+                                <Link href={`${process.env.basePath}/gallery`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>GALLERY</li>
                                 </Link>
-                                <Link href="/#faqs">
+                                <Link href={`${process.env.basePath}#faqs`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>FAQ</li>
                                 </Link>
-                                <Link href="/#download">
+                                <Link href={`${process.env.basePath}#download`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>Downloads</li>
                                 </Link>
-                                <Link href="/#contact-us">
+                                <Link href={`${process.env.basePath}#contact-us`}>
                                     <li className=' text-[12px] cmd:text-[14px] lg:text-[13px] 2xl:text-[15px] 3xl:text-[16px] font-supera500 text-white uppercase tracking-wide'>Contact us</li>
                                 </Link>
                             </ul>

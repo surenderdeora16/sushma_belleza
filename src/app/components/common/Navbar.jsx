@@ -223,9 +223,9 @@ const Navbar = () => {
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
       <div style={{ zIndex: '550' }} className={`w-full z-[50] ${isSticky ? 'fixed top-0' : 'absolute top-0 left-0'}`}>
 
-        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == '/' ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${process.env.basePath == '' ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
+        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-1.5 sm:py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == '/' ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${process.env.basePath == '' ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
           <div className={`duration-500  xl:py-1 lg:py-2.5 w-full 2xl:container flex justify-between lg:justify-around 3xl:justify-between ${megaMenu ? 'items-center sm:items-end xl:items-center duration-1000 px-0' : 'items-center duration-1000 px-1.5 cxs:px-5 xl:px-0'} duration-1000 mx-2`}>
-            <Link href="/" aria-label="Back to homepage" className={`${isSticky ? 'w-[100px] h-[40px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == '/' ? 'w-[130px] h-[60px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
+            <Link href={`${process.env.basePath}`} aria-label="Back to homepage" className={`${isSticky ? 'w-[130px] h-[42px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == '/' ? 'w-[150px] h-[50px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
               <Image
                 src={logo}
                 fill
@@ -237,13 +237,12 @@ const Navbar = () => {
               {navigationItems.map((item) => (
                 <li className={`${megaMenu ? `font-supera500 xl:font-supera600  xl:w-1/6 flex justify-center ${(item?.label === 'About Us' || item?.label === 'Amenities') ? 'hidden' : ''}` : 'font-supera400 xl:font-supera500'} h-full`} key={item.href}>
                   <div className={`text-white  tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table`}>
-                    <Link
-                      href={
+                    <Link href={
                         pathName === '/'
-                          ? item?.href
+                          ? `${process.env.basePath}${item?.href}`
                           : item?.href.includes('#')
-                            ? `/${item?.href}`
-                            : item?.href
+                            ? `${process.env.basePath}${item?.href}`
+                            : `${process.env.basePath}${item?.href}`
                       }
                       className={`w-full h-full text-left whitespace-nowrap relative after:absolute after:left-0 after:top-[120%] after:h-[3px] after:rounded-[20px] after:duration-500 after:z-[60] after:bg-white hover:after:w-[100%] hover:after:duration-500 ${isActive(item.href.replace('#', '').substring(1)) ? 'after:w-[100%] after:duration-500' : 'after:w-[0%]'} ${pathName?.includes(item?.href) ? 'after:w-[100%] after:duration-500' : 'after:w-[0%]'} ${isActive(item.href.substring(1)) ? 'after:w-[100%] after:duration-500' : 'after:w-[0%]'
                         }`}
@@ -254,7 +253,7 @@ const Navbar = () => {
                       <ul className='leading-loose mt-4 mx-auto flex flex-col justify-center gap-y-5 '>
                         {item.submenu.map((subitem, idx) => (
                           <li key={idx} className={`tracking-wider cursor-pointer text-left font-supera400 capitalize flex justify-start gap-x-1 text-[13px] xl:text-[14px] 3xl:text-[15px] leading-tight`}>
-                            <Link href={(subitem?.href) ? subitem?.href : item?.href} onClick={(e) => { setTab(subitem?.href?.replace('/gallery', '')); handleTabChange(subitem?.tab, subitem?.href, e) }}>
+                            <Link href={(subitem?.href) ? `${process.env.basePath}${subitem?.href}` : `${process.env.basePath}${item?.href}`} onClick={(e) => { setTab(subitem?.href?.replace('/gallery', '')); handleTabChange(subitem?.tab, subitem?.href, e) }}>
                               {subitem?.label === '+91 89680 66698' ? (
                                 <>
                                   <div onClick={() => { window.location.href = 'tel:918968066698' }}>
@@ -329,7 +328,7 @@ const Navbar = () => {
                     {content?.map((item, index) => (
                       <li key={index} onClick={() => { setTab(item?.href); setActiveSectionTab(item?.href.replace('#', '')) }}
                         className={` min-w-[130px] py-1.5 inline-flex justify-center rounded-full font-supera700 text-[12px] md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${tab == item?.href ? `bg-[#a27d27]  px-4 cmd:px-6 text-white` : 'text-[#fff] sm:text-[#474536] duration-1000'}  bg-no-repeat bg-center`}>
-                        <Link href={item?.href}>
+                        <Link href={`${process.env.basePath}${item?.href}`}>
                           {item?.label}
                         </Link>
                       </li>
@@ -339,7 +338,7 @@ const Navbar = () => {
                     {content?.map((item, index) => (
                       <li key={index} onClick={() => { setActiveSectionTab(item?.href.replace('#', '')) }}
                         className={` sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg sm:rounded-full whitespace-nowrap font-supera700 text-sm md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${isActive(item?.href?.substring(1)) ? `bg-[#986b10] text-white` : `text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000`}  bg-no-repeat bg-center`}>
-                        <Link href={item?.href}>
+                        <Link href={`${process.env.basePath}${item?.href}`}>
                           {item?.label}
                         </Link>
                       </li>

@@ -5,7 +5,6 @@ import Heading from "@/app/components/common/Heading";
 import dynamic from "next/dynamic";
 import { useActivetab } from "@/app/context/ActiveTabContext";
 const DynamicLightbox = dynamic(() => import("@/app/components/common/DynamicLightbox"), { ssr: false });
-import { useInView } from 'react-intersection-observer';
 import { useParams } from "next/navigation";
 
 import projectGalleryImg1 from "@/app/images/projectgalleryImg1.webp";
@@ -14,21 +13,27 @@ import projectGalleryImg3 from "@/app/images/projectgalleryImg3.webp";
 import projectGalleryImg4 from "@/app/images/projectgalleryImg4.webp";
 import projectGalleryImg5 from "@/app/images/projectgalleryImg5.webp";
 import projectGalleryImg6 from "@/app/images/projectgalleryImg6.webp";
+
 import projectGalleryImg7 from "@/app/images/projectgalleryImg7.webp";
 import projectGalleryImg8 from "@/app/images/projectgalleryImg8.webp";
 import projectGalleryImg9 from "@/app/images/projectgalleryImg9.webp";
 import projectGalleryImg10 from "@/app/images/projectgalleryImg10.webp";
 
-import SampleFlatBedroom from "@/app/images/SampleFlat_Bedroom_02.webp"
-import SampleFlatDress from "@/app/images/SampleFlat_Dress.webp"
-import SampleFlatEntrance from "@/app/images/SampleFlat_Entrance.webp"
-import SampleFlatKidsRoom from "@/app/images/SampleFlat_KidsRoom.webp"
-import SampleFlatKitchen from "@/app/images/SampleFlat_Kitchen.webp"
-import SampleFlatLivingOption from "@/app/images/SampleFlat_Living_Option.webp"
-import SampleFlatLivingDinning from "@/app/images/SampleFlat_LivingDinning_Changes01.webp"
-import SampleFlatLoungeDinning from "@/app/images/SampleFlat_LoungeDinning.webp"
-import SampleFlatMasterBedroom from "@/app/images/SampleFlat_MasterBedroom.webp"
-import SampleFlatLiving from "@/app/images/sampleflatLiving_02_Changes.webp"
+import constructionImg1 from "@/app/images/constructionImg1.webp"
+import constructionImg2 from "@/app/images/constructionImg2.webp"
+import constructionImg3 from "@/app/images/constructionImg3.webp"
+
+import SampleFlatImg1 from "@/app/images/sampleFlatImg1.webp"
+import SampleFlatImg2 from "@/app/images/sampleFlatImg2.webp"
+import SampleFlatImg3 from "@/app/images/sampleFlatImg3.webp"
+import SampleFlatImg4 from "@/app/images/sampleFlatImg4.webp"
+import SampleFlatImg5 from "@/app/images/sampleFlatImg5.webp"
+import SampleFlatImg6 from "@/app/images/sampleFlatImg6.webp"
+import SampleFlatImg7 from "@/app/images/sampleFlatImg7.webp"
+import SampleFlatImg8 from "@/app/images/sampleFlatImg8.webp"
+import SampleFlatImg9 from "@/app/images/sampleFlatImg9.webp"
+import SampleFlatImg10 from "@/app/images/sampleFlatImg10.webp"
+
 
 const desktopTabs = [
   "Project Walk Through",
@@ -62,21 +67,21 @@ const galleryImages = {
     { src: projectGalleryImg10, alt: "Sushma Belleza", class: "col-span-12 cxs:col-span-6", status: true },
   ],
   "Sample Flat": [
-    { src: SampleFlatBedroom, title: "Bedroom", alt: "Bedroom", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
-    { src: SampleFlatDress, title: "Dress", alt: "Dress", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
-    { src: SampleFlatEntrance, title: "Entrance", alt: "Entrance", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
-    { src: SampleFlatKitchen, title: "Kitchen", alt: "Kitchen", class: "col-span-12 sm:col-span-6", status: true },
-    { src: SampleFlatLivingDinning, title: "Living Dinning", alt: "Living Dinning", class: "col-span-12 sm:col-span-6", status: true },
-    { src: SampleFlatLivingOption, title: "Living Option", alt: "Living Option", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
-    { src: SampleFlatLoungeDinning, title: "LoungeDinning", alt: " LoungeDinning", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
-    { src: SampleFlatMasterBedroom, title: "MasterBedroom", alt: " MasterBedroom", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
-    { src: SampleFlatKidsRoom, title: "Kids Room", alt: "Kids Room", class: "col-span-12 sm:col-span-6", status: true },
-    { src: SampleFlatLiving, alt: "Sushma Belleza Living", class: "col-span-12 cxs:col-span-6", status: true },
+    { src: SampleFlatImg1, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
+    { src: SampleFlatImg2, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
+    { src: SampleFlatImg3, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
+    { src: SampleFlatImg4, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6", status: true },
+    { src: SampleFlatImg5, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6", status: true },
+    { src: SampleFlatImg6, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
+    { src: SampleFlatImg7, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
+    { src: SampleFlatImg8, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6 md:col-span-4", status: true },
+    { src: SampleFlatImg9, title: "", alt: "Sushma Belleza image", class: "col-span-12 sm:col-span-6", status: true },
+    { src: SampleFlatImg10, alt: "Sushma Belleza image", class: "col-span-12 cxs:col-span-6", status: true },
   ],
   "Construction Updates": [
-    { src: projectGalleryImg1, alt: "Sample Flat Image 6", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: false },
-    { src: projectGalleryImg2, alt: "Sample Flat Image 7", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
-    { src: projectGalleryImg3, alt: "Sample Flat Image 8", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: constructionImg1, alt: "Sample Flat Image 6", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: false },
+    { src: constructionImg2, alt: "Sample Flat Image 7", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
+    { src: constructionImg3, alt: "Sample Flat Image 8", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
     { src: projectGalleryImg4, alt: "Sample Flat Image 9", class: "col-span-12 cxs:col-span-6", status: true },
     { src: projectGalleryImg5, alt: "Sample Flat Image 10", class: "col-span-12 cxs:col-span-6", status: true },
     { src: projectGalleryImg6, alt: "Construction Update Image 1", class: "col-span-12 cxs:col-span-6 md:col-span-4", status: true },
