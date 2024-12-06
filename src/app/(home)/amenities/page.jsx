@@ -95,7 +95,7 @@ const AmenityItem = ({ image, index, handleImageClick, lightboxRef, amenitiesIma
                             className="absolute right-7 bottom-4"
                         >
                             <div className='w-[30px] sm:w-[40px] xl:w-[50px] h-[30px] sm:h-[40px]  xl:h-[50px] relative'>
-                                <Image src={image?.icon} fill alt={`Sushma Belleza ${image?.title}`} />
+                                <Image src={image?.icon} fill  loading='lazy' alt={`Sushma Belleza ${image?.title}`} />
                             </div>
                         </motion.div>
                     </motion.div>

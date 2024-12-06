@@ -9,7 +9,7 @@ function Footer() {
     return (
         <footer className='section-gap'>
             <div style={{ backgroundImage: `url('${process.env.basePath}/images/footer-bg-image.webp')` }} className={`w-full`}>
-                <div className='w-full h-full bg-[#2D2C2CE5] '>
+                <div className='w-full h-full bg-[#101010BF] sm:bg-[#2D2C2CE5] '>
                     <div className='lg:container mx-auto pt-[35px]'>
                         <Link href={`${process.env.basePath}/`}>
                             <div className='w-full max-w-[300px] sm:max-w-[350px] h-[100px] mx-auto relative'>

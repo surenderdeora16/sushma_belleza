@@ -77,8 +77,8 @@ module.exports = {
         'siteplan-local': `url('/images/siteplanbg.svg')`,
 
         //Get In Touch (Home Page) 
-        'GIT-production': `url('/sushmabelleza/images/getintouchbg.png')`,
-        'GIT-local': `url('/images/getintouchbg.png')`,
+        'GIT-production': `url('/sushmabelleza/images/getintouchbg.webp')`,
+        'GIT-local': `url('/images/getintouchbg.webp')`,
 
         //Contact Info BG IMG 
         'ContactInfoBG-production': `url('/sushmabelleza/images/contactinfobg-img.webp')`,

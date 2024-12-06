@@ -100,7 +100,7 @@ const paymentPlanData = [
 ]
 
 const Page = () => {
-    const [isUnlocked, setIsUnlocked] = useState(false)
+    const [isUnlocked, setIsUnlocked] = useState(true)
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [event, setEvent] = useState('Unlock Price')
 

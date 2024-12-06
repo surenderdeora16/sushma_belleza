@@ -30,10 +30,10 @@ const Brochure = () => {
     };
 
     return (
-        <section style={{ backgroundImage: `url('${process.env.basePath}/images/brouche-section-bg-img.webp')` }} className={`w-full h-screen bg-cover bg-top bg-no-repeat relative `}>
+        <section style={{ backgroundImage: `url('${process.env.basePath}/images/brouche-section-bg-img.webp')` }} className={`w-full h-screen bg-cover bg-right sm:bg-top bg-no-repeat relative `}>
             <div className='absolute top-0 left-0  sm:hidden bg-brochure-section-Shadow w-full h-full'></div>
             <div className='absolute top-0 left-0  hidden sm:block bg-[#00000053] cmd:bg-[#00000000] w-full h-full'></div>
-            <div className='w-full h-[80%] bg-[linear-gradient(0deg,#000000_12.53%,#0000_100%)] sm:bg-[linear-gradient(100deg,#00000_1.53%,rgba(0,0,0,0)_100%)] absolute z-20 left-0 bottom-0'></div>
+            <div className='w-full h-[10%] sm:h-[80%] bg-[linear-gradient(0deg,#000000_12.53%,#0000_100%)] sm:bg-[linear-gradient(100deg,#00000_1.53%,rgba(0,0,0,0)_100%)] absolute z-20 left-0 bottom-0'></div>
             <div className=' 2xl:container h-full mx-auto flex flex-col cmd:justify-end items-start px-5 xs:px-7 sm:px-10 lg:px-16 cmd:pb-[45px] relative z-30'>
                 <div className='pb-[50px] xs:pb-[70px] sm:pb-5 w-full h-full cmd:h-auto flex flex-col cmd:flex-row gap-y-[60px] sm:gap-y-0 justify-end sm:justify-around cmd:justify-between items-start sm:items-center cmd:items-end'>
                     <div className='w-full cmd:max-w-[400px] lg:max-w-[400px] xl:max-w-[440px] flex flex-col items-start sm:items-center cmd:items-start'>
