@@ -132,7 +132,7 @@ const Page = () => {
                 <div>
                     <Heading heading={'Price List'}
                         subHeading={'Explore Sushma Belleza Price list, Payment Plan and Latest offers'}
-                        headingColor={'#4E4E4E'}
+                        headingColor={'#474536'}
                         subHeadingColor={'#5A5454'}
                         subHeadingClass={'font-supera600'}
                     />

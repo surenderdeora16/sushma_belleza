@@ -123,7 +123,7 @@ const AvatarModel = () => {
                         )} */}
 
                         <div className={`mt-3 ${open || isHidden ? 'opacity-0 duration-500 hidden' : 'opacity-100 duration-500'}`}>
-                            <strong className='font-supera700 text-[10px] text-center capitalize text-[#000]'>Pawan Kumar</strong>
+                            <strong className='font-supera700 text-[10px] text-center capitalize text-[#2e2e2e]'>Pawan Kumar</strong>
                             <p className='font-supera500 text-[8px] text-center text-[#7E7E7E] capitalize'>Realty Nivesh</p>
                         </div>
 
@@ -141,7 +141,7 @@ const AvatarModel = () => {
                                             <Image src={AgentImg} className='relative z-50 w-full h-full' alt="agent-img" />
                                         </div>
                                         <div className='ml-4'>
-                                            <strong className='font-supera800 text-[15px] text-center capitalize text-[#000]'>Pawan Kumar</strong>
+                                            <strong className='font-supera700 text-[15px] text-center capitalize text-[#393939]'>Pawan Kumar</strong>
                                             <p className='font-supera500 text-[10px]  text-[#4c4c4c] capitalize'>Realty Nivesh</p>
                                         </div>
                                     </div>

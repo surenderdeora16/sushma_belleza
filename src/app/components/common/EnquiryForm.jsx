@@ -96,7 +96,6 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                     try {
                                         const actionToSend = action == 'submitForm' ? 'submitForm' : 'verifyOTP';
 
-                                        console.log('actionToSend', actionToSend)
                                         const payload = {
                                             ...values,
                                             mobile: `${values.mobile}`,
@@ -108,7 +107,6 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
                                                 },
                                         };
                                         const data = await AxiosHelper.postData(`/sushmabelleza-enquiry/`, payload);
-                                        console.log("data,", data)
 
                                         if (data && data?.data?.status) {
                                             if (actionToSend == 'submitForm') {

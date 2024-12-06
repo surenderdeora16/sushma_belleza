@@ -22,7 +22,7 @@ import { useActivetab } from '@/app/context/ActiveTabContext';
 
 const data = {
     '3BHK': {
-        image: `${process.env.basePath || '' }/images/ourproducts-bgimg.webp`,
+        image: `/images/ourproducts-bgimg.webp`,
         type: 'Semi Furnished',
         heading: <>low <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '2300',
@@ -35,7 +35,7 @@ const data = {
         offer: 'Ask us for the best offers',
     },
     '3BHK+S': {
-        image: `${process.env.basePath || '' }/images/ourproducts-bgimg2.webp`,
+        image: `/images/ourproducts-bgimg2.webp`,
         type: 'SEMI FURNISHED',
         heading: <>High <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '2800',
@@ -48,7 +48,7 @@ const data = {
         offer: 'Ask us for the best offers ',
     },
     '4BHK+S': {
-        image: `${process.env.basePath || '' }/images/ourproducts-bgimg3.webp`,
+        image: `/images/ourproducts-bgimg3.webp`,
         type: 'SEMI FURNISHED',
         heading: <>High <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '3400',
@@ -97,7 +97,6 @@ const OurProducts = () => {
     const handleNext = () => {
         const currentIndex = options.indexOf(selectedOption);
         const nextIndex = (currentIndex + 1) % options.length;
-        console.log(options[nextIndex])
         setSelectedOption(options[nextIndex]);
     };
 
@@ -122,7 +121,6 @@ const OurProducts = () => {
                     text: 'Check out this amazing content!',
                     url: window?.location.href, // Share current page URL
                 });
-                console.log('Content shared successfully');
             } catch (error) {
                 console.error('Error sharing content:', error);
             }
@@ -145,7 +143,6 @@ const OurProducts = () => {
     };
 
     useEffect(() => {
-        console.log('activeSectionTab', activeSectionTab)
         if (activeSectionTab) {
             if (activeSectionTab == '3BHK') {
                 setSelectedOption('3BHK');

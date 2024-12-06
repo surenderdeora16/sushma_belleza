@@ -42,19 +42,19 @@ export default function RootLayout({ children }) {
             <div className="hidden sm:block">
                 <CallToAction />
             </div>
-            {pathName == '/price' && (
+            {pathName == '/price/' && (
                 <HomeLoanFacility />
             )}
             <Faqs />
-            {(pathName == `${process.env.basePath || '/'}`) ? (
+            {(pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`) ? (
                 <GetInTouch />
             ) : (
-                    <EnquiryForm eventSource={`${pathName?.replace(`${process.env.basePath || '/'}`, '')} Page`} />
+                <EnquiryForm eventSource={`${pathName?.replace(`${process.env.basePath || '/'}`, '')} Page`} />
             )}
             <GoogleMap
                 className={'section-gap-inner w-full h-[60vh]'}
                 tabs={tabsConfig}
-            />   
+            />
             <ContactInfo />
             <Downloads />
             <AvatarModel />

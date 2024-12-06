@@ -3,7 +3,7 @@
 const nextConfig = {
     reactStrictMode: true,
     basePath: '',
-    trailingSlash: true,
+    trailingSlash: false,
     assetPrefix: '',
     env: {
         basePath: '',

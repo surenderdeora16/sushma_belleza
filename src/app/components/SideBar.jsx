@@ -16,8 +16,9 @@ const menuData = [
         href: '/#products',
         label: 'Products',
         submenu: [
-            { href: '/#products', tab: '3+1 BHK', label: '3+1 BHK' },
-            { href: '/#products', tab: '4+1 BHK', label: '4+1 BHK' }
+            { href: '/#products', tab: '3BHK', label: '3BHK' },
+            { href: '/#products', tab: '3BHK+S', label: '3BHK+S' },
+            { href: '/#products', tab: '4BHK+S', label: '4BHK+S' }
         ]
     },
     {

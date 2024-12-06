@@ -9,6 +9,8 @@ import BalconyApartImg from '@/app/images/plans-balcony-Img.webp'
 import SitePlanImg from '@/app/images/siteplanImg.webp'
 import towerPlanImg1 from '@/app/images/towerplanmap-img1.webp'
 import towerPlanImg2 from '@/app/images/towerplanmap-img2.webp'
+import towerPlanImg3 from '@/app/images/towerplanmap-img3.webp'
+
 import BottomBanner from '@/app/images/plans-bottombanner.webp'
 import BottomMobileBanner from '@/app/images/plans-bottombannersmallscreen.webp'
 import DynamicLightbox from '@/app/components/common/DynamicLightbox';
@@ -46,7 +48,7 @@ const sitePlan = [
 
 const towerPlans = [
     { label: 'Low rise 2300 sqft', image: towerPlanImg1?.src },
-    { label: 'High rise 2800 sqft', image: towerPlanImg2?.src },
+    { label: 'High rise 2800 sqft', image: towerPlanImg3?.src },
     { label: 'high rise 3400 sqft', image: towerPlanImg2?.src },
 ];
 
@@ -138,7 +140,7 @@ const Page = () => {
                         <div className='block lg:hidden'>
                             <Heading heading={'tower plans'}
                                 subHeading={'Click on the buttons below to view the tower plans in detail!'}
-                                headingColor={'#4B4B4B'}
+                                headingColor={'#474536'}
                                 subHeadingColor={'#5A5454'}
                                 subHeadingClass={'font-supera600'}
                             />

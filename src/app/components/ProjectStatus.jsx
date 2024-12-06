@@ -32,8 +32,6 @@ const ProjectStatus = () => {
         const updateItemsPerRow = () => {
             const width = window?.innerWidth;
 
-            console.log('width', width)
-
             if (width >= 1536) {
                 setItemsPerRow(9);
             } else if (width >= 814) {

@@ -118,7 +118,7 @@ const Testimonial = () => {
                                                         <Image src={CommaIcn} fill alt="" className='object-contain' />
                                                     </div>
                                                     <p className='mt-3 md:mt-2 font-poppins font-light tracking-wide text-center md:text-left capitalize    text-[14px] xl:text-[17px] leading-relaxed text-[#fff] relative md:after:absolute after:left-0 after:top-[118%] after:w-[70%] after:h-[1px] md:after:bg-[#FFFFFFCC]'>
-                                                        <strong className="font-medium">{testimonial.messageHeading}</strong> – {testimonial.message}
+                                                        <strong className="font-medium">{testimonial.messageHeading}</strong> {testimonial.message}
                                                     </p>
                                                     <div className='flex justify-center md:justify-start gap-x-[10.23px] mt-3 md:mt-[46px]'>
                                                         {[...Array(5)].map((_, i) => (

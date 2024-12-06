@@ -23,7 +23,7 @@ const tabsConfig = [
         name: 'Google Map',
         content: {
             type: 'iframe',
-            content: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.5379710327466!2d76.7289327!3d30.67513640000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefb864b5496d%3A0xa59495da638aa68!2sMedallion%20Aurum%20Mohali!5e0!3m2!1sen!2sin!4v1732695357527!5m2!1sen!2sin'
+            content: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7933.407078327625!2d76.82964920564167!3d30.624742960855595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f95853393fb35%3A0xed97a10321b272fd!2sSUSHMA%20BELLEZA%20ZIRAKPUR!5e0!3m2!1sen!2sin!4v1733492111380!5m2!1sen!2sin'
         }
     },
 ]

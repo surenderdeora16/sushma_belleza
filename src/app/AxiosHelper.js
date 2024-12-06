@@ -25,18 +25,13 @@ const AxiosHelper = {
         }
     },
     postData: async (url, formData, type, router) => {
-        console.log("Preparing to send API request");
-        console.log('URL:', url);
-        console.log('Payload:', formData);
         try {
             commonHeaders();
-            console.log("OK89")
             const data = await axios.post(url, formData, {
                 headers: { "Content-Type": type ? "multipart/form-data" : "application/json" }
             });
             return data;
         } catch (error) {
-            console.log('error78', error)
             return errorData(error, router);
         }
     },

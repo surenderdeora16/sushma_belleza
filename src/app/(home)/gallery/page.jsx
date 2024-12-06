@@ -230,7 +230,7 @@ export default function Page() {
           subHeading={
             "Explore Sushma Belleza mohali  Project gallery & Construction Updates."
           }
-          headingColor={"#0A1325"}
+          headingColor={"#474536"}
           subHeadingColor={"#5A5454"}
           subHeadingClass={"font-supera600"}
         />
@@ -270,7 +270,7 @@ export default function Page() {
                 <DynamicLightbox
                   images={item?.src?.src}
                   sliderimages={galleryImageArray}
-                  idx={index}
+                  idx={index} 
                   multipleimg={true}
                   title={item?.alt}
                   zoom={true}
