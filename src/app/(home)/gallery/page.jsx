@@ -48,8 +48,8 @@ const galleryImages = {
   "Project Walk Through": [
     {
       type: "video",
-      src: "/videos/galleryVideo-background.mp4",
-      poster: "/images/galleryvideothumbnail.png",
+      src: `${process.env.basePath}/videos/galleryVideo-background.mp4`,
+      poster: `${process.env.basePath}/images/galleryvideothumbnail.png`,
       alt: "Walkthrough Video",
       class: "col-span-12",
     },

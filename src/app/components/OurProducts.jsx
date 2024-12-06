@@ -22,7 +22,7 @@ import { useActivetab } from '@/app/context/ActiveTabContext';
 
 const data = {
     '3BHK': {
-        image: '/images/ourproducts-bgimg.webp',
+        image: `${process.env.basePath || '' }/images/ourproducts-bgimg.webp`,
         type: 'Semi Furnished',
         heading: <>low <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '2300',
@@ -35,7 +35,7 @@ const data = {
         offer: 'Ask us for the best offers',
     },
     '3BHK+S': {
-        image: '/images/ourproducts-bgimg2.webp',
+        image: `${process.env.basePath || '' }/images/ourproducts-bgimg2.webp`,
         type: 'SEMI FURNISHED',
         heading: <>High <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '2800',
@@ -48,7 +48,7 @@ const data = {
         offer: 'Ask us for the best offers ',
     },
     '4BHK+S': {
-        image: '/images/ourproducts-bgimg3.webp',
+        image: `${process.env.basePath || '' }/images/ourproducts-bgimg3.webp`,
         type: 'SEMI FURNISHED',
         heading: <>High <br className='hidden lg:block' /> Rise luxury Apartments</>,
         size: '3400',

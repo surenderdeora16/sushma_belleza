@@ -35,7 +35,7 @@ const Page = () => {
     const LocationVideo = [
         {
             type: "video",
-            src: "/videos/Location-video.mp4",
+            src: `${process.env.basePath}/videos/Location-video.mp4`,
             alt: "Sushma Belleza Location Video",
             class: "col-span-12",
         },

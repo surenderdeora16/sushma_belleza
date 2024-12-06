@@ -46,10 +46,10 @@ export default function RootLayout({ children }) {
                 <HomeLoanFacility />
             )}
             <Faqs />
-            {(pathName == '/') ? (
+            {(pathName == `${process.env.basePath || '/'}`) ? (
                 <GetInTouch />
             ) : (
-                <EnquiryForm eventSource={`${pathName?.replace('/', '')} Page`} />
+                    <EnquiryForm eventSource={`${pathName?.replace(`${process.env.basePath || '/'}`, '')} Page`} />
             )}
             <GoogleMap
                 className={'section-gap-inner w-full h-[60vh]'}

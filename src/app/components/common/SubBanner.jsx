@@ -1,16 +1,3 @@
-// import React from 'react'
-// import subBanner from '../../../../public/images/subBanner.png'
-// export const SubBanner = () => {
-//   return (
-//     // <div>
-//     //   hgfghfhfgh
-//     // </div>
-//     <div className='relative h-screen flex justify-center items-center bg-cover bg-center' style={{backgroundImage:'url(../../../../public/images/subBanner.png)'}}>
-// <h1 className=" absolute font-supera600 text-4xl md:text-6xl lg:text-8xl text-white text-center">LUXURY BUILT AROUND NATURE</h1>
-//     </div>
-//   )
-// }
-
 import React from 'react';
 import subBanner from '../../../../public/images/subBanner.png';
 

@@ -166,7 +166,7 @@ const SideBar = ({ open, setOpen }) => {
                         <div className="flex flex-col min-h-full pt-5 relative">
                             <div className="flex items-center justify-between pl-5 pr-2">
                                 <button
-                                    onClick={(e) => handleTabChange('/', e)}
+                                    onClick={(e) => handleTabChange(`${process.env.basePath || '/'}`, e)}
                                     aria-label="Back to homepage"
                                     className="flex w-[150px] h-[60px] relative"
                                 >
