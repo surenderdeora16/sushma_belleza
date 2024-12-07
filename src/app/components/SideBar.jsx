@@ -102,14 +102,14 @@ const SideBar = ({ open, setOpen }) => {
             setOpen(false);
         }
 
-        const isExternalLink = href.startsWith('http') || href.startsWith('tel:') || href.startsWith('https://wa.me');
+        const isExternalLink = href.startsWith('tel:') || href.startsWith('https://wa.me');
         if (isExternalLink) {
             window.open(href, '_blank', 'noopener,noreferrer');
             return;
         }
         const [path, hash] = href.split('#');
         if (path) {
-            router.push(href);
+            router.push(`${process.env.basePath}${href}`);
         }
         if (hash) {
             setTimeout(() => {
@@ -232,7 +232,7 @@ const SideBar = ({ open, setOpen }) => {
                                                                             delay: subIndex * 0.05,
                                                                         }}
                                                                     >
-                                                                        <Link href={subItem?.href ? `${process.env.basePath}${subItem?.href}` : ''}
+                                                                        <Link href={subItem?.href ? `${process.env.basePath}${subItem?.href}` : `${process.env.basePath}${item?.href}`}
                                                                             onClick={(e) => { handleTabChange(subItem.tab, subItem.href || menuItem.href, e); }}
                                                                             className="block py-1.5 text-white hover:text-[#6b7280] text-lg font-supera500 tracking-wider w-full text-left"
                                                                         >

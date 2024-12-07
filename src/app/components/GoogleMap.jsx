@@ -38,7 +38,7 @@ const DynamicTabs = ({ className = '', contentHeight = '', tabs, imageClass='' }
                 return (
                     <Image
                         src={content?.content}
-                        loading='eager'
+                        loading='lazy'
                         fill
                         quality={100}
                         alt="Tab content"

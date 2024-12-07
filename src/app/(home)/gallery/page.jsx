@@ -286,7 +286,7 @@ export default function Page() {
       <section id="project-walk-through" className="block sm:hidden">
         {mobileTabs.map((tab) => (
           tab == "Project Walk Through" && (
-            <div key={tab} className={`relative w-full mb-1 flex items-center transition-all duration-300 `}>
+            <div key={tab} className={`relative cursor-pointer w-full mb-1 flex items-center transition-all duration-300 `}>
               <div className="relative">
                 <svg
                   className="w-[300px] bxxs:w-auto bxxs:h-[40px] xs:h-[40px] object-fill"
@@ -352,7 +352,7 @@ export default function Page() {
             {filteredTabs.map(tab => (
               <div
                 key={tab}
-                className={`relative w-full mb-1 flex items-center transition-all duration-300`}
+                className={`relative cursor-pointer w-full mb-1 flex items-center transition-all duration-300`}
               >
                 <div onClick={() => handleScrollToSection(tab)} className="relative">
                   <svg

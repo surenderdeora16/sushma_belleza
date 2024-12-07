@@ -98,7 +98,7 @@ const pageContent = {
 };
 
 const Navbar = () => {
-  const { setActiveSectionTab } = useActivetab();
+  const { setActiveSectionTab, activeSectionTab } = useActivetab();
   const pathName = usePathname();
 
   const params = useParams()
@@ -219,6 +219,16 @@ const Navbar = () => {
     }
   }, []);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (activeSectionTab || window?.location?.hash) {
+        if (activeSectionTab) {
+          setTab(activeSectionTab.replace('#', ''));
+        }
+      }
+    }
+  }, [activeSectionTab, params]);
+  
   return (
     <nav>
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
