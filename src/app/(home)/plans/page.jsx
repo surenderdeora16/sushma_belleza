@@ -115,7 +115,7 @@ const Page = () => {
                                 <ol className="grid grid-rows-14 sm:grid-rows-10 grid-flow-col auto-cols-fr gap-x-4 sm:gap-x-2 gap-y-6 sm:gap-y-4 2xl:gap-y-6 px-3 pb-5 sm:pb-24 pt-5 sm:pt-10 md:pt-14">
                                     {sitePlan?.map((sitePlan, index) => (
                                         <li key={index} className="capitalize font-supera600 text-[#565555] text-xs bxxs:text-[14px] sm:text-[13px] md:text-sm cmd:text-base lg:text-lg xl:text-[21px] flex ">
-                                            <span className={`pr-1 font-supera600 text-transparent bg-clip-text bg-[#565555]`}>{index + 1}&nbsp;</span>{sitePlan}
+                                            <span className={`pr-1 font-supera700 sm:font-supera600 bg-clip-text bg-[#565555] text-[#a27d27]`}>{index + 1}&nbsp;</span>{sitePlan}
                                         </li>
                                     ))}
                                 </ol>

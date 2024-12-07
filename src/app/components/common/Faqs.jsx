@@ -25,11 +25,11 @@ function Faqs() {
         },
         {
             faqQues: "What is the price range of apartments in Sushma Belleza?",
-            faqAns: "contact Reality Nivesh-sushma service partner  sales team for detailed pricing information & current offers."
+            faqAns: "Contact Reality Nivesh-sushma service partner  sales team for detailed pricing information & current offers."
         },
         {
             faqQues: "Is Sushma Belleza RERA approved?",
-            faqAns: "Yes, Sushma Belleza is approved by RERA (Real Estate Regulatory Authority). [Provide the RERA registration number if available."
+            faqAns: "Yes, Sushma Belleza is approved by RERA (Real Estate Regulatory Authority). [Rera No - PBRERA-SAS79-PR0680]"
         },
         {
             faqQues: "What are the payment plan options available for Sushma Belleza?",
@@ -64,7 +64,7 @@ function Faqs() {
                                     <div className='w-full'>
                                         <div className='text-[13px] sm:text-[14px] md:text-[16px] lg:text-[19px] pb-1 sm:pb-2 font-supera600 tracking-wide flex justify-between items-center'>
                                             <div className={`block sm:hidden min-w-[28px] min-h-[28px] ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production'} bg-cover rounded-full text-[#0D0D0D] flex justify-center items-center mr-3`}>{(index + 1).toString().padStart(2, '0')}</div>
-                                            <div className='w-[100%] leading-snug'>
+                                            <div className='w-[100%] leading-snug capitalize'>
                                                 {item.faqQues}
                                             </div>
                                             <div className=' pl-5 pr-1 w-[17px] '>
@@ -85,7 +85,7 @@ function Faqs() {
                                             </div>
                                         </div>
                                         <div
-                                            className={`transition-all duration-500 ease-in-out max-h-0 overflow-hidden ${isActiveFaq === index ? 'max-h-[200px] opacity-100' : 'opacity-0'} `}>
+                                            className={`capitalize transition-all duration-500 ease-in-out max-h-0 overflow-hidden ${isActiveFaq === index ? 'max-h-[200px] opacity-100' : 'opacity-0'} `}>
                                             <p className={`tracking-[1.1px] text-[13px] sm:text-[14px] md:text-[16px] lg:text-[17px] font-supera500 text-wrap pe-6 pt-4 pb-3`}>
                                                 {item.faqAns}
                                             </p>

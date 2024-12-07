@@ -179,7 +179,7 @@ const GetInTouch = () => {
                                                 <button
                                                     aria-label="submit"
                                                     disabled={loaderShow}
-                                                    className={`w-full h-full text-[#fff] ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-cover bg-right rounded-full font-supera600 text-[19px] text-center flex justify-center items-center`}>
+                                                    className={`w-full h-full text-[#fff] bg-[#a27d27] rounded-full font-supera600 text-[19px] text-center flex justify-center items-center`}>
                                                     <div className='flex justify-center items-center gap-x-4'> {loaderShow ? 'Submiting...' : 'Submit'} {loaderShow && (<span className="form-loader after:bg-[#000] group-hover:after:bg-[#fff]"></span>)}</div>
                                                 </button>
                                             </div>

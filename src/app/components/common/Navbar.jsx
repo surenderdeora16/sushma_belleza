@@ -79,21 +79,21 @@ const navigationItems = [
 ];
 
 const pageContent = {
-  '/price': [
-    { label: 'Price', href: '#price' },
-    { label: 'Payment Structure', href: '#payment-structure' },
-    { label: 'Current offers', href: '#current-offer' },
+  '/sushmabelleza/price/': [
+    { label: 'Price', path: '/price', hastPath: '#price' },
+    { label: 'Payment Structure', path: '/price', hastPath: '#payment-structure' },
+    { label: 'Current offers', path: '/price', hastPath: '#current-offer' },
   ],
-  '/gallery': [
-    { label: 'Project walk through', href: '#project-walk-through' },
-    { label: 'Sample flat', href: '#sample-flat' },
-    { label: 'Project Gallery', href: '#project-gallery' },
-    { label: 'Construction updates', href: '#construction-updates' },
+  '/sushmabelleza/gallery/': [
+    { label: 'Project walk through', path: '/gallery', hastPath: '#project-walk-through' },
+    { label: 'Sample flat', path: '/gallery', hastPath: '#sample-flat' },
+    { label: 'Project Gallery', path: '/gallery', hastPath: '#project-gallery' },
+    { label: 'Construction updates', path: '/gallery', hastPath: '#construction-updates' },
   ],
-  '/plans': [
-    { label: 'Unit Plans', href: '#plan' },
-    { label: 'Site Plans', href: '#sitePlan' },
-    { label: 'Tower Plans', href: '#towerPlan' },
+  '/sushmabelleza/plans/': [
+    { label: 'Unit Plans', path: '/plans', hastPath: '#plan' },
+    { label: 'Site Plans', path: '/plans', hastPath: '#sitePlan' },
+    { label: 'Tower Plans', path: '/plans', hastPath: '#towerPlan' },
   ],
 };
 
@@ -110,7 +110,7 @@ const Navbar = () => {
   const [megaMenu, setMegaMenu] = useState(false);
   const [tab, setTab] = useState('#project-walk-through');
 
-  const content = pageContent[pathName?.endsWith('/') ? pathName.slice(0, -1) : pathName] || null;
+  const content = pageContent[pathName] || null;
 
   const handleUserInteraction = useCallback(() => {
     setIsVisible(true);
@@ -165,7 +165,7 @@ const Navbar = () => {
       if (currentScrollY > 500) {
         setIsSticky(true);
       } else {
-        setIsSticky(pathName !== `${process.env.basePath || '/'}`);
+        setIsSticky(pathName !== `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`);
       }
 
       setLastScrollY(currentScrollY);
@@ -173,7 +173,7 @@ const Navbar = () => {
       if (currentScrollY > 100) {
         setIsSticky(true);
       } else {
-        setIsSticky(pathName !== `${process.env.basePath || '/'}`);
+        setIsSticky(pathName !== `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`);
       }
 
       const sections = document.querySelectorAll('section[id]');
@@ -224,9 +224,9 @@ const Navbar = () => {
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
       <div style={{ zIndex: '550' }} className={`w-full z-[50] ${isSticky ? 'fixed top-0' : 'absolute top-0 left-0'}`}>
 
-        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-1.5 sm:py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${process.env.basePath || '' ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
+        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-1.5 sm:py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
           <div className={`duration-500  xl:py-1 lg:py-2.5 w-full 2xl:container flex justify-between lg:justify-around 3xl:justify-between ${megaMenu ? 'items-center sm:items-end xl:items-center duration-1000 px-0' : 'items-center duration-1000 px-1.5 cxs:px-5 xl:px-0'} duration-1000 mx-2`}>
-            <Link href={`${process.env.basePath}`} aria-label="Back to homepage" className={`${isSticky ? 'w-[130px] h-[42px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'w-[150px] h-[50px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
+            <Link href={`${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`} aria-label="Back to homepage" className={`${isSticky ? 'w-[130px] h-[42px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'w-[150px] h-[50px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
               <Image
                 src={logo}
                 fill
@@ -322,14 +322,14 @@ const Navbar = () => {
             </button>
           </div>
           {content && (
-            <div className={`mt-[-0.5px] ${pathName == '/gallery/' ? 'hidden sm:block' : ''} shadow-xl shadow-[#00000039] absolute top-full w-full sm:w-[95%] md:w-[90%] xl:w-[80%] px-2  sm:rounded-b-2xl xl:rounded-b-3xl bg-[#d5d5d3b4] backdrop-blur-md sm:bg-[#fff] overflow-auto`}>
+            <div className={`mt-[-0.5px] ${pathName == '/sushmabelleza/gallery/' ? 'hidden sm:block' : ''} shadow-xl shadow-[#00000039] absolute top-full w-full sm:w-[95%] md:w-[90%] xl:w-[80%] px-2  sm:rounded-b-2xl xl:rounded-b-3xl bg-[#d5d5d3b4] backdrop-blur-md sm:bg-[#fff] overflow-auto`}>
               <ul className='my-3.5 sm:my-2 2xl:my-3 flex justify-around gap-x-3 sm:gap-x-0'>
-                {(pageContent['/gallery/'] && pathName?.includes('/gallery  ')) ? (
+                {(pageContent['/sushmabelleza/gallery/'] && pathName?.includes('/gallery')) ? (
                   <>
                     {content?.map((item, index) => (
-                      <li key={index} onClick={() => { setTab(item?.href); setActiveSectionTab(item?.href.replace('#', '')) }}
-                        className={` min-w-[130px] py-1.5 inline-flex justify-center rounded-full font-supera700 text-[12px] md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${tab == item?.href ? `bg-[#a27d27]  px-4 cmd:px-6 text-white` : 'text-[#fff] sm:text-[#474536] duration-1000'}  bg-no-repeat bg-center`}>
-                        <Link href={`${process.env.basePath}${item?.href}`}>
+                      <li key={index} onClick={() => { setTab(item?.hastPath); setActiveSectionTab(item?.hastPath.replace('#', '')) }}
+                        className={` min-w-[130px] py-1.5 inline-flex justify-center rounded-full font-supera700 text-[12px] md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${tab == item?.hastPath ? `bg-[#a27d27]  px-4 cmd:px-6 text-white` : 'text-[#fff] sm:text-[#474536] duration-1000'}  bg-no-repeat bg-center`}>
+                        <Link href={`${process.env.basePath}${item?.path}${item?.hastPath}`}>
                           {item?.label}
                         </Link>
                       </li>
@@ -337,9 +337,9 @@ const Navbar = () => {
                   </>) : (
                   <>
                     {content?.map((item, index) => (
-                      <li key={index} onClick={() => { setActiveSectionTab(item?.href.replace('#', '')) }}
-                        className={` sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg sm:rounded-full whitespace-nowrap font-supera700 text-sm md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${isActive(item?.href?.substring(1)) ? `bg-[#986b10] text-white` : `text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000`}  bg-no-repeat bg-center`}>
-                        <Link href={`${process.env.basePath}${item?.href}`}>
+                      <li key={index} onClick={() => { setActiveSectionTab(item?.hastPath.replace('#', '')) }}
+                        className={` sm:min-w-[130px] px-4 sm:px-6 py-1.5 inline-flex justify-center rounded-lg sm:rounded-full whitespace-nowrap font-supera700 text-sm md:text-[13px] cmd:text-sm lg:text-base xl:text-xl text-center tracking-wide uppercase ${isActive(item?.hastPath?.substring(1)) ? `bg-[#986b10] text-white` : `text-[#121212] sm:text-[#474536] bg-[#FFFFFF80] sm:bg-inherit sm:duration-1000`}  bg-no-repeat bg-center`}>
+                        <Link href={`${process.env.basePath}${item?.path}${item?.hastPath}`}>
                           {item?.label}
                         </Link>
                       </li>

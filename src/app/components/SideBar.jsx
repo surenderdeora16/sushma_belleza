@@ -162,7 +162,7 @@ const SideBar = ({ open, setOpen }) => {
                             velocity: 5,  // Prevent sudden jumps
                         }}
                         style={{ zIndex: 2147483647 }}
-                        className="fixed top-0 right-0 h-full w-[80%] bg-gray-800 text-white shadow-lg z-[999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999]"
+                        className="fixed top-0 right-0 h-full w-[80%] bg-[#363738] text-white shadow-lg z-[999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999]"
                     >
                         <div className="flex flex-col min-h-full pt-5 relative">
                             <div className="flex items-center justify-between pl-5 pr-2">

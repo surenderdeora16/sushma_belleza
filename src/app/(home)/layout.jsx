@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
             <div className="hidden sm:block">
                 <CallToAction />
             </div>
-            {pathName == '/price/' && (
+            {pathName == '/sushmabelleza/price/' || pathName == '/price/' && (
                 <HomeLoanFacility />
             )}
             <Faqs />

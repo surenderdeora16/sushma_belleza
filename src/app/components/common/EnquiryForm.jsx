@@ -316,12 +316,12 @@ const EnquiryForm = ({ formType, eventSource = '' }) => {
 
                                                     <div>
                                                         <ul className='flex flex-wrap gap-x-8 xs:gap-x-16 gap-y-3'>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom `}><Link href={`${process.env.basePath}#products`} className="w-full h-full">Products</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom `}><Link href={`${process.env.basePath}/plans`} className="w-full h-full">Plans</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom `}><Link href={`${process.env.basePath}/amenities`} className="w-full h-full">Amenities</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom `}><Link href={`${process.env.basePath}/price`} className="w-full h-full">Price</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom `}><Link href={`${process.env.basePath}/location`} className="w-full h-full">Location</Link></li>
-                                                            <li className={`font-supera600 text-[17px] text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-bottom `}><Link href={`${process.env.basePath}/gallery`} className="w-full h-full">Gallery</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-[#bc8b27] `}><Link href={`${process.env.basePath}#products`} className="w-full h-full">Products</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-[#bc8b27] `}><Link href={`${process.env.basePath}/plans`} className="w-full h-full">Plans</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-[#bc8b27] `}><Link href={`${process.env.basePath}/amenities`} className="w-full h-full">Amenities</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-[#bc8b27] `}><Link href={`${process.env.basePath}/price`} className="w-full h-full">Price</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-[#bc8b27] `}><Link href={`${process.env.basePath}/location`} className="w-full h-full">Location</Link></li>
+                                                            <li className={`font-supera600 text-[17px] text-[#bc8b27] `}><Link href={`${process.env.basePath}/gallery`} className="w-full h-full">Gallery</Link></li>
                                                         </ul>
                                                     </div>
 

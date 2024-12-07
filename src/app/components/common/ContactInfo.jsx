@@ -69,7 +69,7 @@ const ContactInfo = () => {
                                     <path d="M13.1303 6.39945C15.8039 6.39945 16.9443 7.53984 16.9443 10.2135H19.487C19.487 6.1134 17.2304 3.85676 13.1303 3.85676V6.39945ZM17.4808 13.3194C17.2365 13.0973 16.9155 12.9789 16.5856 12.9891C16.2556 12.9993 15.9425 13.1373 15.7124 13.374L12.6701 16.5028C11.9378 16.363 10.4656 15.904 8.95012 14.3924C7.43468 12.8757 6.97573 11.3996 6.83969 10.6724L9.96593 7.62884C10.2029 7.39889 10.3411 7.08575 10.3513 6.75569C10.3616 6.42563 10.2429 6.10455 10.0206 5.8604L5.32298 0.69493C5.10055 0.450014 4.7914 0.301454 4.4612 0.280802C4.131 0.260149 3.80575 0.369031 3.55454 0.584323L0.795723 2.95029C0.575922 3.17089 0.44473 3.46449 0.427033 3.7754C0.407963 4.09323 0.0443588 11.6221 5.88237 17.4627C10.9754 22.5544 17.355 22.9269 19.112 22.9269C19.3688 22.9269 19.5264 22.9193 19.5684 22.9167C19.8792 22.8993 20.1727 22.7676 20.3922 22.5468L22.7569 19.7867C22.9724 19.5356 23.0815 19.2105 23.061 18.8803C23.0406 18.5501 22.8923 18.2409 22.6476 18.0183L17.4808 13.3194Z" fill="#8F7127" />
                                 </svg>
                             </div>
-                            <button aria-label="call 1" className='font-supera400 cxs:font-supera500 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl text-white  xs:pl-1 cxs:pl-2' onClick={() => { window.location.href = 'tel:918968066698' }}>+91 89680 66698</button>
+                            <button aria-label="call 1" className='font-supera500 cxs:font-supera600 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl text-white  xs:pl-1 cxs:pl-2' onClick={() => { window.location.href = 'tel:918968066698' }}>+91 89680 66698</button>
                         </div>
                     </div>
                     <div className={`pr-0.5 bg-[#84600C] bg-right-top w-full`}>
@@ -79,7 +79,7 @@ const ContactInfo = () => {
                                     <path d="M13.1303 6.39945C15.8039 6.39945 16.9443 7.53984 16.9443 10.2135H19.487C19.487 6.1134 17.2304 3.85676 13.1303 3.85676V6.39945ZM17.4808 13.3194C17.2365 13.0973 16.9155 12.9789 16.5856 12.9891C16.2556 12.9993 15.9425 13.1373 15.7124 13.374L12.6701 16.5028C11.9378 16.363 10.4656 15.904 8.95012 14.3924C7.43468 12.8757 6.97573 11.3996 6.83969 10.6724L9.96593 7.62884C10.2029 7.39889 10.3411 7.08575 10.3513 6.75569C10.3616 6.42563 10.2429 6.10455 10.0206 5.8604L5.32298 0.69493C5.10055 0.450014 4.7914 0.301454 4.4612 0.280802C4.131 0.260149 3.80575 0.369031 3.55454 0.584323L0.795723 2.95029C0.575922 3.17089 0.44473 3.46449 0.427033 3.7754C0.407963 4.09323 0.0443588 11.6221 5.88237 17.4627C10.9754 22.5544 17.355 22.9269 19.112 22.9269C19.3688 22.9269 19.5264 22.9193 19.5684 22.9167C19.8792 22.8993 20.1727 22.7676 20.3922 22.5468L22.7569 19.7867C22.9724 19.5356 23.0815 19.2105 23.061 18.8803C23.0406 18.5501 22.8923 18.2409 22.6476 18.0183L17.4808 13.3194Z" fill="#6D551B" />
                                 </svg>
                             </div>
-                            <button aria-label="call 2" className='font-supera400 cxs:font-supera500 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl text-white  xs:pl-1 cxs:pl-2' onClick={() => { window.location.href = 'tel:919988010405' }}>+91 99880 10405</button>
+                            <button aria-label="call 2" className='font-supera500 cxs:font-supera600 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl text-white  xs:pl-1 cxs:pl-2' onClick={() => { window.location.href = 'tel:919988010405' }}>+91 99880 10405</button>
                         </div>
                     </div>
                     <div className={`pr-0.5 bg-[#84600C] bg-right-top w-full`}>
@@ -90,7 +90,7 @@ const ContactInfo = () => {
                                 </svg>
                             </div>
                             <div className=' xs:pl-1 cxs:pl-2'>
-                                <button aria-label="info@realtynivesh.com" onClick={() => { window.location.href = 'mailto:info@realtynivesh.com' }} className='font-supera400 cxs:font-supera500 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl text-white'>info@realtynivesh.com</button>
+                                <button aria-label="info@realtynivesh.com" onClick={() => { window.location.href = 'mailto:info@realtynivesh.com' }} className='font-supera500 cxs:font-supera600 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl text-white'>info@realtynivesh.com</button>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ const ContactInfo = () => {
                             </div>
                             <div className=' xs:pl-1 cxs:pl-2'>
                                 <Link href="https://maps.google.com/maps/place//data=!4m2!3m1!1s0x390fe9ec15cbfd03:0x4cb1dcaa577519c8?entry=s&utm_campaign=srp-72762481&sa=X&ved=1t:8290&ictx=111" target="_blank" >
-                                    <p className='font-supera400 cxs:font-supera500 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl  text-white'>
+                                    <p className='font-supera500 cxs:font-supera600 no-underline tracking-wider text-sm bxxs:text-base xs:text-lg cxs:text-xl  text-white'>
                                         Showroom No. 12 level 2, Uptown insignia PR-7 Airport Road, Zirakpur, Punjab
                                     </p>
                                 </Link>

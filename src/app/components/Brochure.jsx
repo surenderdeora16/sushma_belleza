@@ -39,7 +39,7 @@ const Brochure = () => {
                     <div className='w-full cmd:max-w-[400px] lg:max-w-[400px] xl:max-w-[440px] flex flex-col items-start sm:items-center cmd:items-start'>
                         <h3 className='text-left sm:text-center cmd:text-left font-supera500 text-[27px] cxs:text-[32px] sm:text-[30px] lg:text-[35px] leading-[0.92]  text-[#FFFFFF] uppercase flex flex-col items-start gap-x-2 sm:block'>
                             The pride of
-                            <span className={`tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px] text-transparent bg-clip-text bg-[#a27d27] ${process.env.basePath == '' ? 'sm:bg-backgroud-theme-local' : 'sm:bg-backgroud-theme-production '} bg-no-repeat bg-center`}> zirakpur </span>
+                            <span className={`tracking-wide sm:tracking-normal font-supera700 text-[60px] sm:text-[65px] lg:text-[80px] xl:text-[85px] text-transparent bg-clip-text bg-[#e3a71a] ${process.env.basePath == '' ? 'sm:bg-backgroud-theme-local' : 'sm:bg-backgroud-theme-production '} bg-no-repeat bg-center`}> zirakpur </span>
                         </h3>
                         <p className='mt-1.5 pb-6 cmd:border-b font-supera500 text-[15px] bxxs:text-[16px] xs:text-xl tracking-wider text-[#fff] capitalize text-center cmd:text-left'>live amidst nature and openness.</p>
                         <div className='text-left sm:text-left cmd:text-left tracking-wide font-supera500 text-[19px] xs:text-[20px] text-[#FFFFFF] capitalize mt-8 sm:mt-3'>Sushma belleza PR-7 airport road, zirakpur</div>

@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-    reactStrictMode: true,
+    reactStrictMode: false,
     basePath: '',
     trailingSlash: false,
-    assetPrefix: '',
+    assetPrefix: '/sushmabelleza',
     env: {
-        basePath: '',
+        basePath: '/sushmabelleza',
     },
     images: {
         unoptimized: true
@@ -17,9 +17,6 @@ const nextConfig = {
         buildActivityPosition: 'bottom-right',
         appIsrStatus: false,
     },
-
-    // Enable React Strict Mode for improved development experience
-    reactStrictMode: true,
 
     // Configure headers for better security and caching
     // async headers() {
@@ -54,12 +51,15 @@ const nextConfig = {
 
 
     // Disable x-powered-by header
-    poweredByHeader: false,
+    // poweredByHeader: false,
 
     // Enable production source maps for better debugging
     productionBrowserSourceMaps: false,
 
-    webpack: (config) => {
+    webpack: (config, { dev, isServer }) => {
+        if (!dev) {
+            config.devtool = false;
+        }
         config.resolve.fallback = {
             fs: false,
             path: false,

@@ -117,14 +117,14 @@ const Plans = () => {
                     </button>
                     <div className=' w-full px-2 flex-col cmd:flex-row flex justify-between items-start cmd:items-center lg:px-5'>
                         <div className='pt-2 bxxs:pt-0 sm:pr-1 cmd:pr-0 w-full cmd:w-auto'>
-                            <div className={`overflow-x-scroll sm:overflow-hidden ${activeViewBtn === '2Dview' ? 'w-full opacity-100 duration-500 relative z-20  flex self-start  justify-between sm:justify-center items-center gap-1.5 xs:gap-3 md:gap-5 border-b-[2px] sm:border-none border-[#D9D9D9]' : 'flex self-start justify-start xs:justify-center items-center gap-4 md:gap-[33.50px] opacity-0 duration-500 absolute z-0'}`}>
+                            <div className={`overflow-x-scroll overflow-y-hidden sm:overflow-hidden ${activeViewBtn === '2Dview' ? 'w-full opacity-100 duration-500 relative z-20  flex self-start  justify-between sm:justify-center items-center gap-1.5 xs:gap-3 md:gap-5 border-b-[2px] sm:border-none border-[#D9D9D9]' : 'flex self-start justify-start xs:justify-center items-center gap-4 md:gap-[33.50px] opacity-0 duration-500 absolute z-0'}`}>
                                 {unitPlan.map((unit, index) => (
                                     <div
                                         key={index}
                                         onClick={() => {
                                             handleTabChange(index)
                                         }}
-                                        className={`mb-1 cxs:mb-0 ${selectedUnitTab?.tab_id === unit?.tab_id ? ' text-[#986B10] sm:text-[#fff] bg-transparent sm:bg-[#474536]' : 'text-[#868484] sm:text-[#4B4B4B] bg-[#fff] sm:bg-[#EFEFEF] '} w-full h-[22px] cxs:h-[32px] md:h-[36px] px-4 xs:px-0 sm:px-5 rounded-[9.42px] sm:hover:bg-[#474536] sm:hover:text-white  cursor-pointer sm:border-0 border-[#202622]  leading-tight cxs:leading-normal whitespace-nowrap font-supera700 sm:font-supera500 text-[13px] cxs:text-sm cmd:text-[16px] tracking-[8%] text-center flex justify-center items-center uppercase`}>
+                                        className={`mb-1 cxs:mb-0 ${selectedUnitTab?.tab_id === unit?.tab_id ? ' text-[#986B10] sm:text-[#fff] bg-transparent sm:bg-[#474536]' : 'text-[#868484] sm:text-[#4B4B4B] bg-[#fff] sm:bg-[#EFEFEF] '} w-full h-[22px] cxs:h-[32px] md:h-[36px] px-4 xs:px-0 sm:px-5 rounded-[9.42px] sm:hover:bg-[#474536] sm:hover:text-white  cursor-pointer sm:border-0 border-[#202622]  leading-tight cxs:leading-normal whitespace-nowrap font-supera800 sm:font-supera500 text-[13px] cxs:text-sm cmd:text-[16px] tracking-[8%] text-center flex justify-center items-center uppercase`}>
                                         {unit?.tab}
                                     </div>
                                 ))}
@@ -249,9 +249,9 @@ const Plans = () => {
                             <ul className='md:hidden flex my-2.5 gap-x-5  overflow-x-auto pb-1.5'>
                                 {Object?.keys(View3DData)?.map((item, index) => (
                                     <li key={item} onClick={() => { setView3DIdx(index); setSelected3DItem(item) }} className={`${selected3DItem === item ? 'bg-[#000] text-[#fff]' : 'bg-[#fff] text-[#000]'}   shadow-[0px_0px_4.8px_0px_rgba(255,211,171,0.5)] border-[0.6px] border-[#000] rounded-[22px] flex gap-x-2 items-center py-1.5 px-5`}>
-                                        <div className={`${selected3DItem === item ? 'fill-[#fff]' : 'fill-[#000]'}`}>
+                                        <div className={`${selected3DItem === item ? 'fill-[#fff]' : 'fill-[#474536]'}`}>
                                             {View3DData[item]?.svg && React.cloneElement(View3DData[item]?.svg, {
-                                                className: `${selected3DItem === item ? ' stroke-[#fff]' : ' stroke-[#000]'}`,
+                                                className: `${selected3DItem === item ? ' stroke-[#fff]' : ' stroke-[#474536]'}`,
                                             })}
                                         </div>
                                         {/* <h6 className='font-supera600 whitespace-nowrap text-[12px] xs:text-[13px] xl:text-[15.5px] tracking-wide  '>{item}</h6> */}
@@ -259,7 +259,7 @@ const Plans = () => {
                                 ))}
                             </ul>
                             <div className='w-full md:w-1/2 lg:w-auto md:pl-6 lg:pl-9 pt-0 lg:pt-2 xl:pt-4 flex flex-col justify-start'>
-                                <motion.h4 className='font-supera700 text-[30px] lg:text-[39px] text-[#000] capitalize'>{View3DData[selected3DItem]?.title}</motion.h4>
+                                <motion.h4 className='font-supera700 text-[30px] lg:text-[39px] text-[#474536] capitalize'>{View3DData[selected3DItem]?.title}</motion.h4>
                                 <motion.div
                                     className='flex flex-col gap-y-3 xl:gap-y-5 mt-4 xl:mt-6'
                                     key={selected3DItem + '-features'}
@@ -278,7 +278,7 @@ const Plans = () => {
                                     {View3DData[selected3DItem]?.features.map((feature, index) => (
                                         <div key={index}>
                                             <h6 className='font-supera600 text-[14px] lg:text-[15px] xl:text-[17.61px] text-[#5E5D59] capitalize'>{feature.title}</h6>
-                                            <p className='mt-1 font-supera600 w-full xl:max-w-[450px] leading-tight text-[13.5px] xl:text-[15px] text-[#000] capitalize'>{feature.description}</p>
+                                            <p className='mt-1 font-supera600 w-full xl:max-w-[450px] leading-tight text-[13.5px] xl:text-[15px] text-[#39382c] capitalize'>{feature.description}</p>
                                         </div>
                                     ))}
                                 </motion.div>
@@ -289,7 +289,7 @@ const Plans = () => {
                                 <div className='w-full 3xl:container mx-auto flex flex-col'>
                                     <div className='w-full'>
                                         <div className='bg-[#F4F4F4 flex items-center'>
-                                            <h4 className='whitespace-nowrap font-supera600 text-[22px] border-b-[0.98px] border-b-[#000] text-[#363636]'>Browse From Here</h4>
+                                            <h4 className='whitespace-nowrap font-supera600 text-[22px] border-b-[0.98px] border-b-[#474536] text-[#363636]'>Browse From Here</h4>
                                         </div>
                                         <div>
                                             <ul className='scroll-hidden flex mt-4 gap-x-5 overflow-x-auto pb-2.5'>
@@ -297,10 +297,10 @@ const Plans = () => {
                                                     <li
                                                         key={index}
                                                         onClick={() => { setView3DIdx(index); setSelected3DItem(item) }}
-                                                        className={` ${selected3DItem === item ? ' bg-[#000] text-[#fff]' : 'text-[#000] bg-[#fff]'} cursor-pointer shadow-[0px_0px_4.8px_0px_rgba(255,211,171,0.5)] border-[0.6px] border-[#000] rounded-[22px] flex gap-x-2.5 items-center py-1.5 px-5`}>
-                                                        <div className={`${selected3DItem === item ? 'fill-[#fff]' : 'fill-[#000]'}`}>
+                                                        className={` ${selected3DItem === item ? ' bg-[#474536] text-[#fff]' : 'text-[#474536] bg-[#fff]'} cursor-pointer shadow-[0px_0px_4.8px_0px_rgba(255,211,171,0.5)] border-[0.6px] border-[#474536] rounded-[22px] flex gap-x-2.5 items-center py-1.5 px-5`}>
+                                                        <div className={`${selected3DItem === item ? 'fill-[#fff]' : 'fill-[#474536]'}`}>
                                                             {View3DData[item]?.svg && React.cloneElement(View3DData[item]?.svg, {
-                                                                className: `${selected3DItem === item ? ' stroke-[#fff]' : ' stroke-[#000]'}`,
+                                                                className: `${selected3DItem === item ? ' stroke-[#fff]' : ' stroke-[#474536]'}`,
                                                             })}
                                                         </div>
                                                         <h6 className='whitespace-nowrap font-supera600 text-[14.5px] xl:text-[15.5px] tracking-wide'>{item}</h6>

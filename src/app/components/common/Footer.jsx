@@ -3,11 +3,39 @@ import React from 'react'
 import Image from 'next/image';
 import logo from "@/app/images/combined-logo.webp";
 import Link from 'next/link';
+import CoinImg from '@/app/images/gold-series-coin.png'
+import CredaiImg from "@/app/images/credai.png"
+import Rera_DesignImg from "@/app/images/Rera_Design3b_03.png"
 
 function Footer() {
-
     return (
         <footer className='section-gap'>
+            <div className="bg-[#F0EFEF] py-4 px-1 md:px-0">
+                <div className="flex justify-around md:justify-center flex-wrap md:flex-nowrap gap-6 md:gap-28">
+
+                    <div className="flex flex-col justify-center items-center">
+                        <h6 className="font-supera600 tracking-wide text-[15px] text-[#303030] capitalize"> Product Category </h6>
+                        <div className="size-[98px] relative">
+                            <Image src={CoinImg} layout="fill" alt="" className="object-contain" />
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col justify-center items-center">
+                        <h6 className="font-supera600 tracking-wide text-[15px] text-[#303030] capitalize"> CREDAI Member </h6>
+                        <div className="w-[133px] h-[98px] relative">
+                            <Image src={CredaiImg} layout="fill" alt="" className="object-contain" />
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col gap-y-1.5 justify-center items-center">
+                        <h6 className="font-supera600 tracking-wide text-[15px] text-[#303030] capitalize"> RERA Approved </h6>
+                        <div className="size-[65px] relative">
+                            <Image src={Rera_DesignImg} layout="fill" alt="" className="object-contain" />
+                        </div>
+                        <p className="font-supera600 text-[14px] text-[#303030] uppercase whitespace-nowrap">PBRERA-SAS79-PR0680</p>
+                    </div>
+                </div>
+            </div>
             <div style={{ backgroundImage: `url('${process.env.basePath}/images/footer-bg-image.webp')` }} className={`w-full`}>
                 <div className='w-full h-full bg-[#101010BF] sm:bg-[#2D2C2CE5] '>
                     <div className='lg:container mx-auto pt-[35px]'>

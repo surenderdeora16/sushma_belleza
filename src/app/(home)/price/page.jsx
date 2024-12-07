@@ -15,7 +15,7 @@ const propertyData = [
         image: ApartmentImg1,
         title: '3 BHK',
         size: '2300 SQFT.',
-        description: 'introducing our 3BHK Apartments @ Sushma Belleza , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
+        description: 'introducing our 3BHK Apartments @ Sushma Belleza, A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
         // offer: 'Earn Monthly Rental Up to ₹ 15000*/- Per Month till Possession',
         offer: null,
         priceLabel: 'Company price',
@@ -27,7 +27,7 @@ const propertyData = [
         image: ApartmentImg2,
         title: '3 BHK+S',
         size: '2800 SQFT.',
-        description: 'introducing our3bhk+s  Apartments @Sushma Belleza  , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
+        description: 'introducing our 3bhk+s Apartments @Sushma Belleza, A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
         offer: null,
         priceLabel: 'Company price',
         companyPrice: '₹ 2.06cr',
@@ -38,7 +38,7 @@ const propertyData = [
         image: ApartmentImg3,
         title: '4BHK+S',
         size: '3400 SQFT.',
-        description: 'introducing our 4bhk+S  Apartments @ Sushma Belleza  , A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
+        description: 'introducing our 4bhk+S Apartments @ Sushma Belleza, A magnificent testament to luxury and modern living. These stunning towers offer spacious living spaces.',
         offer: null,
         priceLabel: 'Company price',
         companyPrice: '₹ 2.58cr',
@@ -118,12 +118,6 @@ const Page = () => {
     const handleUnlock = () => {
         setIsUnlocked(false)
     }
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setIsUnlocked(false)
-    //     }, 2000)
-    // }, [])
     return (
         <div>
             {isModalOpen && <EnquiryForm heading={'View Price Sheet'} formType={'enquiry'} isOpen={isModalOpen} onClose={handleCloseModal} onFormSubmit={handleUnlock} eventSource={`Unlock Price (${event})`} notThankyou={true} />}
@@ -255,10 +249,10 @@ const Page = () => {
                                 {paymentPlanData?.map((plan, index) => {
                                     return (
                                         <div key={index} className='w-[98%] 3xl:container mx-auto h-full sm:h-[35px] md:h-full flex items-center gap-x-4 md:gap-x-7 cmd:gap-x-12 '>
-                                            <div className='size-[35px] md:size-[40px] cmd:size-[53.14px] rounded-full bg-[#141413] flex justify-center items-center font-supera600 text-[13px] md:text-[14px] cmd:text-[18.5px] text-[#fff]'>
+                                            <div className='size-[35px] md:size-[40px] cmd:size-[53.14px] rounded-full bg-[#a27d27] flex justify-center items-center font-supera600 text-[13px] md:text-[14px] cmd:text-[18.5px] text-[#fff]'>
                                                 {index < 9 && ("0")}{index + 1}
                                             </div>
-                                            <div className='w-[88%] h-full pr-1 pb-1 cxs:pb-3 flex justify-between items-end border-b-[0.9px] border-b-[#D9D9D9] sm:border-b-[#141413] font-supera600 leading-tight xs:leading-snug sm:leading-normal text-[12px] bxxs:text-[14px] md:text-[16px] cmd:text-[18.5px] text-[#3A3A39] sm:text-[#141413]'>
+                                            <div className='w-[88%] h-full pr-1 pb-1 cxs:pb-3 flex justify-between items-end border-b-[0.9px] border-b-[#D9D9D9] sm:border-b-[#141413] font-supera600 leading-tight xs:leading-snug sm:leading-normal text-[12px] bxxs:text-[14px] md:text-[16px] cmd:text-[18.5px] text-[#3A3A39] sm:text-[#494949]'>
                                                 <div>
                                                     {plan?.name}
                                                 </div>

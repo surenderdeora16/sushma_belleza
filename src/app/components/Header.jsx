@@ -56,7 +56,7 @@ const Header = () => {
                 aria-label="Sushma Belleza Header Image"
               />
               {/* Overlay content */}
-              <div className="w-full h-full flex items-end bg-[#00000029]">
+              <div className="w-full h-full flex items-end bg-[#00000078] z-40 relative">
                 <div className="relative w-full h-full sm:h-[calc(100%-75px)] lg:h-[calc(100%-80px)]">
                   <div className="px-5 xs:px-10 cmd:px-14 lg:px-6 xl:px-16 3xl:px-4 -mt-10 sm:mt-0 w-full h-full flex flex-col justify-center sm:justify-center items-start">
                     <div></div>

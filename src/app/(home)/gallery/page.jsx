@@ -228,7 +228,7 @@ export default function Page() {
         <Heading
           heading={typeof window !== 'undefined' && window.innerWidth >= 640 ? activeTab : 'Gallery'}
           subHeading={
-            "Explore Sushma Belleza mohali  Project gallery & Construction Updates."
+            "Explore sushma Belleza  Project gallery & Construction Updates."
           }
           headingColor={"#474536"}
           subHeadingColor={"#5A5454"}
@@ -296,15 +296,15 @@ export default function Page() {
                 >
                   <path
                     d="M0 0H500L450 55H0V0Z"
-                    fill={`${mobileActiveTab == 'Project Walk Through' ? '#EFA056' : '#949494'}`}
+                    fill={`${mobileActiveTab == 'Project Walk Through' ? '#8E680E' : '#2D2E2F'}`}
                   />
                   <path
                     d="M0 0H479.167L431.25 55H0V0Z"
-                    fill={`${mobileActiveTab == 'Project Walk Through' ? '#DB8B3F' : '#313131'}`}
+                    fill={`${mobileActiveTab == 'Project Walk Through' ? '#9B751C' : '#3C3D3E'}`}
                   />
                   <path
                     d="M0 0H460.069L414.062 55H0V0Z"
-                    fill={`${mobileActiveTab == 'Project Walk Through' ? '#BE7530' : '#0E0E0E'}`}
+                    fill={`${mobileActiveTab == 'Project Walk Through' ? '#A27D27' : '#4B4B4B'}`}
                   />
                 </svg>
                 <h4 className="w-full h-full absolute top-0 tracking-wider font-supera600 text-base xs:text-lg capitalize text-white flex justify-left items-center pl-[10%]">Project Walk Through</h4>
@@ -363,15 +363,15 @@ export default function Page() {
                   >
                     <path
                       d="M0 0H500L450 55H0V0Z"
-                      fill={`${mobileActiveTab === tab ? '#EFA056' : '#949494'}`}
+                      fill={`${mobileActiveTab === tab ? '#8E680E' : '#2D2E2F'}`}
                     />
                     <path
                       d="M0 0H479.167L431.25 55H0V0Z"
-                      fill={`${mobileActiveTab === tab ? '#DB8B3F' : '#313131'}`}
+                      fill={`${mobileActiveTab === tab ? '#9B751C' : '#3C3D3E'}`}
                     />
                     <path
                       d="M0 0H460.069L414.062 55H0V0Z"
-                      fill={`${mobileActiveTab === tab ? '#BE7530' : '#0E0E0E'}`}
+                      fill={`${mobileActiveTab === tab ? '#A27D27' : '#4B4B4B'}`}
                     />
                   </svg>
                   <h4 className="w-full h-full absolute top-0 tracking-wider font-supera600 text-base xs:text-lg capitalize text-white flex justify-left items-center pl-[10%]">

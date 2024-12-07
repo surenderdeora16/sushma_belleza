@@ -82,7 +82,7 @@ export default function Home() {
     return (
         // <section id="key-highlights" className="h-screen md:h-auto  scroll-mt-20 section-gap 3xl:px-5 md:bg-[#EFEEEE] relative ">
         //     <div className="h-full md:h-auto xl:container mx-auto md:px-4 md:pt-5 md:pb-8 xl:px-16 3xl:px-0  relative z-20">
-        <section id="key-highlights" className="h-auto scroll-mt-20 section-gap 3xl:px-5 md:bg-[#EFEEEE] relative after:absolute after:top-0 after:left-0 after:w-full after:h-[40%] after:bg-black md:after:bg-transparent after:z-10">
+        <section id="key-highlights" className="h-auto scroll-mt-20 section-gap 3xl:px-5 md:bg-[#EFEEEE] relative after:absolute after:top-0 after:left-0 after:w-full after:h-[40%] after:bg-[#a27d27] md:after:bg-transparent after:z-10">
             <div className="h-full md:h-auto xl:container mx-auto px-2 bxxs:px-4 pt-5 pb-8 xl:px-16 3xl:px-0  relative z-20">
                 <div className="hidden md:block">
                     <Heading
@@ -94,7 +94,7 @@ export default function Home() {
                     />
                 </div>
                 <div className='block md:hidden px-5 sm:px-5 mb-[22px] xl:container mx-auto'>
-                    <h2 className={`uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-transparent bg-clip-text ${process.env.basePath == '' ? 'bg-backgroud-theme-local' : 'bg-backgroud-theme-production '} bg-cover bg-bottom`}>key Highlights</h2>
+                    <h2 className={`uppercase font-supera700 text-[24px] sm:text-[32px] cmd:text-[36px] text-center text-white`}>key Highlights</h2>
                     <p className={`font-supera600 capitalize cmd:mt-1.5  max-w-full tracking-wider sm:tracking-normal text-[13px] cxs:text-sm sm:text-[15px] md:text-[16px] cmd:text-[18px] leading-[14px] xs:leading-[18px] sm:leading-[20px] cmd:leading-[22px] text-center text-[#fff]`}>Your Dream Home Awaits you to Own Exquisite Site in Sushma Belleza</p>
                 </div>
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">

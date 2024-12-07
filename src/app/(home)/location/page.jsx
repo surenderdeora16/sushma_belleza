@@ -88,7 +88,7 @@ const Page = () => {
                 <section className='xl:container mx-auto px-5'>
                     <div>
                         <h4 className='text-[#303030] font-supera700 text-center cmd:text-left  text-2xl  cxs:text-3xl cmd:text-4xl lg:text-4xl xl:text-[42px] leading-tight uppercase'>Why <br className="hidden cmd:block" />
-                            Mohali- <br className='block cmd:hidden' /> Sushma Belleza?
+                            zirakpur - <br className='block cmd:hidden' /> Sushma Belleza?
                         </h4>
 
                         <div className='grid grid-cols-2 gap-y-10 cmd:gap-y-0 cmd:flex mt-14'>

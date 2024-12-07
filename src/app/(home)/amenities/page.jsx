@@ -24,7 +24,7 @@ const Page = () => {
             <div id='amenities' className='section-gap scroll-mt-28 sm:scroll-mt-20'>
                 <Heading
                     heading={'Amenities'}
-                    subHeading={'Discover the Premium amenities at Sushma Belleza Aurum Mohali'}
+                    subHeading={'Discover the Premium amenities at Sushma Belleza'}
                     headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
                     subHeadingClass={'font-supera600'}
@@ -80,7 +80,7 @@ const AmenityItem = ({ image, index, handleImageClick, lightboxRef, amenitiesIma
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: -20, opacity: 0 }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="text-lg cxs:text-base sm:text-lg cmd:text-xl lg:text-2xl 3xl:text-3xl text-center font-supera600 tracking-wider px-1 mb-2"
+                            className="text-lg cxs:text-base sm:text-lg cmd:text-xl lg:text-2xl 3xl:text-3xl text-center font-supera600 tracking-wider px-1 mb-2 capitalize"
                         >
                             {image?.title}
                         </motion.h3>
