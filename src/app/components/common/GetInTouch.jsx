@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import PhoneInput, { getCountryCallingCode } from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
 import SideImg from '@/app/images/getInTouch-img.webp'
+import { useRouter } from 'next/navigation';
 
 const validationSchema = Yup.object({
     name: Yup.string().required('Name is required').min(3).max(50),
@@ -20,6 +21,7 @@ const GetInTouch = () => {
     const [value, setValue] = useState('')
     const [countryCode, setCountryCode] = useState('+ 91');
     const [loaderShow, setLoaderShow] = useState(false);
+    const router = useRouter()
 
     const handleCountryChange = (country) => {
         if (country) {
@@ -94,14 +96,14 @@ const GetInTouch = () => {
                                         <div className='col-span-2 lg:col-span-1'>
                                             <label className='ml-2 font-supera400 text-[15px] tracking-wide text-[#F3F9FF] capitalize'><span className='inline lg:hidden'>Your Name</span> <span className='hidden lg:inline'>First Name</span></label>
                                             <div className='mt-1.5 w-full h-[44px] bg-[#121212CC] md:bg-[#232323] border-[0.74px] border-[#F2F9FF] rounded-[6px]'>
-                                                <Field type="text" name="name" placeholder='Rohit' className='w-full h-full bg-transparent outline-none px-5 text-[14.78px] text-white font-supera500 placeholder:font-supera500 placeholder:text-[14.78px] placeholder:text-[#909090]' />
+                                                <Field type="text" name="name" placeholder='Your Name' className='w-full h-full bg-transparent outline-none px-5 text-[14.78px] text-white font-supera500 placeholder:font-supera500 placeholder:text-[14.78px] placeholder:text-[#909090]' />
                                             </div>
                                             <ErrorMessage component="div" className="text-left text-[10.5px]  pl-1 absolute text-red-500" name="name" />
                                         </div>
                                         <div className='hidden lg:block'>
                                             <label className='ml-2 font-supera400 text-[15px] tracking-wide text-[#F3F9FF] capitalize'>Last Name</label>
                                             <div className='mt-1.5 w-full h-[44px] bg-[#121212CC] md:bg-[#232323] border-[0.74px] border-[#F2F9FF] rounded-[6px]'>
-                                                <Field type="text" name="lastName" placeholder='Sharma (Optional)' className='w-full h-full bg-transparent outline-none px-5 text-[14.78px] text-white font-supera500 placeholder:font-supera500 placeholder:text-[14.78px] placeholder:text-[#909090]' />
+                                                <Field type="text" name="lastName" placeholder='Last Name (Optional)' className='w-full h-full bg-transparent outline-none px-5 text-[14.78px] text-white font-supera500 placeholder:font-supera500 placeholder:text-[14.78px] placeholder:text-[#909090]' />
                                             </div>
                                         </div>
                                         <div className='col-span-2 cmd:col-span-1'>
@@ -110,7 +112,7 @@ const GetInTouch = () => {
                                                 {/* <input type="text" placeholder='91 +' className='w-full h-full bg-transparent outline-none px-5 text-[14.78px] text-white font-supera500 placeholder:font-supera500 placeholder:text-[14.78px] placeholder:text-[#909090]' /> */}
                                                 <div className='mr-2.5 font-supera500 text-[14.78px] text-[#909090] whitespace-nowrap '>{countryCode}</div>
                                                 <PhoneInput
-                                                    placeholder="Mobile"
+                                                    placeholder="Your Phone number*"
                                                     defaultCountry='IN'
                                                     value={value}
                                                     onCountryChange={handleCountryChange}

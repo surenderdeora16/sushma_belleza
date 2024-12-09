@@ -91,14 +91,14 @@ const pageContent = {
     { label: 'Construction updates', path: '/gallery', hastPath: '#construction-updates' },
   ],
   '/sushmabelleza/plans/': [
-    { label: 'Unit Plans', path: '/plans', hastPath: '#plan' },
+    { label: 'Unit Plan', path: '/plans', hastPath: '#plan' },
     { label: 'Site Plans', path: '/plans', hastPath: '#sitePlan' },
     { label: 'Tower Plans', path: '/plans', hastPath: '#towerPlan' },
   ],
 };
 
 const Navbar = () => {
-  const { setActiveSectionTab, activeSectionTab } = useActivetab();
+  const { setActiveSectionTab } = useActivetab();
   const pathName = usePathname();
 
   const params = useParams()
@@ -219,16 +219,6 @@ const Navbar = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (activeSectionTab || window?.location?.hash) {
-        if (activeSectionTab) {
-          setTab(activeSectionTab.replace('#', ''));
-        }
-      }
-    }
-  }, [activeSectionTab, params]);
-  
   return (
     <nav>
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />

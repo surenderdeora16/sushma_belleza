@@ -65,7 +65,7 @@ const Page = () => {
             <SubHeader />
 
             <section id='plan' className='section-gap-inner scroll-mt-24 sm:scroll-mt-20'>
-                <Heading heading={'Unit plans'}
+                <Heading heading={'Unit plan'}
                     subHeading={'Explore Sushma Belleza floor plans, Site plan & Tower plans'}
                     headingColor={'#474536'}
                     subHeadingColor={'#5A5454'}
