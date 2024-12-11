@@ -49,7 +49,7 @@ const sitePlan = [
 const towerPlans = [
     { label: 'Low rise 2300 sqft', image: towerPlanImg1?.src },
     { label: 'High rise 2800 sqft', image: towerPlanImg3?.src },
-    { label: 'high rise 3400 sqft', image: towerPlanImg2?.src },
+    { label: 'High rise 3400 sqft', image: towerPlanImg2?.src },
 ];
 
 const Page = () => {
@@ -93,7 +93,7 @@ const Page = () => {
                 <div className={`${process.env.basePath == '' ? 'sm:bg-siteplan-local' : 'sm:bg-siteplan-production'} bg-no-repeat bg-cover`}>
                     <div className='xl:container mx-auto px-5 sm:pt-20'>
                         <Heading
-                            heading={'Site plans'}
+                            heading={'Site plan'}
                             subHeading={'Explore Sushma Belleza floor plans, Site plan & Tower plans'}
                             headingColor={'#474536'}
                             subHeadingColor={'#5A5454'}

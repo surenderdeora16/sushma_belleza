@@ -57,12 +57,13 @@ const AmenityItem = ({ image, index, handleImageClick, lightboxRef, amenitiesIma
             <DynamicLightbox
                 ref={lightboxRef}
                 images={image?.src}
-                sliderimages={amenitiesImageData}
-                idx={index}
-                multipleimg={true}
+                lighbox={false}
+                // sliderimages={amenitiesImageData}
+                // idx={index}
+                // multipleimg={true}
                 title={image?.alt}
-                zoom={true}
-                keyboardNavigation={true}
+                // zoom={true}
+                // keyboardNavigation={true}
                 className="object-cover scale-100 group-hover:scale-125 duration-500"
             />
             <AnimatePresence>
@@ -116,7 +117,7 @@ export function useIntersectionObserver(options = {}) {
                 setIsIntersecting(entry.isIntersecting);
             },
             {
-                threshold: 0.5, // 50% of the element should be visible
+                threshold: 0, // 50% of the element should be visible
                 rootMargin: '-25% 0px -25% 0px', // Custom viewport bounds (top and bottom margin)
                 ...options,
             }

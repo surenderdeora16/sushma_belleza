@@ -17,16 +17,16 @@ import NearbyImg13 from '@/app/images/nearby-img13.webp'
 
 
 const nearbyData = [
-    { image: NearbyImg13, distance: '01', unit: 'KM', place: 'manav mangal smart school zirakpur' },
-    { image: NearbyImg2, distance: '02', unit: 'KM', place: 'Starbucks' },
-    { image: NearbyImg3, distance: '02', unit: 'KM', place: 'Inox Cinema' },
-    { image: NearbyImg4, distance: '02', unit: 'KM', place: 'Dominos' },
-    { image: NearbyImg8, distance: '02', unit: 'KM', place: 'Big Bazaar' },
-    { image: NearbyImg9, distance: '05', unit: 'KM', place: 'Airocity' },
-    { image: NearbyImg12, distance: '07', unit: 'KM', place: 'Chandigarh International Airport' },
-    { image: NearbyImg1, distance: '11', unit: 'KM', place: 'Chandigarh' },
-    { image: NearbyImg7, distance: '15', unit: 'KM', place: 'fortis Hospital mohali' },
-    { image: NearbyImg5, distance: '15', unit: 'KM', place: 'Railway Station' },
+    { image: NearbyImg13, distance: '01', unit: 'Min', place: 'manav mangal smart school zirakpur' },
+    { image: NearbyImg2, distance: '02', unit: 'Min', place: 'Starbucks' },
+    { image: NearbyImg3, distance: '02', unit: 'Min', place: 'Inox Cinema' },
+    { image: NearbyImg4, distance: '02', unit: 'Min', place: 'Dominos' },
+    { image: NearbyImg9, distance: '08', unit: 'Min', place: 'Airocity' },
+    { image: NearbyImg1, distance: '11', unit: 'Min', place: 'Chandigarh' },
+    { image: NearbyImg8, distance: '12', unit: 'Min', place: 'Big Bazaar' },
+    { image: NearbyImg12, distance: '15', unit: 'Min', place: 'Chandigarh International Airport' },
+    { image: NearbyImg5, distance: '15', unit: 'Min', place: 'Railway Station' },
+    { image: NearbyImg7, distance: '25', unit: 'Min', place: 'fortis Hospital mohali' },
 ]
 
 const NearBy = () => {

@@ -4,12 +4,12 @@ const nextConfig = {
     reactStrictMode: false,
     basePath: '',
     trailingSlash: false,
-    assetPrefix: '/sushmabelleza',
+    assetPrefix: '',
     env: {
-        basePath: '/sushmabelleza',
+        basePath: '',
     },
     images: {
-        unoptimized: true
+        unoptimized: false
     },
 
     devIndicators: {
