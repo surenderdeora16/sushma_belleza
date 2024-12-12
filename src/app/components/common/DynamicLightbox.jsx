@@ -117,7 +117,7 @@ const DynamicLightbox = forwardRef(
                   {/* <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div> */}
                   <div className="h-full w-full  animate-pulse flex justify-center items-center">
                     {/* <div className="animate-moveUpDown text-2xl font-supera800">Ameneties...</div> */}
-                    <Image src={loader} quality={60} width={100} height={100} className="object-contain object-center animate-pulse brightness-50" />
+                    <Image src={loader} quality={60} width={100} height={100} alt="loading" className="object-contain object-center animate-pulse brightness-50" />
                   </div>
                 </div>
               )}
@@ -146,7 +146,7 @@ const DynamicLightbox = forwardRef(
                   {/* <div className="h-8 w-8 animate-spin rounded-full border-4 border-gray-300 border-t-blue-600"></div> */}
                   <div className="h-full w-full animate-pulse flex justify-center items-center">
                     {/* <div className="animate-moveUpDown text-2xl font-supera800">Ameneties...</div> */}
-                      <Image src={loader} quality={0} width={100} height={100} className="object-contain object-center animate-pulse brightness-50" />
+                      <Image src={loader} quality={0} width={100} height={100} alt="loading" className="object-contain object-center animate-pulse brightness-50" />
                   </div>
                 </div>
               )}

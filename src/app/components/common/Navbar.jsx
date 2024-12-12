@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -7,7 +8,11 @@ import Image from 'next/image';
 import { useActivetab } from '@/app/context/ActiveTabContext';
 import logo from '@/app/images/logo.webp';
 import HambarIcon from '@/app/images/hambar.svg';
-import SideBar from '@/app/components/SideBar';
+import dynamic from 'next/dynamic';
+const SideBar = dynamic(() => import('@/app/components/SideBar'), {
+  loading: () => <p>SideBar...</p>,
+});
+
 
 const navigationItems = [
   {
@@ -221,7 +226,9 @@ const Navbar = () => {
 
   return (
     <nav>
+      <Suspense fallback={<div>Loading...</div>}>
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
+      </Suspense>
       <div style={{ zIndex: '550' }} className={`w-full z-[50] ${isSticky ? 'fixed top-0' : 'absolute top-0 left-0'}`}>
 
         <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-1.5 sm:py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${pathName == `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
@@ -231,6 +238,7 @@ const Navbar = () => {
                 src={logo}
                 fill
                 className="object-contain"
+                priority
                 alt='logo'
               />
             </Link>
@@ -305,7 +313,7 @@ const Navbar = () => {
               <li className={`${megaMenu ? 'self-start' : 'self-center'} `}>
                 {!megaMenu && (
                   <button aria-label="megamenu toggle button" className="flex justify-end  pl-[20px] xl:pl-[40px] relative top-1">
-                    <Image onClick={() => setMegaMenu(!megaMenu)} src={HambarIcon} alt='bar' />
+                    <Image onClick={() => setMegaMenu(!megaMenu)} src={HambarIcon} priority alt='bar' />
                   </button>
                 )}
                 {megaMenu && (
@@ -318,7 +326,7 @@ const Navbar = () => {
               </li>
             </ul>
             <button aria-label="megamenu open button" onClick={() => setIsSidebarOpen(true)} className="flex justify-end  lg:p-4 lg:hidden">
-              <Image src={HambarIcon} alt='bar' className='object-center p-1 sm:p-0' />
+              <Image src={HambarIcon} alt='bar' priority className='object-center p-1 sm:p-0' />
             </button>
           </div>
           {content && (

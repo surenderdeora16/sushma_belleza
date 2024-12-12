@@ -43,7 +43,8 @@ function Footer() {
                             <div className='w-full max-w-[300px] sm:max-w-[350px] h-[100px] mx-auto relative'>
                                 <Image
                                     src={logo}
-                                    alt="footer-logo"
+                                    alt="sushma belleza logo"
+                                    priority
                                     fill 
                                     className='w-full object-contain'
                                 />

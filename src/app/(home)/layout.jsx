@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         <div>
             <Navbar />
             {children}
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
                 <CallToAction />
             </div>
             {pathName.includes(`${process.env.basePath}/price/`) && (
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
             <ContactInfo />
             <Downloads />
             <AvatarModel />
-            <AppBar />
+            <AppBar /> */}
             <Footer />
         </div>
     );
