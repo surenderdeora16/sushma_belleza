@@ -1,9 +1,9 @@
 import View3DImg from '@/app/images/amenities-img3.webp'
-import View3DImg2 from '@/app/images/amenities-img3.webp'
-import View3DImg3 from '@/app/images/amenities-img3.webp'
-import View3DImg4 from '@/app/images/amenities-img3.webp'
-import View3DImg5 from '@/app/images/amenities-img3.webp'
-import View3DImg7 from '@/app/images/amenities-img3.webp'
+import View3DImg2 from '@/app/images/amenities-img2.webp'
+import View3DImg3 from '@/app/images/amenities-img1.webp'
+import View3DImg4 from '@/app/images/amenities-img4.webp'
+import View3DImg5 from '@/app/images/amenities-img5.webp'
+import View3DImg7 from '@/app/images/amenities-img6.webp'
 
 const View3DData = {
     'Living Room': {

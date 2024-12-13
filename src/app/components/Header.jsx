@@ -48,13 +48,45 @@ const Header = () => {
           <div className="absolute w-full h-full">
             <div className="relative w-full h-full overflow-hidden ">
               {/* Background video */}
-              <Image
+              {/* <Image
                 src={HeaderImg}
                 className="w-full h-full object-cover"
                 alt="sushma belleza"
                 fill
                 aria-label="Sushma Belleza Header Image"
-              />
+              /> */}
+              <video
+                // ref={videoRef}
+                src={`/videos/mainVideo-background.mp4`}
+                muted
+                loop
+                autoPlay
+                preload="metadata"
+                className="hidden sm:block w-full h-full object-cover absolute top-0 left-0"
+                aria-label="Background Video"
+                playsInline
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
+              >
+                Your browser does not support the video tag.
+              </video>
+              <video
+                // ref={videoRef}
+                src={`/videos/mainVideoMobile-background.mp4`}
+                muted
+                loop
+                autoPlay
+                preload="metadata"
+                className="block sm:hidden w-full h-full object-cover object-bottom absolute top-0 left-0"
+                aria-label="Background Video"
+                playsInline
+                disablePictureInPicture
+                controlsList="nodownload nofullscreen noremoteplayback"
+              >
+                Your browser does not support the video tag.
+              </video>
+
+
               {/* Overlay content */}
               <div className="w-full h-full flex items-end bg-[#00000078] z-40 relative">
                 <div className="relative w-full h-full sm:h-[calc(100%-75px)] lg:h-[calc(100%-80px)]">

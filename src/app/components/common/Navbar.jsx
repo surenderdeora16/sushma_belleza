@@ -1,5 +1,6 @@
 'use client';
 
+import { Suspense } from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -7,7 +8,11 @@ import Image from 'next/image';
 import { useActivetab } from '@/app/context/ActiveTabContext';
 import logo from '@/app/images/logo.webp';
 import HambarIcon from '@/app/images/hambar.svg';
-import SideBar from '@/app/components/SideBar';
+import dynamic from 'next/dynamic';
+const SideBar = dynamic(() => import('@/app/components/SideBar'), {
+  loading: () => <p>SideBar...</p>,
+});
+
 
 const navigationItems = [
   {
@@ -79,26 +84,26 @@ const navigationItems = [
 ];
 
 const pageContent = {
-  '/sushmabelleza/price/': [
+  '/price/': [
     { label: 'Price', path: '/price', hastPath: '#price' },
     { label: 'Payment Structure', path: '/price', hastPath: '#payment-structure' },
     { label: 'Current offers', path: '/price', hastPath: '#current-offer' },
   ],
-  '/sushmabelleza/gallery/': [
+  '/gallery/': [
     { label: 'Project walk through', path: '/gallery', hastPath: '#project-walk-through' },
     { label: 'Sample flat', path: '/gallery', hastPath: '#sample-flat' },
     { label: 'Project Gallery', path: '/gallery', hastPath: '#project-gallery' },
     { label: 'Construction updates', path: '/gallery', hastPath: '#construction-updates' },
   ],
-  '/sushmabelleza/plans/': [
-    { label: 'Unit Plans', path: '/plans', hastPath: '#plan' },
-    { label: 'Site Plans', path: '/plans', hastPath: '#sitePlan' },
+  '/plans/': [
+    { label: 'Unit Plan', path: '/plans', hastPath: '#plan' },
+    { label: 'Site Plan', path: '/plans', hastPath: '#sitePlan' },
     { label: 'Tower Plans', path: '/plans', hastPath: '#towerPlan' },
   ],
 };
 
 const Navbar = () => {
-  const { setActiveSectionTab, activeSectionTab } = useActivetab();
+  const { setActiveSectionTab } = useActivetab();
   const pathName = usePathname();
 
   const params = useParams()
@@ -117,7 +122,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (pathName === `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`) {
+    if (pathName === `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}`) {
       const mouseMoveHandler = () => handleUserInteraction();
       const scrollHandler = () => handleUserInteraction();
 
@@ -140,9 +145,9 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (pathName === `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` || pathName === '/location/' || pathName === '/amenities/') {
+      if (pathName === `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` || pathName.includes(`${process.env.basePath}/location`) || pathName.includes(`${process.env.basePath}/amenities`)) {
         // Existing behavior for home page
-        if (currentScrollY > lastScrollY && currentScrollY > 500 && (pathName !== `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` && pathName !== '/location/' && pathName !== '/amenities/')) {
+        if (currentScrollY > lastScrollY && currentScrollY > 500 && (pathName !== `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` && !pathName.includes(`${process.env.basePath}/location`) && !pathName.includes(`${process.env.basePath}/amenities`))) {
           setIsVisible(false);
         } else {
           setIsVisible(true);
@@ -165,7 +170,7 @@ const Navbar = () => {
       if (currentScrollY > 500) {
         setIsSticky(true);
       } else {
-        setIsSticky(pathName !== `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`);
+        setIsSticky(pathName !== `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}`);
       }
 
       setLastScrollY(currentScrollY);
@@ -173,7 +178,7 @@ const Navbar = () => {
       if (currentScrollY > 100) {
         setIsSticky(true);
       } else {
-        setIsSticky(pathName !== `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`);
+        setIsSticky(pathName !== `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}`);
       }
 
       const sections = document.querySelectorAll('section[id]');
@@ -219,28 +224,21 @@ const Navbar = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (activeSectionTab || window?.location?.hash) {
-        if (activeSectionTab) {
-          setTab(activeSectionTab.replace('#', ''));
-        }
-      }
-    }
-  }, [activeSectionTab, params]);
-  
   return (
     <nav>
+      <Suspense fallback={<div>Loading...</div>}>
       <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
+      </Suspense>
       <div style={{ zIndex: '550' }} className={`w-full z-[50] ${isSticky ? 'fixed top-0' : 'absolute top-0 left-0'}`}>
 
-        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-1.5 sm:py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
+        <div className={`relative bg-no-repeat bg-cover bg-right-bottom ${megaMenu ? `bg-[#27261e] backdrop-blur px-5 sm:px-10 cmd:px-14 lg:px-6 2xl:px-8 3xl:px-4 pt-2 sm:pt-6 lg:pb-10` : ``}  w-full transition-all duration-500 ${isSticky ? `bg-[#363738] sm:bg-[#27261e] shadow-lg py-1.5 sm:py-2 lg:py-1 ${isVisible ? 'translate-y-0' : `${megaMenu ? '' : '-translate-y-full'}`} duration-500` : `${pathName == `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` ? 'py-2 lg:py-1 xl:py-4 ' : `bg-[#27261e] ${pathName == `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` ? 'bg-[#363738] sm:bg-transparent-local' : 'bg-[#363738] sm:bg-transparent-production '}  py-1`}  duration-500 `} flex justify-center items-center duration-500`}>
           <div className={`duration-500  xl:py-1 lg:py-2.5 w-full 2xl:container flex justify-between lg:justify-around 3xl:justify-between ${megaMenu ? 'items-center sm:items-end xl:items-center duration-1000 px-0' : 'items-center duration-1000 px-1.5 cxs:px-5 xl:px-0'} duration-1000 mx-2`}>
-            <Link href={`${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`} aria-label="Back to homepage" className={`${isSticky ? 'w-[130px] h-[42px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}` ? 'w-[150px] h-[50px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
+            <Link href={`${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}`} aria-label="Back to homepage" className={`${isSticky ? 'w-[130px] h-[42px] sm:w-[160px] sm:h-[50px]  duration-1000  sm:my-0' : `${pathName == `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}` ? 'w-[150px] h-[50px] sm:w-[200px] sm:h-[60px] xl:w-[206px] xl:h-[50px]' : 'w-[120px] h-[50px] sm:w-[150px] sm:h-[60px] py-3'} duration-1000`} flex relative`}>
               <Image
                 src={logo}
                 fill
                 className="object-contain"
+                priority
                 alt='logo'
               />
             </Link>
@@ -249,7 +247,7 @@ const Navbar = () => {
                 <li className={`${megaMenu ? `font-supera500 xl:font-supera600  xl:w-1/6 flex justify-center ${(item?.label === 'About Us' || item?.label === 'Amenities') ? 'hidden' : ''}` : 'font-supera400 xl:font-supera500'} h-full`} key={item.href}>
                   <div className={`text-white  tracking-wide text-[14px] xl:text-[17px] 3xl:text-lg uppercase relative table`}>
                     <Link href={
-                      pathName === `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`
+                      pathName === `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}`
                         ? `${process.env.basePath}${item?.href}`
                         : item?.href.includes('#')
                           ? `${process.env.basePath}${item?.href}`
@@ -315,7 +313,7 @@ const Navbar = () => {
               <li className={`${megaMenu ? 'self-start' : 'self-center'} `}>
                 {!megaMenu && (
                   <button aria-label="megamenu toggle button" className="flex justify-end  pl-[20px] xl:pl-[40px] relative top-1">
-                    <Image onClick={() => setMegaMenu(!megaMenu)} src={HambarIcon} alt='bar' />
+                    <Image onClick={() => setMegaMenu(!megaMenu)} src={HambarIcon} priority alt='bar' />
                   </button>
                 )}
                 {megaMenu && (
@@ -328,13 +326,13 @@ const Navbar = () => {
               </li>
             </ul>
             <button aria-label="megamenu open button" onClick={() => setIsSidebarOpen(true)} className="flex justify-end  lg:p-4 lg:hidden">
-              <Image src={HambarIcon} alt='bar' className='object-center p-1 sm:p-0' />
+              <Image src={HambarIcon} alt='bar' priority className='object-center p-1 sm:p-0' />
             </button>
           </div>
           {content && (
-            <div className={`mt-[-0.5px] ${pathName == '/sushmabelleza/gallery/' ? 'hidden sm:block' : ''} shadow-xl shadow-[#00000039] absolute top-full w-full sm:w-[95%] md:w-[90%] xl:w-[80%] px-2  sm:rounded-b-2xl xl:rounded-b-3xl bg-[#d5d5d3b4] backdrop-blur-md sm:bg-[#fff] overflow-auto`}>
+            <div className={`mt-[-0.5px] ${pathName.includes(`${process.env.basePath}/gallery`) ? 'hidden sm:block' : ''} shadow-xl shadow-[#00000039] absolute top-full w-full sm:w-[95%] md:w-[90%] xl:w-[80%] px-2  sm:rounded-b-2xl xl:rounded-b-3xl bg-[#d5d5d3b4] backdrop-blur-md sm:bg-[#fff] overflow-auto`}>
               <ul className='my-3.5 sm:my-2 2xl:my-3 flex justify-around gap-x-3 sm:gap-x-0'>
-                {(pageContent['/sushmabelleza/gallery/'] && pathName?.includes('/gallery')) ? (
+                {(pageContent[`${process.env.basePath}/gallery/`] && pathName?.includes(`${process.env.basePath}/gallery`)) ? (
                   <>
                     {content?.map((item, index) => (
                       <li key={index} onClick={() => { setTab(item?.hastPath); setActiveSectionTab(item?.hastPath.replace('#', '')) }}

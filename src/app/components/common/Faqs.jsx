@@ -36,7 +36,7 @@ function Faqs() {
             faqAns: "Sushma belleza offers multiple payment plans such as down payment options, installment plans, and any special offers."
         },
         {
-            faqQues: "WWhat is the possession status of Sushma Belleza?",
+            faqQues: "What is the possession status of Sushma Belleza?",
             faqAns: "Sushma belleza under construction project estimated completion December 2027."
         },
     ]

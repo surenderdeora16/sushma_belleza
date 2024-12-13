@@ -39,14 +39,14 @@ export default function RootLayout({ children }) {
         <div>
             <Navbar />
             {children}
-            <div className="hidden sm:block">
+            {/* <div className="hidden sm:block">
                 <CallToAction />
             </div>
-            {pathName == '/sushmabelleza/price/' || pathName == '/price/' && (
+            {pathName.includes(`${process.env.basePath}/price/`) && (
                 <HomeLoanFacility />
             )}
             <Faqs />
-            {(pathName == `${process.env.basePath == '' ? '/' : '/sushmabelleza/'}`) ? (
+            {(pathName == `${process.env.basePath == '' ? '/' : `${process.env.basePath}/`}`) ? (
                 <GetInTouch />
             ) : (
                 <EnquiryForm eventSource={`${pathName?.replace(`${process.env.basePath || '/'}`, '')} Page`} />
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
             <ContactInfo />
             <Downloads />
             <AvatarModel />
-            <AppBar />
+            <AppBar /> */}
             <Footer />
         </div>
     );

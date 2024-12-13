@@ -14,7 +14,6 @@ import Testimonal from "@/app/components/Testimonal";
 import Keyhighlights from "../components/Keyhighlights";
 const EnquiryForm = dynamic(() => import('@/app/components/common/ModalEnquiryForm'), { ssr: false });
 
-
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [event, setEvent] = useState(false)
