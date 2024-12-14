@@ -1,3 +1,8 @@
+import unitPlanImg1 from "@/app/images/unit-plan-map1.webp"
+import unitPlanImg2 from "@/app/images/unit-plan-map2.webp"
+import unitPlanImg3 from "@/app/images/unit-plan-map3.webp"
+
+
 const unitPlan = [
     {
         tab: 'Low rise - 3BHK',
@@ -7,7 +12,7 @@ const unitPlan = [
                 size: '2300 sq.ft.',
                 type: {
                     type1: {
-                        images: `${process.env.basePath || '' }/images/unit-plan-map1.webp`,
+                        images: unitPlanImg1,
                         Image3D: "",
                         title: "EXCLUSIVE 3BHK",
                         size: '2300 sq.ft.',
@@ -28,7 +33,7 @@ const unitPlan = [
                 size: '2800 sq.ft.',
                 type: {
                     type1: {
-                        images: `${process.env.basePath || '' }/images/unit-plan-map2.webp`,
+                        images: unitPlanImg2,
                         Image3D: "",
                         title: "EXCLUSIVE 3BHK",
                         size: '2800 sq.ft.',
@@ -49,7 +54,7 @@ const unitPlan = [
                 size: '3400 sq.ft.',
                 type: {
                     type1: {
-                        images: `${process.env.basePath || '' }/images/unit-plan-map3.webp`,
+                        images: unitPlanImg3,
                         Image3D: "",
                         title: "EXCLUSIVE 4BHK +s",
                         size: '3400 sq.ft.',

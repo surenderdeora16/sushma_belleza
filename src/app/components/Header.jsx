@@ -57,7 +57,7 @@ const Header = () => {
               /> */}
               <video
                 // ref={videoRef}
-                src={`/videos/mainVideo-background.mp4`}
+                src={`${process.env.basePath}/videos/mainVideo-background.mp4`}
                 muted
                 loop
                 autoPlay
@@ -72,7 +72,7 @@ const Header = () => {
               </video>
               <video
                 // ref={videoRef}
-                src={`/videos/mainVideoMobile-background.mp4`}
+                src={`${process.env.basePath}/videos/mainVideoMobile-background.mp4`}
                 muted
                 loop
                 autoPlay

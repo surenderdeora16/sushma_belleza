@@ -115,7 +115,12 @@ const Navbar = () => {
   const [megaMenu, setMegaMenu] = useState(false);
   const [tab, setTab] = useState('#project-walk-through');
 
-  const content = pageContent[pathName] || null;
+  const content = pageContent[
+    process.env.basePath === ''
+      ? pathName
+      : pathName.replace(process.env.basePath, '')
+  ] || null;
+
 
   const handleUserInteraction = useCallback(() => {
     setIsVisible(true);
@@ -227,7 +232,7 @@ const Navbar = () => {
   return (
     <nav>
       <Suspense fallback={<div>Loading...</div>}>
-      <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
+        <SideBar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
       </Suspense>
       <div style={{ zIndex: '550' }} className={`w-full z-[50] ${isSticky ? 'fixed top-0' : 'absolute top-0 left-0'}`}>
 
@@ -332,7 +337,7 @@ const Navbar = () => {
           {content && (
             <div className={`mt-[-0.5px] ${pathName.includes(`${process.env.basePath}/gallery`) ? 'hidden sm:block' : ''} shadow-xl shadow-[#00000039] absolute top-full w-full sm:w-[95%] md:w-[90%] xl:w-[80%] px-2  sm:rounded-b-2xl xl:rounded-b-3xl bg-[#d5d5d3b4] backdrop-blur-md sm:bg-[#fff] overflow-auto`}>
               <ul className='my-3.5 sm:my-2 2xl:my-3 flex justify-around gap-x-3 sm:gap-x-0'>
-                {(pageContent[`${process.env.basePath}/gallery/`] && pathName?.includes(`${process.env.basePath}/gallery`)) ? (
+                {(pageContent[`/gallery/`] && pathName?.includes(`${process.env.basePath}/gallery`)) ? (
                   <>
                     {content?.map((item, index) => (
                       <li key={index} onClick={() => { setTab(item?.hastPath); setActiveSectionTab(item?.hastPath.replace('#', '')) }}
